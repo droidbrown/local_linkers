@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Login Screen-->
+
+    <dimen name="logo_from_top">100dp</dimen>
+    <dimen name="ed_phone_text">18dp</dimen>
+    <dimen name="forget_txt">15sp</dimen>
+    <dimen name="btn_signin">20sp</dimen>
+
+
+    <!--Forget Screen-->
+
+    <dimen name="header_title">30sp</dimen>
+
+
+    <!--Tab item sizes-->
+
+    <dimen name="tab_icon">20sp</dimen>
+    <dimen name="tab_text">12sp</dimen>
+    <dimen name="pading_size">5sp</dimen>
+
+
+    <!--Home tab sizes-->
+
+    <dimen name="slider_image">150sp</dimen>
+
+
+</resources>

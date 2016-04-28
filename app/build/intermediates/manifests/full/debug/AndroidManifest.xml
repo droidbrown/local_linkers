@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hbs.hashbrownsys.locallinkers"
+    android:versionCode="6"
+    android:versionName="1.5" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <permission
+        android:name="com.hbs.hashbrownsys.locallinkers.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.demo.hbslenovo_3.locallinker.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- GCM connects to Internet Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.hbs.hashbrownsys.locallinkers.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.demo.hbslenovo_3.locallinker.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Forget"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.SignUp"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Home_Detial"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Reset_Password"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Confirm"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.demo.hbslenovo_3.locallinker" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.hbs.hashbrownsys.locallinkers.gcm.GCMIntentService" />
+
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.SplashScreen"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true" >
+                <data android:scheme="locallinkers" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Business_Details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Shopping_Details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Coupon_Detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.DemoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.hbs.hashbrownsys.locallinkers.Change_Password" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.My_Oder_Detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Bill_Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Web_View_Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Terms_Conditions"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Map"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAew76iMuLiUZ8w7IIRrHWwxPnFWoO3s1s" />
+
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Check_Permission_Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Sub_Category"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Coupon_Sub_Category"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Date_PickerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Business_List_Search"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Coupon_List_Search"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hbs.hashbrownsys.locallinkers.Shopping_List_Search"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="com.hbs.hashbrownsys.locallinkers.google_measurement_service"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

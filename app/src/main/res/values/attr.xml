@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<declare-styleable name="UnderlinePageIndicator">-->
+        <!--&lt;!&ndash; Whether or not the selected indicator fades. &ndash;&gt;-->
+        <!--<attr name="fades" format="boolean" />-->
+        <!--&lt;!&ndash; Length of the delay to fade the indicator. &ndash;&gt;-->
+        <!--<attr name="fadeDelay" format="integer" />-->
+        <!--&lt;!&ndash; Length of the indicator fade to transparent. &ndash;&gt;-->
+        <!--<attr name="fadeLength" format="integer" />-->
+        <!--&lt;!&ndash; Color of the selected line that represents the current page. &ndash;&gt;-->
+        <!--<attr name="selectedColor" />-->
+        <!--&lt;!&ndash; View background &ndash;&gt;-->
+        <!--<attr name="android:background"/>-->
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="CirclePageIndicator">-->
+        <!--&lt;!&ndash; Whether or not the indicators should be centered. &ndash;&gt;-->
+        <!--<attr name="centered" />-->
+        <!--&lt;!&ndash; Color of the filled circle that represents the current page. &ndash;&gt;-->
+        <!--<attr name="fillColor" format="color" />-->
+        <!--&lt;!&ndash; Color of the filled circles that represents pages. &ndash;&gt;-->
+        <!--<attr name="pageColor" format="color" />-->
+        <!--&lt;!&ndash; Orientation of the indicator. &ndash;&gt;-->
+        <!--<attr name="android:orientation"/>-->
+        <!--&lt;!&ndash; Radius of the circles. This is also the spacing between circles. &ndash;&gt;-->
+        <!--<attr name="radius" format="dimension" />-->
+        <!--&lt;!&ndash; Whether or not the selected indicator snaps to the circles. &ndash;&gt;-->
+        <!--<attr name="snap" format="boolean" />-->
+        <!--&lt;!&ndash; Color of the open circles. &ndash;&gt;-->
+        <!--<attr name="strokeColor" format="color" />-->
+        <!--&lt;!&ndash; Width of the stroke used to draw the circles. &ndash;&gt;-->
+        <!--<attr name="strokeWidth" />-->
+        <!--&lt;!&ndash; View background &ndash;&gt;-->
+        <!--<attr name="android:background"/>-->
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="TitlePageIndicator">-->
+        <!--&lt;!&ndash; Screen edge padding. &ndash;&gt;-->
+        <!--<attr name="clipPadding" format="dimension" />-->
+        <!--&lt;!&ndash; Color of the footer line and indicator. &ndash;&gt;-->
+        <!--<attr name="footerColor" format="color" />-->
+        <!--&lt;!&ndash; Height of the footer line. &ndash;&gt;-->
+        <!--<attr name="footerLineHeight" format="dimension" />-->
+        <!--&lt;!&ndash; Style of the indicator. Default is triangle. &ndash;&gt;-->
+        <!--<attr name="footerIndicatorStyle">-->
+            <!--<enum name="none" value="0" />-->
+            <!--<enum name="triangle" value="1" />-->
+            <!--<enum name="underline" value="2" />-->
+        <!--</attr>-->
+        <!--&lt;!&ndash; Height of the indicator above the footer line. &ndash;&gt;-->
+        <!--<attr name="footerIndicatorHeight" format="dimension" />-->
+        <!--&lt;!&ndash; Left and right padding of the underline indicator. &ndash;&gt;-->
+        <!--<attr name="footerIndicatorUnderlinePadding" format="dimension" />-->
+        <!--&lt;!&ndash; Padding between the bottom of the title and the footer. &ndash;&gt;-->
+        <!--<attr name="footerPadding" format="dimension" />-->
+        <!--&lt;!&ndash; Position of the line. &ndash;&gt;-->
+        <!--<attr name="linePosition">-->
+            <!--<enum name="bottom" value="0"/>-->
+            <!--<enum name="top" value="1"/>-->
+        <!--</attr>-->
+        <!--&lt;!&ndash; Color of the selected title. &ndash;&gt;-->
+        <!--<attr name="selectedColor" />-->
+        <!--&lt;!&ndash; Whether or not the selected item is displayed as bold. &ndash;&gt;-->
+        <!--<attr name="selectedBold" format="boolean" />-->
+        <!--&lt;!&ndash; Color of regular titles. &ndash;&gt;-->
+        <!--<attr name="android:textColor" />-->
+        <!--&lt;!&ndash; Size of title text. &ndash;&gt;-->
+        <!--<attr name="android:textSize" />-->
+        <!--&lt;!&ndash; Padding between titles when bumping into each other. &ndash;&gt;-->
+        <!--<attr name="titlePadding" format="dimension" />-->
+        <!--&lt;!&ndash; Padding between titles and the top of the View. &ndash;&gt;-->
+        <!--<attr name="topPadding" format="dimension" />-->
+        <!--&lt;!&ndash; View background &ndash;&gt;-->
+        <!--<attr name="android:background"/>-->
+    <!--</declare-styleable>-->
+
+    <!--<attr name="centered" format="boolean" />-->
+    <!--<attr name="selectedColor" format="color" />-->
+    <!--<attr name="strokeWidth" format="dimension" />-->
+    <!--<attr name="unselectedColor" format="color" />-->
+
+    <!--<declare-styleable name="ViewFlipperIndicator">-->
+        <!--&lt;!&ndash; Style of the circle indicator. &ndash;&gt;-->
+        <!--<attr name="vfiCirclePageIndicatorStyle" format="reference"/>-->
+        <!--&lt;!&ndash; Style of the icon indicator's views. &ndash;&gt;-->
+        <!--<attr name="vfiIconPageIndicatorStyle" format="reference"/>-->
+        <!--&lt;!&ndash; Style of the line indicator. &ndash;&gt;-->
+        <!--<attr name="vfiLinePageIndicatorStyle" format="reference"/>-->
+        <!--&lt;!&ndash; Style of the title indicator. &ndash;&gt;-->
+        <!--<attr name="vfiTitlePageIndicatorStyle" format="reference"/>-->
+        <!--&lt;!&ndash; Style of the tab indicator's tabs. &ndash;&gt;-->
+        <!--<attr name="vfiTabPageIndicatorStyle" format="reference"/>-->
+        <!--&lt;!&ndash; Style of the underline indicator. &ndash;&gt;-->
+        <!--<attr name="vfiUnderlinePageIndicatorStyle" format="reference"/>-->
+    <!--</declare-styleable>-->
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs_pre_jb">true</bool>
+    <bool name="abc_config_allowActionMenuItemTextWithIcon">true</bool>
+    <dimen name="btn_signin">20sp</dimen>
+    <dimen name="ed_phone_text">18dp</dimen>
+    <dimen name="forget_txt">15sp</dimen>
+    <dimen name="logo_from_top">100dp</dimen>
+    <dimen name="pading_size">10sp</dimen>
+    <dimen name="slider_image">150sp</dimen>
+    <dimen name="tab_icon">30sp</dimen>
+    <dimen name="tab_text">15sp</dimen>
+</resources>

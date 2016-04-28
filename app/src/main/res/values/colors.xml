@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#841633</color>
+    <color name="colorPrimaryDark">#841633</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFF</color>
+
+    <color name="holo_blue_dark">#841633</color>
+        <color name="view_divider_color">#bababa</color>
+        <color name="view_divider_color_2">#dadada</color>
+
+
+    <color name="dc_container_show">#66000000</color>
+    <color name="dc_white">#FFFFFFFF</color>
+    <color name="dc_cancel_press">#FFEBEBEB</color>
+    <color name="dc_item_gray">#FFEBEBEB</color>
+    <color name="dc_item_press">#FFDBDBDB</color>
+    <color name="dc_green_text">#FF36D68E</color>
+    <color name="dc_content_text">#FF343434</color>
+    <color name="dc_green_text_press">#FF1ED68D</color>
+    <color name="dc_default_line">#FFDBDBDB</color>
+
+    <color name="primary">#ff2d8c3c</color>
+    <color name="primary_dark">#ff2d8c3c</color>
+    <color name="accent">#F4FF81</color>
+    <color name="window_background">#FFF5F5F5</color>
+
+    <color name="tab_background">#cccccc</color>
+
+
+    <color name="ColorPrimary">#00897B</color>
+    <color name="ColorPrimaryDark">#00695C</color>
+    <color name="tabsScrollColor">#841633</color>
+
+</resources>
