@@ -426,6 +426,7 @@
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
     <string name="product_name">Product Name</string>
+    <string name="rollbar_token">2b0c455abbe8483687f3fc2182748a9d</string>
     <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
     <string name="server_registered">From Demo Server: successfully added device!</string>
     <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>

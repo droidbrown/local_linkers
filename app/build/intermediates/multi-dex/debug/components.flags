@@ -1,7 +1,7 @@
--injars 'C:\Users\ajit kumar\Desktop\LocalLinkers-master\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
--outjars 'C:\Users\ajit kumar\Desktop\LocalLinkers-master\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+-injars /Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars 'C:\Users\ajit kumar\AppData\Local\Android\sdk\build-tools\23.0.1\lib\shrinkedAndroid.jar'
+-libraryjars /Users/prateekarora/Library/Android/sdk/build-tools/23.0.1/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
@@ -10,8 +10,13 @@
 -dontpreverify
 -dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
 -dontwarn **
--printconfiguration 'C:\Users\ajit kumar\Desktop\LocalLinkers-master\app\build\intermediates\multi-dex\debug\components.flags'
+-printconfiguration /Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/multi-dex/debug/components.flags
 
+
+-keep class com.hbs.hashbrownsys.locallinkers.LocalLinkersApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
 
 -keep class com.hbs.hashbrownsys.locallinkers.Login {
     <init>();

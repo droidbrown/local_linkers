@@ -56,5 +56,6 @@
     <string name="gps_network_not_enabled">GPS not enable</string>
     <string name="open_location_settings">Open Location Settings</string>
     <string name="Cancel">Cancel</string>
+    <string name="rollbar_token">2b0c455abbe8483687f3fc2182748a9d</string>
 
 </resources>

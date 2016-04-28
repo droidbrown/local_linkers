@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
+        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/values-port/values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-port/values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
+        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -35,7 +35,31 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 287,
+                        "endColumn": 55,
+                        "endOffset": 338
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
