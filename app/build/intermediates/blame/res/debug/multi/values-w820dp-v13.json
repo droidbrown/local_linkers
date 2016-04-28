@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 150
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 195
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 237
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 283
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 326
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 371
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 411
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 451
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\hbslenovo-3\\Android_Projects\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -176,7 +176,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -187,7 +187,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -206,7 +206,7 @@
                     "endOffset": 150
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -225,7 +225,7 @@
                     "endOffset": 195
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -244,7 +244,7 @@
                     "endOffset": 237
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -263,7 +263,7 @@
                     "endOffset": 283
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -282,7 +282,7 @@
                     "endOffset": 326
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -301,7 +301,7 @@
                     "endOffset": 371
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -320,7 +320,7 @@
                     "endOffset": 411
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -339,13 +339,189 @@
                     "endOffset": 451
                 },
                 "from": {
-                    "file": "C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/C:\\Users\\ajit kumar\\Desktop\\LocalLinkers-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
                         "startOffset": 634,
                         "endColumn": 39,
                         "endOffset": 669
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 291,
+                        "endColumn": 57,
+                        "endOffset": 344
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 41,
+                    "endOffset": 150
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 508,
+                        "endColumn": 41,
+                        "endOffset": 545
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 155,
+                    "endColumn": 44,
+                    "endOffset": 195
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 421,
+                        "endColumn": 44,
+                        "endOffset": 461
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 200,
+                    "endColumn": 41,
+                    "endOffset": 237
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 466,
+                        "endColumn": 41,
+                        "endOffset": 503
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 242,
+                    "endColumn": 45,
+                    "endOffset": 283
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 375,
+                        "endColumn": 45,
+                        "endOffset": 416
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 288,
+                    "endColumn": 42,
+                    "endOffset": 326
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 658,
+                        "endColumn": 42,
+                        "endOffset": 696
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 331,
+                    "endColumn": 44,
+                    "endOffset": 371
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 729,
+                        "endColumn": 44,
+                        "endOffset": 769
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 376,
+                    "endColumn": 39,
+                    "endOffset": 411
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 578,
+                        "endColumn": 39,
+                        "endOffset": 613
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 416,
+                    "endColumn": 39,
+                    "endOffset": 451
+                },
+                "from": {
+                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w820dp/dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 618,
+                        "endColumn": 39,
+                        "endOffset": 653
                     }
                 }
             }

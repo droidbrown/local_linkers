@@ -1,3 +1,7 @@
+-keep class com.hbs.hashbrownsys.locallinkers.LocalLinkersApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
 -keep class com.hbs.hashbrownsys.locallinkers.Login { <init>(); }
 -keep class com.hbs.hashbrownsys.locallinkers.Forget { <init>(); }
 -keep class com.hbs.hashbrownsys.locallinkers.SignUp { <init>(); }

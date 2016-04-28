@@ -29,9 +29,17 @@ android {
         exclude 'META-INF/notice.txt'
     }
     buildTypes {
+        debug {
+            // disable rollbar
+            buildConfigField "boolean", "USE_ROLLBAR", "false"
+            ext.enableRollbar = false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // enable rollbar
+            buildConfigField "boolean", "USE_ROLLBAR", "true"
+            ext.enableRollbar = true
         }
     }
 
@@ -58,4 +66,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:8.4.0'
     compile 'com.google.android.gms:play-services-gcm:8.4.0'
     compile 'com.github.delight-im:Android-SimpleLocation:v1.0.1'
+    compile files('libs/rollbar-android-0.1.2-dev.jar')
 }
