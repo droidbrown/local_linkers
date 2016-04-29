@@ -51,6 +51,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        name="com.hbs.hashbrownsys.locallinkers.LocalLinkersApplication"
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_app_launcher"

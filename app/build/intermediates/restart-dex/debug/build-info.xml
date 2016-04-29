@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="21"
-    density="560dpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
     format="7"
-    timestamp="1461839709516816000" >
+    timestamp="1461910889663187000" >
 
     <task
         name="javac"
-        duration="2599" />
+        duration="34391" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3097" />
+        duration="13461" />
     <task
         name="verifier"
-        duration="479" />
+        duration="683" />
 
     <artifact
         location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="1461839709516816000" >
+    <build timestamp="1461910889663187000" >
         <artifact
             location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
