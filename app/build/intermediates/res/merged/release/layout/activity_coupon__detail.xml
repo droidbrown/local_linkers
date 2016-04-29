@@ -264,9 +264,10 @@
                 android:paddingRight="10dp"
                 android:singleLine="true"
                 android:text="CFC Burger Combo Pack"
-                android:textColor="#841633"
+                android:textColor="#2c2c2c"
                 android:textSize="20sp"
-                android:visibility="gone" />
+               />
+
 
 
             <WebView
@@ -325,7 +326,7 @@
                 android:paddingRight="10dp"
                 android:paddingTop="5dp"
                 android:singleLine="true"
-                android:text="Term and Condition"
+                android:text="Terms and Condition"
                 android:textColor="#2c2c2c"
                 android:textSize="15sp" />
 
@@ -370,7 +371,6 @@
         android:inputType="text"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text="Buy Now"
         android:textColor="#fff" />
 
 

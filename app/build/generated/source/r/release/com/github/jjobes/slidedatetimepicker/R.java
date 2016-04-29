@@ -12,19 +12,19 @@ public final class R {
 		public static final int gray_holo_light = 0x7f0c0045;
 	}
 	public static final class drawable {
-		public static final int selection_divider = 0x7f0200cf;
+		public static final int selection_divider = 0x7f0200d0;
 	}
 	public static final class id {
-		public static final int buttonHorizontalDivider = 0x7f0d0160;
-		public static final int buttonVerticalDivider = 0x7f0d0162;
-		public static final int cancelButton = 0x7f0d0161;
+		public static final int buttonHorizontalDivider = 0x7f0d0162;
+		public static final int buttonVerticalDivider = 0x7f0d0164;
+		public static final int cancelButton = 0x7f0d0163;
 		public static final int customTab = 0x7f0d010a;
-		public static final int datePicker = 0x7f0d0132;
-		public static final int okButton = 0x7f0d0163;
-		public static final int slidingTabLayout = 0x7f0d015e;
+		public static final int datePicker = 0x7f0d0134;
+		public static final int okButton = 0x7f0d0165;
+		public static final int slidingTabLayout = 0x7f0d0160;
 		public static final int tabText = 0x7f0d010b;
-		public static final int timePicker = 0x7f0d013b;
-		public static final int viewPager = 0x7f0d015f;
+		public static final int timePicker = 0x7f0d013d;
+		public static final int viewPager = 0x7f0d0161;
 	}
 	public static final class layout {
 		public static final int custom_tab = 0x7f04003d;

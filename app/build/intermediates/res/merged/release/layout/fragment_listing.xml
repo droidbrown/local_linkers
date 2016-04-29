@@ -14,7 +14,7 @@
         <EditText
             android:id="@+id/ed_search"
             android:layout_width="match_parent"
-            android:hint="Search items"
+            android:hint="Search Category"
             android:textColor="#fff"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
@@ -41,6 +41,7 @@
             android:textSize="12sp"
             android:textColor="#fff"
             android:text="cancel"
+            android:visibility="gone"
             />
 
 

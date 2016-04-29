@@ -14,10 +14,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.hbs.hashbrownsys.locallinkers.database.Cart_Database;
 import com.hbs.hashbrownsys.locallinkers.http.CommonPostRequestThread;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpExceptionListener;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
+import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
+
 import org.json.JSONObject;
 
 public class Confirm extends AppCompatActivity
@@ -34,6 +38,7 @@ public class Confirm extends AppCompatActivity
     String phone_no;
     String Email,Phone,UserName,Image,Address,City,RoleId;
     int user_Id;
+    Cart_Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -236,6 +241,11 @@ public class Confirm extends AppCompatActivity
                             prefs.edit().putString("city_name","Saharanpur").commit();
                             prefs.edit().putInt("city_id", 3).commit();
                             Toast.makeText(getApplicationContext(), "Sign Up successfully..", Toast.LENGTH_LONG).show();
+
+                            database = new Cart_Database(Confirm.this);
+                            database.open();
+                            Cart_model cart_model = new Cart_model();
+                            database.deleteModal(cart_model);
                             Intent login_page = new Intent(Confirm.this, Home.class);
                             startActivity(login_page);
                             finish();

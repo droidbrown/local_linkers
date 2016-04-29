@@ -121,10 +121,6 @@
     <init>();
 }
 
--keep class com.hbs.hashbrownsys.locallinkers.Webview_Demo {
-    <init>();
-}
-
 -keep class com.google.android.gms.measurement.AppMeasurementContentProvider {
     <init>();
 }

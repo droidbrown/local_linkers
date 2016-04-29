@@ -1,8 +1,11 @@
 package com.hbs.hashbrownsys.locallinkers;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
@@ -18,6 +21,7 @@ import android.widget.Toast;
 
 import com.hbs.hashbrownsys.locallinkers.database.Cart_Database;
 import com.hbs.hashbrownsys.locallinkers.http.CommonPostRequestThread;
+import com.hbs.hashbrownsys.locallinkers.http.HttpConn;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpExceptionListener;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
@@ -25,8 +29,10 @@ import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
 import com.hbs.hashbrownsys.locallinkers.model.Image_Coupon_List;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Coupon_Detail extends AppCompatActivity {
@@ -43,10 +49,12 @@ public class Coupon_Detail extends AppCompatActivity {
     String address, images_type, terms, updated_date, actual_price, sale_price, coupon_price, title, desc, CouponId, button_updated_text, Latitude, Longitude, payTomarchant,BusinessName;
     String image_path, url, product_id;
     String IsAsPerBill;
-    ProgressDialog progressDialog;
+    ProgressDialog progressDialog,pdia;
     public final String tag = this.getClass().getSimpleName();
     ArrayList<Image_Coupon_List> image_arrayList = new ArrayList<Image_Coupon_List>();
     Cart_Database database;
+    SharedPreferences prefs;
+    int user_id;
     ArrayList<Cart_model> cart_list = new ArrayList<Cart_model>();
 
     @Override
@@ -117,6 +125,9 @@ public class Coupon_Detail extends AppCompatActivity {
         payTomarchant = getIntent().getExtras().getString("paytomarchant");
         IsAsPerBill=getIntent().getExtras().getString("IsAsPerBill");
         BusinessName=getIntent().getExtras().getString("BusinessName");
+        prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
+        user_id=  prefs.getInt("user_id", 0);
+
         Log.e("as per bill",""+IsAsPerBill);
 
         Log.e("latlong", "" + Latitude);
@@ -129,7 +140,8 @@ public class Coupon_Detail extends AppCompatActivity {
         txt_offer_price_value.setText(sale_price);
         txt_address.setText(address);
         txt_title.setText(BusinessName);
-        btn_buy_now.setText(button_updated_text);
+//        btn_buy_now.setText(button_updated_text);
+        checkCouponValidation();
 
         if(IsAsPerBill.equalsIgnoreCase("true")){
             txt_merchant_price.setText("Pay to Merchant " + payTomarchant);
@@ -168,59 +180,24 @@ public class Coupon_Detail extends AppCompatActivity {
         });
 
 
+
+
+
         btn_buy_now.setOnClickListener(new View.OnClickListener()
                                        {
                                            @Override
                                            public void onClick(View v)
                                            {
-                                               if (button_updated_text.equals("Update"))
-                                               {
-                                                   Toast.makeText(getApplicationContext(), "Data Updated Sucessfully", Toast.LENGTH_SHORT).show();
-                                                   onBackPressed();
-                                               } else {
-                                                   if (cart_list.size() == 0) {
-                                                       Cart_model modal = new Cart_model();
-                                                       url = "http://locallinkers.azurewebsites.net/admin/couponimages/";
-                                                       String qty = "1";
-                                                       modal.setProduct_name(title);
-                                                       modal.setPrice(coupon_price);
-                                                       modal.setAmount(coupon_price);
-                                                       modal.setImage_Id(image_path);
-                                                       modal.setImage_url(url);
-                                                       modal.setDescription(desc);
-                                                       modal.setDistance("hgjug");
-                                                       modal.setProduct_id(CouponId);
-                                                       modal.setQty(qty);
-                                                       modal.setStock("1");
-                                                       modal.setStore_value_type("Coupon");
-                                                       modal.setIsAsPerBill(IsAsPerBill);
-                                                       modal.setPayToMarchant(payTomarchant);
-                                                       modal.setBusinessName(BusinessName);
-                                                       Cart_Database datasource = new Cart_Database(getApplication());
-                                                       datasource.open();
-                                                       Cart_model productDetails = datasource.createproductModal(modal);
-                                                       datasource.close();
-                                                       Toast.makeText(getApplicationContext(), "Your item has been added", Toast.LENGTH_SHORT).show();
+                                               String buttontext= String.valueOf(btn_buy_now.getText());
+
+                                               if(buttontext.equals("Buy now")) {
+
+
+                                                   if (button_updated_text.equals("Update")) {
+                                                       Toast.makeText(getApplicationContext(), "Data Updated Sucessfully", Toast.LENGTH_SHORT).show();
                                                        onBackPressed();
-
                                                    } else {
-                                                       Boolean isproduct_exits = false;
-                                                       for (int k = 0; k < cart_list.size(); k++)
-                                                       {
-                                                           Cart_model model = (Cart_model) cart_list.get(k);
-                                                           product_id = model.getProduct_id();
-                                                           if (product_id.equals(CouponId)) {
-                                                               isproduct_exits = true;
-                                                               break;
-                                                           }
-
-                                                       }
-
-                                                       if (isproduct_exits == true) {
-                                                           Toast.makeText(getApplicationContext(), "Coupon Already added to cart", Toast.LENGTH_LONG).show();
-                                                           onBackPressed();
-
-                                                       } else {
+                                                       if (cart_list.size() == 0) {
                                                            Cart_model modal = new Cart_model();
                                                            url = "http://locallinkers.azurewebsites.net/admin/couponimages/";
                                                            String qty = "1";
@@ -245,16 +222,128 @@ public class Coupon_Detail extends AppCompatActivity {
                                                            Toast.makeText(getApplicationContext(), "Your item has been added", Toast.LENGTH_SHORT).show();
                                                            onBackPressed();
 
+                                                       } else {
+                                                           Boolean isproduct_exits = false;
+                                                           for (int k = 0; k < cart_list.size(); k++) {
+                                                               Cart_model model = (Cart_model) cart_list.get(k);
+                                                               product_id = model.getProduct_id();
+                                                               if (product_id.equals(CouponId)) {
+                                                                   isproduct_exits = true;
+                                                                   break;
+                                                               }
+
+                                                           }
+
+                                                           if (isproduct_exits == true) {
+                                                               Toast.makeText(getApplicationContext(), "Coupon Already added to cart", Toast.LENGTH_LONG).show();
+                                                               onBackPressed();
+
+                                                           } else {
+                                                               Cart_model modal = new Cart_model();
+                                                               url = "http://locallinkers.azurewebsites.net/admin/couponimages/";
+                                                               String qty = "1";
+                                                               modal.setProduct_name(title);
+                                                               modal.setPrice(coupon_price);
+                                                               modal.setAmount(coupon_price);
+                                                               modal.setImage_Id(image_path);
+                                                               modal.setImage_url(url);
+                                                               modal.setDescription(desc);
+                                                               modal.setDistance("hgjug");
+                                                               modal.setProduct_id(CouponId);
+                                                               modal.setQty(qty);
+                                                               modal.setStock("1");
+                                                               modal.setStore_value_type("Coupon");
+                                                               modal.setIsAsPerBill(IsAsPerBill);
+                                                               modal.setPayToMarchant(payTomarchant);
+                                                               modal.setBusinessName(BusinessName);
+                                                               Cart_Database datasource = new Cart_Database(getApplication());
+                                                               datasource.open();
+                                                               Cart_model productDetails = datasource.createproductModal(modal);
+                                                               datasource.close();
+                                                               Toast.makeText(getApplicationContext(), "Your item has been added", Toast.LENGTH_SHORT).show();
+                                                               onBackPressed();
+
+                                                           }
+
                                                        }
 
-                                                   }
 
+                                                   }
+                                               }else{
+                                                   Toast.makeText(Coupon_Detail.this,"This offer has already been redeemed by you.Thank you for your participation.",Toast.LENGTH_SHORT).show();
 
                                                }
                                            }
                                        }
 
         );
+
+
+    }
+
+    private void checkCouponValidation() {
+        pdia = ProgressDialog.show(Coupon_Detail.this, "", "Checking. Please wait...", false);
+
+        AsyncTask<Void, Void, String> mregister = new AsyncTask<Void, Void, String>() {
+
+            @Override
+            protected String doInBackground(Void... params) {
+                HttpConn http = new HttpConn();
+                String response = null;
+
+                try {
+                    response = http.getMethods(new JSONObject(), Constants.CHECK_COUPON_VALIDATION +"?UserId="+user_id+"&CouponId="+CouponId);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                Log.v("response is::", "" + response);
+
+                return response;
+            }
+
+
+            @Override
+            protected void onPostExecute(String response) {
+                // TODO Auto-generated method stub
+                super.onPostExecute(response);
+                pdia.dismiss();
+                JSONObject obj=null;
+                try {
+                    if (response != null)
+                    {
+                        //  progressDialog.dismiss();
+                        String result = response;
+                        obj = new JSONObject(result);
+                        Log.e("", "obj" + obj);
+                        String Result = obj.getString("Result");
+                        Log.e("", "Result" + Result);
+
+                        if (Result.equals("0")) {
+
+                        } else if (Result.equals("1"))
+                        {
+                            btn_buy_now.setText("Offer Redeemed");
+                            Toast.makeText(Coupon_Detail.this,"This offer has already been redeemed by you.Thank you for your participation.",Toast.LENGTH_SHORT).show();
+
+
+                        }
+                        else if(Result.equals("2")){
+                            btn_buy_now.setText("Buy now");
+                        }
+                    } else {
+
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        mregister.execute(null, null, null);
 
 
     }

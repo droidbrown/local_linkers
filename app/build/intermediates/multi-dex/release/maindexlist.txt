@@ -113,7 +113,6 @@ com/hbs/hashbrownsys/locallinkers/Shopping_Details.class
 com/hbs/hashbrownsys/locallinkers/Sub_Category$2.class
 com/hbs/hashbrownsys/locallinkers/Sub_Category.class
 android/support/design/widget/AppBarLayout$OnOffsetChangedListener.class
-com/hbs/hashbrownsys/locallinkers/Webview_Demo.class
 com/hbs/hashbrownsys/locallinkers/Date_PickerActivity$9.class
 android/support/v4/util/LogWriter.class
 android/support/v4/view/animation/LookupTableInterpolator.class
@@ -301,7 +300,6 @@ android/support/v7/app/ActionBarDrawerToggle$Delegate.class
 org/apache/http/impl/io/DefaultHttpResponseParser.class
 android/support/v4/media/MediaMetadataCompat$Builder.class
 com/google/android/gms/maps/SupportStreetViewPanoramaFragment.class
-com/hbs/hashbrownsys/locallinkers/Coupon_Detail$8$1.class
 android/support/v4/widget/ScrollerCompat.class
 com/google/android/gms/gcm/OneoffTask.class
 org/apache/http/impl/conn/tsccm/BasicPooledConnAdapter.class
@@ -484,6 +482,7 @@ org/apache/http/client/params/HttpClientParamConfig.class
 android/support/v7/widget/RecyclerView$4.class
 android/support/v4/widget/MaterialProgressDrawable$2.class
 com/google/android/gms/maps/MapFragment.class
+com/hbs/hashbrownsys/locallinkers/Coupon_Detail$9$1.class
 android/support/v7/widget/AdapterHelper$Callback.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
 com/hbs/hashbrownsys/locallinkers/Map.class
@@ -766,6 +765,7 @@ com/google/android/gms/common/SignInButton$ButtonSize.class
 android/support/design/widget/Snackbar$Callback$DismissEvent.class
 com/google/android/gms/location/places/AutocompletePrediction$Substring.class
 org/apache/http/impl/execchain/HttpResponseProxy.class
+com/hbs/hashbrownsys/locallinkers/Coupon_Detail$9.class
 org/apache/http/client/protocol/ClientContext.class
 android/support/design/widget/TabLayout$Mode.class
 com/hbs/hashbrownsys/locallinkers/Shopping_Details$4.class
