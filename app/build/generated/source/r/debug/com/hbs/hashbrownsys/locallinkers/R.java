@@ -3520,18 +3520,19 @@ containing a value of this type.
         public static final int place_autocomplete_clear_button=0x7f060030;
         public static final int place_autocomplete_search_hint=0x7f060031;
         public static final int product_name=0x7f060054;
-        public static final int server_register_error=0x7f060055;
-        public static final int server_registered=0x7f060056;
-        public static final int server_registering=0x7f060057;
-        public static final int server_unregister_error=0x7f060058;
-        public static final int server_unregistered=0x7f060059;
+        public static final int rollbar_token=0x7f060055;
+        public static final int server_register_error=0x7f060056;
+        public static final int server_registered=0x7f060057;
+        public static final int server_registering=0x7f060058;
+        public static final int server_unregister_error=0x7f060059;
+        public static final int server_unregistered=0x7f06005a;
         public static final int status_bar_notification_info_overflow=0x7f060032;
-        public static final int time_out=0x7f06005a;
-        public static final int title_activity_confirm=0x7f06005b;
-        public static final int title_activity_main=0x7f06005c;
-        public static final int title_activity_notification=0x7f06005d;
-        public static final int title_activity_splash_screen=0x7f06005e;
-        public static final int txt_image_slider=0x7f06005f;
+        public static final int time_out=0x7f06005b;
+        public static final int title_activity_confirm=0x7f06005c;
+        public static final int title_activity_main=0x7f06005d;
+        public static final int title_activity_notification=0x7f06005e;
+        public static final int title_activity_splash_screen=0x7f06005f;
+        public static final int txt_image_slider=0x7f060060;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007f;

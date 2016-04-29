@@ -14,11 +14,12 @@ import android.widget.TextView;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.Category_Model;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
-public class CategoryAdapter extends ArrayAdapter<Category_Model>
-{
+public class CategoryAdapter extends ArrayAdapter<Category_Model> {
 
     private ArrayList<Category_Model> originalList;
     private ArrayList<Category_Model> countryList;
@@ -28,8 +29,7 @@ public class CategoryAdapter extends ArrayAdapter<Category_Model>
     Activity activity;
     Typeface Font;
 
-    public CategoryAdapter(Context context, int textViewResourceId, ArrayList<Category_Model> countryList)
-    {
+    public CategoryAdapter(Context context, int textViewResourceId, ArrayList<Category_Model> countryList) {
         super(context, textViewResourceId, countryList);
         this.countryList = new ArrayList<Category_Model>();
         this.countryList.addAll(countryList);
@@ -50,8 +50,7 @@ public class CategoryAdapter extends ArrayAdapter<Category_Model>
         return filter;
     }
 
-    public class ViewHolder
-    {
+    public class ViewHolder {
         TextView tv;
         ImageView img;
     }
@@ -63,9 +62,9 @@ public class CategoryAdapter extends ArrayAdapter<Category_Model>
         if (convertView == null) {
             vi = inflater.inflate(R.layout.category_list_item, null);
             holder = new ViewHolder();
-            holder.tv=(TextView) vi.findViewById(R.id.textView1);
+            holder.tv = (TextView) vi.findViewById(R.id.textView1);
             holder.tv.setTypeface(Font);
-            holder.img=(ImageView) vi.findViewById(R.id.imageView1);
+            holder.img = (ImageView) vi.findViewById(R.id.imageView1);
             vi.setTag(holder);
         } else
             holder = (ViewHolder) vi.getTag();
@@ -77,8 +76,13 @@ public class CategoryAdapter extends ArrayAdapter<Category_Model>
             tempValues = (Category_Model) countryList.get(position);
             holder.tv.setText(tempValues.getName());
             String image_path = tempValues.getImage();
-            UrlImageViewHelper.setUrlDrawable(holder.img, "http://locallinkers.azurewebsites.net/admin/categoryimages/" + image_path);
 
+            ImageLoader imageLoader = ImageLoader.getInstance();
+            DisplayImageOptions options = new DisplayImageOptions.Builder()
+                    .cacheInMemory(true)
+                    .build();
+
+            imageLoader.displayImage("http://locallinkers.azurewebsites.net/admin/categoryimages/" + image_path, holder.img, options);
 
             if (position % 2 == 0) {
 
