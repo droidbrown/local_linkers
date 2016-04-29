@@ -406,8 +406,9 @@ public class Coupon_Detail extends AppCompatActivity {
                             Log.e("LIST SIZE", "-----" + image_arrayList.size());
                         }
                         handler.sendEmptyMessage(1);
+                    } else {
+                        handler.sendEmptyMessage(0);
                     }
-
 
                 } else {
 

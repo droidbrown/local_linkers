@@ -40,8 +40,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Coupon_Tab extends Fragment
-{
+public class Coupon_Tab extends Fragment {
     ListView list_view;
     Coupon_list_Adapter adapter;
     EditText ed_search;
@@ -61,10 +60,10 @@ public class Coupon_Tab extends Fragment
     SharedPreferences prefs;
     String Titles[];
     String Keyword = "";
-    int startingPageIndex=0;
+    int startingPageIndex = 0;
     int Numboftabs;
     LinearLayout linear_layout;
-    String Latitude="0.0", Longitude="0.0";
+    String Latitude = "0.0", Longitude = "0.0";
 
     public Coupon_Tab() {
         // Required empty public constructor
@@ -121,17 +120,15 @@ public class Coupon_Tab extends Fragment
         requestThread.start();
     }
 
-    public JSONObject prepareJsonObject()
-    {
+    public JSONObject prepareJsonObject() {
         prefs = getActivity().getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
         city_id = prefs.getInt("city_id", 0);
         Log.d("city_id", "..........city_id.........." + city_id);
-        Latitude =  prefs.getString(Constants.LATITUDE, "");
-        Longitude =  prefs.getString(Constants.LONGITUDE,"");
+        Latitude = prefs.getString(Constants.LATITUDE, "");
+        Longitude = prefs.getString(Constants.LONGITUDE, "");
 
         JSONObject innerJsonObject = new JSONObject();
-        try
-        {
+        try {
             innerJsonObject.put("CategoryId", 0);
             innerJsonObject.put("CityId", city_id);
             innerJsonObject.put("Counter", 20);
@@ -139,11 +136,9 @@ public class Coupon_Tab extends Fragment
             innerJsonObject.put("SubCategoryId", 0);
             innerJsonObject.put("Latitude", Latitude);
             innerJsonObject.put("Longitude", Longitude);
-            innerJsonObject.put("Keyword",Keyword);
+            innerJsonObject.put("Keyword", Keyword);
             Utilities.printD(tag, "" + innerJsonObject.toString());
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         startingPageIndex += 1;
@@ -265,11 +260,9 @@ public class Coupon_Tab extends Fragment
                         });
 
 
-                        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                        {
+                        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
-                            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
-                            {
+                            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                                 Coupon_list_model selected = (Coupon_list_model) arrayList.get(position);
                                 Intent intent = new Intent(getActivity(), Coupon_Detail.class);
                                 intent.putExtra("address", selected.getAddress());
@@ -284,10 +277,10 @@ public class Coupon_Tab extends Fragment
                                 intent.putExtra("button_updated_text", "Buy Now");
                                 intent.putExtra("Latitude", selected.getLatitude());
                                 intent.putExtra("Longitude", selected.getLongitude());
-                                intent.putExtra("paytomarchant",selected.getPayToMerchant());
-                                intent.putExtra("IsAsPerBill",selected.getAsPerBill());
+                                intent.putExtra("paytomarchant", selected.getPayToMerchant());
+                                intent.putExtra("IsAsPerBill", selected.getAsPerBill());
                                 intent.putExtra("Type", "Coupons");
-                                intent.putExtra("BusinessName",selected.getBusinessName());
+                                intent.putExtra("BusinessName", selected.getBusinessName());
                                 startActivity(intent);
 
                             }
@@ -326,8 +319,7 @@ public class Coupon_Tab extends Fragment
                 Log.d("MyFragment", "Not visible anymore.  Stopping audio.");
                 // TODO stop audio playback
             } else {
-                if (arrayList.size() == 0)
-                {
+                if (arrayList.size() == 0) {
                     Log.d("current_tab", ",........... COUPON_TAB.............,");
                     Show_Coupon_List();
                 } else {

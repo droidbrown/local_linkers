@@ -208,12 +208,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/drawable/border.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/drawable/border.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/drawable/border.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/drawable/border.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
