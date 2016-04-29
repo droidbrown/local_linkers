@@ -46,10 +46,10 @@ public class Coupon_Detail extends AppCompatActivity {
     TextView txt_merchant_price;
     PageIndicator mIndicator;
     public static final String TAG = "detailsFragment";
-    String address, images_type, terms, updated_date, actual_price, sale_price, coupon_price, title, desc, CouponId, button_updated_text, Latitude, Longitude, payTomarchant,BusinessName;
+    String address, images_type, terms, updated_date, actual_price, sale_price, coupon_price, title, desc, CouponId, button_updated_text, Latitude, Longitude, payTomarchant, BusinessName;
     String image_path, url, product_id;
     String IsAsPerBill;
-    ProgressDialog progressDialog,pdia;
+    ProgressDialog progressDialog, pdia;
     public final String tag = this.getClass().getSimpleName();
     ArrayList<Image_Coupon_List> image_arrayList = new ArrayList<Image_Coupon_List>();
     Cart_Database database;
@@ -123,12 +123,12 @@ public class Coupon_Detail extends AppCompatActivity {
         Latitude = getIntent().getExtras().getString("Latitude");
         Longitude = getIntent().getExtras().getString("Longitude");
         payTomarchant = getIntent().getExtras().getString("paytomarchant");
-        IsAsPerBill=getIntent().getExtras().getString("IsAsPerBill");
-        BusinessName=getIntent().getExtras().getString("BusinessName");
+        IsAsPerBill = getIntent().getExtras().getString("IsAsPerBill");
+        BusinessName = getIntent().getExtras().getString("BusinessName");
         prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
-        user_id=  prefs.getInt("user_id", 0);
+        user_id = prefs.getInt("user_id", 0);
 
-        Log.e("as per bill",""+IsAsPerBill);
+        Log.e("as per bill", "" + IsAsPerBill);
 
         Log.e("latlong", "" + Latitude);
         Log.e("latlong", "" + Longitude);
@@ -143,13 +143,13 @@ public class Coupon_Detail extends AppCompatActivity {
 //        btn_buy_now.setText(button_updated_text);
         checkCouponValidation();
 
-        if(IsAsPerBill.equalsIgnoreCase("true")){
-            txt_merchant_price.setText("Pay to Merchant " + payTomarchant);
-
-        }else{
+        if (IsAsPerBill.equalsIgnoreCase("true")) {
             txt_merchant_price.setText("Pay to Merchant As per Bill");
-        }
 
+        } else {
+
+            txt_merchant_price.setText("Pay to Merchant " + payTomarchant);
+        }
 
 
         WebView webView = (WebView) findViewById(R.id.webView);
@@ -162,7 +162,7 @@ public class Coupon_Detail extends AppCompatActivity {
                 intent.putExtra("Latitude", Latitude);
                 intent.putExtra("Longitude", Longitude);
                 intent.putExtra("address", address);
-                intent.putExtra("title",title);
+                intent.putExtra("title", title);
                 startActivity(intent);
 
             }
@@ -180,17 +180,12 @@ public class Coupon_Detail extends AppCompatActivity {
         });
 
 
-
-
-
-        btn_buy_now.setOnClickListener(new View.OnClickListener()
-                                       {
+        btn_buy_now.setOnClickListener(new View.OnClickListener() {
                                            @Override
-                                           public void onClick(View v)
-                                           {
-                                               String buttontext= String.valueOf(btn_buy_now.getText());
+                                           public void onClick(View v) {
+                                               String buttontext = String.valueOf(btn_buy_now.getText());
 
-                                               if(buttontext.equals("Buy now")) {
+                                               if (buttontext.equals("Buy now")) {
 
 
                                                    if (button_updated_text.equals("Update")) {
@@ -269,8 +264,8 @@ public class Coupon_Detail extends AppCompatActivity {
 
 
                                                    }
-                                               }else{
-                                                   Toast.makeText(Coupon_Detail.this,"This offer has already been redeemed by you.Thank you for your participation.",Toast.LENGTH_SHORT).show();
+                                               } else {
+                                                   Toast.makeText(Coupon_Detail.this, "This offer has already been redeemed by you.Thank you for your participation.", Toast.LENGTH_SHORT).show();
 
                                                }
                                            }
@@ -292,7 +287,7 @@ public class Coupon_Detail extends AppCompatActivity {
                 String response = null;
 
                 try {
-                    response = http.getMethods(new JSONObject(), Constants.CHECK_COUPON_VALIDATION +"?UserId="+user_id+"&CouponId="+CouponId);
+                    response = http.getMethods(new JSONObject(), Constants.CHECK_COUPON_VALIDATION + "?UserId=" + user_id + "&CouponId=" + CouponId);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -312,10 +307,9 @@ public class Coupon_Detail extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 super.onPostExecute(response);
                 pdia.dismiss();
-                JSONObject obj=null;
+                JSONObject obj = null;
                 try {
-                    if (response != null)
-                    {
+                    if (response != null) {
                         //  progressDialog.dismiss();
                         String result = response;
                         obj = new JSONObject(result);
@@ -325,14 +319,12 @@ public class Coupon_Detail extends AppCompatActivity {
 
                         if (Result.equals("0")) {
 
-                        } else if (Result.equals("1"))
-                        {
+                        } else if (Result.equals("1")) {
                             btn_buy_now.setText("Offer Redeemed");
-                            Toast.makeText(Coupon_Detail.this,"This offer has already been redeemed by you.Thank you for your participation.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Coupon_Detail.this, "This offer has already been redeemed by you.Thank you for your participation.", Toast.LENGTH_SHORT).show();
 
 
-                        }
-                        else if(Result.equals("2")){
+                        } else if (Result.equals("2")) {
                             btn_buy_now.setText("Buy now");
                         }
                     } else {

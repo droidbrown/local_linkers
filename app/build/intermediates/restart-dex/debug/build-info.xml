@@ -4,29 +4,21 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="1461910889663187000" >
+    timestamp="1461922879456634000" >
 
     <task
         name="javac"
-        duration="34391" />
+        duration="3480" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="13461" />
+        duration="1318" />
     <task
         name="verifier"
-        duration="683" />
+        duration="225" />
 
-    <artifact
-        location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="1461910889663187000" >
-        <artifact
-            location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
+    <build timestamp="1461922879456634000" />
 
 </instant-run>
