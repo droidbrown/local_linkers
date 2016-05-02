@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,7 +55,8 @@ public class Shopping_Tab extends Fragment {
     SharedPreferences prefs;
     String Latitude, Longitude;
     int startingPageIndex;
-
+    Button btnLoadMore;
+    boolean flag_loading;
 
     Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
@@ -85,28 +87,7 @@ public class Shopping_Tab extends Fragment {
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                adapter = new Shopping_List_Adapter(getActivity(), arrayList, getResources());
-                                list_view.setAdapter(adapter);
                                 adapter.notifyDataSetChanged();
-                            }
-                        });
-
-                        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                        {
-                            @Override
-                            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
-                            {
-                                Shopping_List_Model selected = (Shopping_List_Model) arrayList.get(position);
-                                Intent intent = new Intent(getActivity(), Shopping_Details.class);
-                                intent.putExtra("title", selected.getTitle());
-                                intent.putExtra("desc", selected.getDescription());
-                                intent.putExtra("stok", selected.getStock());
-                                intent.putExtra("actual_price", selected.getActualPrice());
-                                intent.putExtra("sale_price", selected.getSalePrice());
-                                intent.putExtra("ProductId", selected.getProductId());
-                                intent.putExtra("button_updated_text", "Add to Cart");
-                                intent.putExtra("Type", "Products");
-                                startActivity(intent);
                             }
                         });
 
@@ -164,14 +145,53 @@ public class Shopping_Tab extends Fragment {
         Log.d("Category_id", "..........Category_id.........." + Category_id);
 
 
-
-        Button btnLoadMore = new Button(getActivity());
+        btnLoadMore = new Button(getActivity());
         btnLoadMore.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.white));
         btnLoadMore.setTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));
         btnLoadMore.setText("Load More");
 
 
-        list_view.addFooterView(btnLoadMore);
+//        list_view.addFooterView(btnLoadMore);
+
+        adapter = new Shopping_List_Adapter(getActivity(), arrayList, getResources());
+        list_view.setAdapter(adapter);
+
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Shopping_List_Model selected = (Shopping_List_Model) arrayList.get(position);
+                Intent intent = new Intent(getActivity(), Shopping_Details.class);
+                intent.putExtra("title", selected.getTitle());
+                intent.putExtra("desc", selected.getDescription());
+                intent.putExtra("stok", selected.getStock());
+                intent.putExtra("actual_price", selected.getActualPrice());
+                intent.putExtra("sale_price", selected.getSalePrice());
+                intent.putExtra("ProductId", selected.getProductId());
+                intent.putExtra("button_updated_text", "Add to Cart");
+                intent.putExtra("Type", "Products");
+                startActivity(intent);
+            }
+        });
+
+        list_view.setOnScrollListener(new AbsListView.OnScrollListener() {
+
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+
+            }
+
+            public void onScroll(AbsListView view, int firstVisibleItem,
+                                 int visibleItemCount, int totalItemCount) {
+
+                if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0) {
+                    if (flag_loading == false) {
+                        flag_loading = true;
+                        Show_Shopping_List();
+                    }
+                }
+            }
+        });
+
         btnLoadMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -238,8 +258,13 @@ public class Shopping_Tab extends Fragment {
                     Log.e("", "Result" + Result);
 
                     if (Result.equals("0")) {
+//                        showHideLoadMoreButton("hide");
                         handler.sendEmptyMessage(0);
+                        flag_loading = true;
                     } else if (Result.equals("1")) {
+                        handler.sendEmptyMessage(2);
+                        flag_loading = false;
+//                        showHideLoadMoreButton("visible");
                         handler.sendEmptyMessage(1);
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Products");
@@ -276,6 +301,8 @@ public class Shopping_Tab extends Fragment {
                         }
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
+                        flag_loading = true;
+//                        showHideLoadMoreButton("hide");
                     }
 
 
@@ -288,7 +315,19 @@ public class Shopping_Tab extends Fragment {
         }
     };
 
+    void showHideLoadMoreButton(final String status) {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+//                if (status.equalsIgnoreCase("hide"))
+//                    list_view.removeFooterView(btnLoadMore);
+//                else if (list_view.getFooterViewsCount() == 0)
+//                    list_view.addFooterView(btnLoadMore);
 
+
+            }
+        });
+    }
 
 
     @Override

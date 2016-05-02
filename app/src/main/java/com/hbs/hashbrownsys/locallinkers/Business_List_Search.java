@@ -32,8 +32,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Business_List_Search extends AppCompatActivity
-{
+public class Business_List_Search extends AppCompatActivity {
     ImageView back_image;
     ListView list_view;
     Business_List_Adapter adapter;

@@ -36,12 +36,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_screen_toolbar.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/demo.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/demo.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/approve_otp_layout.xml",
@@ -80,12 +80,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_navigation_item.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_sign_up.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_sign_up.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_navigation_item.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/home_list_item.xml",
@@ -104,28 +104,28 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_navigation_item_separator.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/notification_media_action.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/notification_template_media.xml"
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_date__picker.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_date__picker.xml"
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_navigation_menu.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_navigation_menu.xml"
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_date__picker.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_date__picker.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/image_share.xml",
@@ -144,12 +144,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/fragment_coupon__product.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/image_layout1.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/image_layout1.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/slide_date_time_picker.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.github.jjobes/SlideDateTimePicker/v1.0.4/res/layout/slide_date_time_picker.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/image_layout1.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/image_layout1.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/business_list_item.xml",
@@ -168,12 +168,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/fragment_setting.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_fragment.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_fragment.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
@@ -192,12 +192,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/fragment_category.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_layout_tab_icon.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_layout_tab_icon.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
@@ -220,24 +220,24 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/fragment_coupon_fragment.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/fragment_coupon_fragment.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/fragment_coupon_fragment.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/fragment_coupon_fragment.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_check__permission_.xml",
@@ -252,12 +252,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/tab_layout.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/vp_image.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/vp_image.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/vp_image.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/vp_image.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_home.xml",
@@ -268,12 +268,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/image_layout3.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_business__list__search.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_business__list__search.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_coupon__detail.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_coupon__detail.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_business__list__search.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_business__list__search.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
@@ -340,12 +340,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/fragment_date.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.github.jjobes/SlideDateTimePicker/v1.0.4/res/layout/fragment_date.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_business__details.xml",
@@ -356,12 +356,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_tan__example.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/cart_list_item.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/cart_list_item.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/cart_list_item.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/cart_list_item.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_status.xml",
@@ -480,12 +480,12 @@
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_terms__conditions.xml"
     },
     {
-        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_forget.xml",
-        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_forget.xml"
-    },
-    {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/shopping_item_list.xml",
         "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/shopping_item_list.xml"
+    },
+    {
+        "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_forget.xml",
+        "source": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/layout/activity_forget.xml"
     },
     {
         "merged": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/layout/activity_main.xml",

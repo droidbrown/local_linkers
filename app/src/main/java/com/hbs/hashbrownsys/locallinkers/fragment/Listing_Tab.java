@@ -38,8 +38,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class Listing_Tab extends Fragment
-{
+public class Listing_Tab extends Fragment {
 
     ArrayList<Category_Model> arrayList = new ArrayList<Category_Model>();
     Category_Model model;
@@ -52,7 +51,7 @@ public class Listing_Tab extends Fragment
     CategoryAdapter dataAdapter;
     EditText ed_search;
     SharedPreferences prefs;
-    ImageView filter_image,location_image;
+    ImageView filter_image, location_image;
     ArrayList<Sub_Category_Model> sub_cat_arraylist = new ArrayList<Sub_Category_Model>();
     Button btn_cancle;
 
@@ -66,8 +65,7 @@ public class Listing_Tab extends Fragment
     String category = "";
 
     // TODO: Rename and change types of parameters
-    public static Listing_Tab newInstance(String param1)
-    {
+    public static Listing_Tab newInstance(String param1) {
         Listing_Tab fragment = new Listing_Tab();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -76,8 +74,7 @@ public class Listing_Tab extends Fragment
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root_view = inflater.inflate(R.layout.fragment_listing, container, false);
 
@@ -86,11 +83,9 @@ public class Listing_Tab extends Fragment
 
         location_image = (ImageView) Home.topToolBar.findViewById(R.id.location_image);
         location_image.setVisibility(View.GONE);
-        location_image.setOnClickListener(new View.OnClickListener()
-        {
+        location_image.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
 
             }
         });
@@ -102,7 +97,7 @@ public class Listing_Tab extends Fragment
         btn_cancle.setTypeface(Font);
         prefs = getActivity().getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
 
-        gv=(GridView) root_view.findViewById(R.id.gridView1);
+        gv = (GridView) root_view.findViewById(R.id.gridView1);
 
         btn_cancle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,12 +107,14 @@ public class Listing_Tab extends Fragment
             }
         });
 
-        ed_search.addTextChangedListener(new TextWatcher()
-        {
-            public void afterTextChanged(Editable s)
-            {
+        ed_search.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {
                 Log.d("", "*** Search value changed: " + s.toString());
                 String text = ed_search.getText().toString().toLowerCase(Locale.getDefault());
+
+                if (dataAdapter == null)
+                    dataAdapter = new CategoryAdapter(getActivity(), R.layout.category_list_item, arrayList);
+
                 dataAdapter.getFilter().filter(text);
             }
 
@@ -136,8 +133,7 @@ public class Listing_Tab extends Fragment
     }
 
 
-    public void Show_Category_List()
-    {
+    public void Show_Category_List() {
         JSONObject json = prepareJsonObject();
         progressDialog = ProgressDialog.show(getActivity(), "", "Checking. Please wait...", false);
         String url = Constants.URL + Constants.CATEGORY_LIST;
@@ -145,27 +141,22 @@ public class Listing_Tab extends Fragment
         requestThread.start();
     }
 
-    public JSONObject prepareJsonObject()
-    {
+    public JSONObject prepareJsonObject() {
         JSONObject innerJsonObject = new JSONObject();
-        try
-        {
-            innerJsonObject.put("Type","business");
+        try {
+            innerJsonObject.put("Type", "business");
             Utilities.printD(tag, "" + innerJsonObject.toString());
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return innerJsonObject;
     }
 
 
-    IHttpExceptionListener exceptionListener = new IHttpExceptionListener()
-    {
+    IHttpExceptionListener exceptionListener = new IHttpExceptionListener() {
 
         @Override
-        public void handleException(String message)
-        {
+        public void handleException(String message) {
             try {
                 if (progressDialog != null && progressDialog.isShowing() == true)
                     progressDialog.dismiss();
@@ -176,24 +167,19 @@ public class Listing_Tab extends Fragment
     };
 
 
-
     IHttpResponseListener responseListener = new IHttpResponseListener() {
 
         @Override
-        public void handleResponse(String response)
-        {
-            try
-            {
-                if (response != null)
-                {
+        public void handleResponse(String response) {
+            try {
+                if (response != null) {
                     //  progressDialog.dismiss();
                     JSONObject obj = new JSONObject(response);
                     Log.e("", "obj" + obj);
 
                     JSONArray jsonArray = obj.getJSONArray("Lst_Category");
                     Log.e("Lst_Category", "Lst_Category" + jsonArray.length());
-                    for (int i = 0; i < jsonArray.length(); i++)
-                    {
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         Category_Model modal = new Category_Model();
                         JSONObject almonObject = jsonArray.getJSONObject(i);
                         modal.setCategoryId(almonObject.getString("CategoryId"));
@@ -208,17 +194,12 @@ public class Listing_Tab extends Fragment
                         arrayList.add(modal);
                         Log.e("LIST SIZE", "-----" + arrayList.size());
                     }
-                    if (arrayList.size()>0)
-                    {
+                    if (arrayList.size() > 0) {
                         handler.sendEmptyMessage(1);
-                    }
-                    else
-                    {
+                    } else {
                         handler.sendEmptyMessage(0);
                     }
-                }
-                else
-                {
+                } else {
 
                 }
             } catch (Exception e) {
@@ -247,8 +228,7 @@ public class Listing_Tab extends Fragment
                     break;
                 case 1:
                     // Registration Successful
-                    try
-                    {
+                    try {
                         if (progressDialog != null && progressDialog.isShowing() == true)
                             progressDialog.dismiss();
 
@@ -258,11 +238,9 @@ public class Listing_Tab extends Fragment
                         dataAdapter = new CategoryAdapter(getActivity(), R.layout.category_list_item, arrayList);
                         gv.setAdapter(dataAdapter);
 
-                        gv.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                        {
+                        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-                            {
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 Category_Model model = (Category_Model) arrayList.get(position);
                                 int Category_id = Integer.parseInt(model.getCategoryId());
                                 String name = model.getName();
@@ -288,15 +266,10 @@ public class Listing_Tab extends Fragment
     };
 
 
-
-
-    public void setUserVisibleHint(boolean isVisibleToUser)
-    {
+    public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser)
-        {
-            if (arrayList.size() == 0)
-            {
+        if (isVisibleToUser) {
+            if (arrayList.size() == 0) {
                 Log.d("current_tab", ",........... LIST_TAB.............,");
                 Show_Category_List();
             } else {
@@ -308,11 +281,9 @@ public class Listing_Tab extends Fragment
     }
 
     @Override
-    public void onResume()
-    {
+    public void onResume() {
         super.onResume();
     }
-
 
 
 }
