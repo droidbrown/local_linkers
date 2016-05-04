@@ -84,6 +84,7 @@ public class ProfileFragment extends Fragment {
     public final String tag = this.getClass().getSimpleName();
     int user_Id;
     int user_id;
+    String profile_pic_url = "";
     SharedPreferences prefs;
     LinearLayout linear_layout, main_layout;
     String Email, Phone, UserName, Image, Address, City;
@@ -131,7 +132,7 @@ public class ProfileFragment extends Fragment {
         Log.e("", "Phone" + Phone);
         UserName = prefs.getString(Constants.USER_NAME, null);
         Log.e("", "UserName" + UserName);
-        Image = prefs.getString(Constants.IMAGE, null);
+        Image = prefs.getString(Constants.PRODUCT_PHOTO, null);
         Log.e("", "Image" + Image);
         Address = prefs.getString(Constants.ADDRESS, null);
         Log.e("", "Address" + Address);
@@ -517,6 +518,7 @@ public class ProfileFragment extends Fragment {
                     }
                     if (status.equals("1")) {
                         user_Id = Utilities.getJSONIntValue(jsonObject, "UserId", 0);
+                        profile_pic_url = Utilities.getJSONStringValue(jsonObject, "ImageName", "");
                         Log.d("", "user_Id" + user_Id);
                         handler.sendEmptyMessage(1);
 
@@ -577,7 +579,7 @@ public class ProfileFragment extends Fragment {
                         prefs.edit().putString(Constants.CITY, city).commit();
                         if (bitmap != null) {
                             prefs.edit().putString(Constants.IMAGE, null).commit();
-                            sharedPreferences();
+                            sharedPreferences(profile_pic_url);
 
                         } else {
                             Log.e("not changed", "Image not changed");
@@ -596,21 +598,26 @@ public class ProfileFragment extends Fragment {
         }
     };
 
-    private void sharedPreferences() {
+    private void sharedPreferences(String url) {
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("PRODUCT_PHOTO", encodeTobase64(bitmap));
+        editor.putString("PRODUCT_PHOTO", url);
         editor.commit();
     }
 
 
     private void retrivesharedPreferences() {
         String photo = prefs.getString("PRODUCT_PHOTO", "photo");
-        assert photo != null;
         if (!photo.equals("photo")) {
-            byte[] b = Base64.decode(photo, Base64.DEFAULT);
-            InputStream is = new ByteArrayInputStream(b);
-            bitmap = BitmapFactory.decodeStream(is);
-            profile_imageView.setImageBitmap(bitmap);
+
+            ImageLoader imageLoader = ImageLoader.getInstance();
+            DisplayImageOptions options = new DisplayImageOptions.Builder()
+                    .cacheInMemory(true)
+                    .build();
+
+            imageLoader.displayImage("http://locallinkers.com/UserImages/" + photo + "?width=120&mode=crop",
+                    profile_imageView, options);
+
+
         } else {
             profile_imageView.setImageResource(R.drawable.no_preview);
         }

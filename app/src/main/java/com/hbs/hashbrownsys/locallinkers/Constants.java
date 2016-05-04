@@ -54,6 +54,7 @@ public class Constants
     public static final String EMAIL = "email";
     public static final String USER_NAME = "UserName";
     public static final String IMAGE = "Image";
+    public static final String PRODUCT_PHOTO = "PRODUCT_PHOTO";
     public static final String ADDRESS = "Address";
     public static final String CITY = "City";
     public static final String Role_ID ="RoleId" ;

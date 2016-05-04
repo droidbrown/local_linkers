@@ -40,6 +40,8 @@ import com.hbs.hashbrownsys.locallinkers.fragment.My_Order_Fragment;
 import com.hbs.hashbrownsys.locallinkers.fragment.ProfileFragment;
 import com.hbs.hashbrownsys.locallinkers.model.ItemObject;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -270,7 +272,7 @@ public class Home extends AppCompatActivity implements LocationListener {
     public boolean onPrepareOptionsMenu(Menu menu) {
         UserName = prefs.getString(Constants.USER_NAME, null);
         Log.e("", "UserName" + UserName);
-        Image = prefs.getString(Constants.IMAGE, null);
+        Image = prefs.getString(Constants.PRODUCT_PHOTO, null);
 
         Log.e("", "Image" + Image);
         if (UserName != null) {
@@ -281,7 +283,13 @@ public class Home extends AppCompatActivity implements LocationListener {
 
         if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null")) {
             try {
-                UrlImageViewHelper.setUrlDrawable(imageView1, "http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop");
+                ImageLoader imageLoader = ImageLoader.getInstance();
+                DisplayImageOptions options = new DisplayImageOptions.Builder()
+                        .cacheInMemory(true)
+                        .build();
+
+                imageLoader.displayImage("http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
+                        imageView1, options);
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
@@ -309,10 +317,13 @@ public class Home extends AppCompatActivity implements LocationListener {
         String photo = prefs.getString("PRODUCT_PHOTO", "photo");
         assert photo != null;
         if (!photo.equals("photo")) {
-            byte[] b = Base64.decode(photo, Base64.DEFAULT);
-            InputStream is = new ByteArrayInputStream(b);
-            bitmap = BitmapFactory.decodeStream(is);
-            imageView1.setImageBitmap(bitmap);
+            ImageLoader imageLoader = ImageLoader.getInstance();
+            DisplayImageOptions options = new DisplayImageOptions.Builder()
+                    .cacheInMemory(true)
+                    .build();
+
+            imageLoader.displayImage("http://locallinkers.azurewebsites.net/admin/categoryimages/" + photo,
+                    imageView1, options);
         }
     }
 

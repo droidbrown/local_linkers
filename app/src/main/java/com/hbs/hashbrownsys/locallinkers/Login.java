@@ -26,26 +26,24 @@ import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
 
 import org.json.JSONObject;
 
-public class Login extends AppCompatActivity
-{
-    EditText ed_phone,ed_pswrd;
-    TextView txt_foregt,txt_dont_account,txt_signup;
+public class Login extends AppCompatActivity {
+    EditText ed_phone, ed_pswrd;
+    TextView txt_foregt, txt_dont_account, txt_signup;
     Button btn_signin;
     Typeface Font;
     ProgressDialog progressDialog;
     public final String tag = this.getClass().getSimpleName();
-    String user_name,pswrd;
-    String Email,Phone,UserName,Image,Address,City,RoleId;
+    String user_name, pswrd;
+    String Email, Phone, UserName, Image, Address, City, RoleId;
     int user_Id;
     SharedPreferences prefs;
     Cart_Database database;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Font = Typeface.createFromAsset(getAssets(),"fonts/MyriadPro-Regular.otf");
+        Font = Typeface.createFromAsset(getAssets(), "fonts/MyriadPro-Regular.otf");
         ed_phone = (EditText) findViewById(R.id.ed_phone);
         ed_phone.setTypeface(Font);
         ed_pswrd = (EditText) findViewById(R.id.ed_pswrd);
@@ -62,41 +60,30 @@ public class Login extends AppCompatActivity
         prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
 
 
-        txt_signup.setOnClickListener(new View.OnClickListener()
-        {
+        txt_signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 Intent intent = new Intent(Login.this, SignUp.class);
                 startActivity(intent);  //
             }
         });
 
-        txt_foregt.setOnClickListener(new View.OnClickListener()
-        {
+        txt_foregt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(Login.this,Forget.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, Forget.class);
                 startActivity(intent);
             }
         });
 
-        btn_signin.setOnClickListener(new View.OnClickListener()
-        {
+        btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                if(ed_phone.getText().length() == 0)
-                {
-                    Toast.makeText(getApplicationContext(),"Please enter your number",Toast.LENGTH_SHORT).show();
-                }
-                else if(ed_pswrd.getText().length() == 0)
-                {
-                    Toast.makeText(getApplicationContext(),"Please enter your Password",Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
+            public void onClick(View v) {
+                if (ed_phone.getText().length() == 0) {
+                    Toast.makeText(getApplicationContext(), "Please enter your number", Toast.LENGTH_SHORT).show();
+                } else if (ed_pswrd.getText().length() == 0) {
+                    Toast.makeText(getApplicationContext(), "Please enter your Password", Toast.LENGTH_SHORT).show();
+                } else {
                     user_name = ed_phone.getText().toString();
                     pswrd = ed_pswrd.getText().toString();
                     Login_Data();
@@ -106,8 +93,7 @@ public class Login extends AppCompatActivity
         });
     }
 
-    public void Login_Data()
-    {
+    public void Login_Data() {
         JSONObject json = prepareJsonObject();
         progressDialog = ProgressDialog.show(Login.this, "", "Checking. Please wait...", false);
         String url = Constants.URL + Constants.LOGIN;
@@ -115,16 +101,13 @@ public class Login extends AppCompatActivity
         requestThread.start();
     }
 
-    public JSONObject prepareJsonObject()
-    {
+    public JSONObject prepareJsonObject() {
         JSONObject innerJsonObject = new JSONObject();
-        try
-        {
+        try {
             innerJsonObject.put("Password", pswrd);
             innerJsonObject.put("PhoneNumber", user_name);
             Utilities.printD(tag, "" + innerJsonObject.toString());
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return innerJsonObject;
@@ -148,18 +131,15 @@ public class Login extends AppCompatActivity
         @Override
         public void handleResponse(String response) {
             try {
-                if (response != null && response.length() != 0)
-                {
+                if (response != null && response.length() != 0) {
 
                     JSONObject jsonObject = new JSONObject(response);
                     String status = Utilities.getJSONStringValue(jsonObject, "Result", null);
                     Log.e("", "response" + response);
-                    if (status.equals("0"))
-                    {
+                    if (status.equals("0")) {
                         handler.sendEmptyMessage(0);
                     }
-                    if (status.equals("1"))
-                    {
+                    if (status.equals("1")) {
                         user_Id = Utilities.getJSONIntValue(jsonObject, "UserId", 0);
                         Log.d("", "user_Id" + user_Id);
                         Email = Utilities.getJSONStringValue(jsonObject, "Email", null);
@@ -236,28 +216,26 @@ public class Login extends AppCompatActivity
                     break;
                 case 1:
                     // Registration Successful
-                    try
-                    {
+                    try {
                         if (progressDialog != null && progressDialog.isShowing() == true)
                             progressDialog.dismiss();
-                        if (prefs.edit().putInt(Constants.USER_ID, user_Id).commit() && prefs.edit().putString(Constants.PHONE_NUMBER,Phone).commit() && prefs.edit().putBoolean(Constants.USER_LOGGED_IN, true).commit())
-                        {
-                            prefs.edit().putString(Constants.EMAIL, Email).commit();
-                            prefs.edit().putString(Constants.USER_NAME, UserName).commit();
-                            prefs.edit().putString(Constants.IMAGE, Image).commit();
-                            prefs.edit().putString(Constants.ADDRESS, Address).commit();
-                            prefs.edit().putString(Constants.CITY, City).commit();
-                            prefs.edit().putString(Constants.Role_ID,RoleId).commit();
+                        if (prefs.edit().putInt(Constants.USER_ID, user_Id).commit() && prefs.edit().putString(Constants.PHONE_NUMBER, Phone).commit() && prefs.edit().putBoolean(Constants.USER_LOGGED_IN, true).commit()) {
+                            prefs.edit().putString(Constants.EMAIL, Email).apply();
+                            prefs.edit().putString(Constants.USER_NAME, UserName).apply();
+                            prefs.edit().putString(Constants.IMAGE, Image).apply();
+                            prefs.edit().putString(Constants.PRODUCT_PHOTO, Image).apply();
+                            prefs.edit().putString(Constants.ADDRESS, Address).apply();
+                            prefs.edit().putString(Constants.CITY, City).apply();
+                            prefs.edit().putString(Constants.Role_ID, RoleId).apply();
                             Log.e("", "" + Constants.USER_LOGGED_IN);
-                            prefs.edit().putString("city_name","Saharanpur").commit();
-                            prefs.edit().putInt("city_id", 3).commit();
+                            prefs.edit().putString("city_name", "Saharanpur").apply();
+                            prefs.edit().putInt("city_id", 3).apply();
 //                            Toast.makeText(getApplicationContext(), "Welcome to LocalLinker", Toast.LENGTH_LONG).show();
 
                             database = new Cart_Database(Login.this);
                             database.open();
                             Cart_model cart_model = new Cart_model();
                             database.deleteModal(cart_model);
-
 
 
                             Intent login_page = new Intent(Login.this, Home.class);
@@ -297,11 +275,9 @@ public class Login extends AppCompatActivity
                         AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                         builder.setMessage("You don’t have verify your account yet. Please verify it")
                                 .setCancelable(false)
-                                .setPositiveButton("OK", new DialogInterface.OnClickListener()
-                                {
-                                    public void onClick(DialogInterface dialog, int id)
-                                    {
-                                        prefs.edit().putString(Constants.PHONE_NUMBER,Phone).commit();
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        prefs.edit().putString(Constants.PHONE_NUMBER, Phone).commit();
                                         prefs.edit().putInt(Constants.USER_ID, user_Id).commit();
                                         prefs.edit().putString(Constants.EMAIL, Email).commit();
                                         prefs.edit().putString(Constants.USER_NAME, UserName).commit();
@@ -371,8 +347,6 @@ public class Login extends AppCompatActivity
             }
         }
     };
-
-
 
 
 }
