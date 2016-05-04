@@ -175,8 +175,8 @@ public class ProfileFragment extends Fragment {
                         .cacheInMemory(true)
                         .build();
 
-                imageLoader.displayImage("http://locallinkers.azurewebsites.net/admin/categoryimages/" + Image, profile_imageView, options);
-
+                imageLoader.displayImage("http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
+                        profile_imageView, options);
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
