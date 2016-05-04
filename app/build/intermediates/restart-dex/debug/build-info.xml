@@ -4,29 +4,37 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="1462181724445647000" >
+    timestamp="1462345873931940000"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="6438" />
+        duration="4422" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="3961" />
     <task
         name="instant-run-transform"
-        duration="1563" />
+        duration="217" />
     <task
         name="verifier"
-        duration="205" />
+        duration="82" />
 
     <artifact
-        location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="1462181724445647000" >
+    <build timestamp="1462345060578349000" >
         <artifact
             location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="1462345873931940000"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

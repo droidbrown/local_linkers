@@ -68,6 +68,5 @@ dependencies {
     compile files('libs/rollbar-android-0.1.2-dev.jar')
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'de.greenrobot:eventbus:2.4.0'
-    compile 'com.github.jkwiecien:EasyImage:1.2.1'
-    compile 'com.github.tajchert:nammu:1.1.1'
+    compile 'com.github.himanshu-soni:image-intent-handler:e724d3e462'
 }

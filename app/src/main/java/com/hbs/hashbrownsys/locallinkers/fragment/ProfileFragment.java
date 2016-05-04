@@ -42,7 +42,11 @@ import com.hbs.hashbrownsys.locallinkers.http.CommonPostRequestThread;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpExceptionListener;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
+import com.hs.image.ImageIntentHandler;
+import com.hs.image.ImageUtils;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import org.json.JSONObject;
 
@@ -86,6 +90,8 @@ public class ProfileFragment extends Fragment {
     ImageView filter_image, location_image, search_icon;
     Button btn_add, btn_cancle;
     SearchView search;
+
+    ImageIntentHandler.ImagePair mImagePair;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -161,18 +167,19 @@ public class ProfileFragment extends Fragment {
         ed_add.setText(Address);
         ed_City.setText(City);
 
-        if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null"))
-        {
-            try
-            {
-                UrlImageViewHelper.setUrlDrawable(profile_imageView, "http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop");
-            }
-            catch (Exception e)
-            {
+        if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null")) {
+            try {
+                ImageLoader imageLoader = ImageLoader.getInstance();
+                DisplayImageOptions options = new DisplayImageOptions.Builder()
+                        .cacheInMemory(true)
+                        .build();
+
+                imageLoader.displayImage("http://locallinkers.azurewebsites.net/admin/categoryimages/" + Image, profile_imageView, options);
+
+            } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
-        } else
-        {
+        } else {
             retrivesharedPreferences();
         }
 
@@ -267,17 +274,16 @@ public class ProfileFragment extends Fragment {
                         requestPermissionForCamera();
                     } else {
 
-                        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                        fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+                        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        startActivityForResult(takePictureIntent, ImageIntentHandler.REQUEST_CAPTURE);
 
-                        startActivityForResult(intent, CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
                     }
 
 
                 } else if (options[item].equals("Choose from Gallery")) {
-                    Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(intent, 2);
+                    mImagePair = new ImageIntentHandler.ImagePair(profile_imageView, null);
+                    Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    startActivityForResult(i, ImageIntentHandler.REQUEST_GALLERY);
                 } else if (options[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
@@ -287,9 +293,9 @@ public class ProfileFragment extends Fragment {
     }
 
 
-    public boolean checkPermissionForCamera(){
+    public boolean checkPermissionForCamera() {
         int result = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA);
-        if (result == PackageManager.PERMISSION_GRANTED){
+        if (result == PackageManager.PERMISSION_GRANTED) {
             return true;
         } else {
             return false;
@@ -297,11 +303,11 @@ public class ProfileFragment extends Fragment {
     }
 
 
-    public void requestPermissionForCamera(){
-        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.CAMERA)){
+    public void requestPermissionForCamera() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.CAMERA)) {
             Toast.makeText(getActivity(), "Camera permission needed. Please allow in App Settings for additional functionality.", Toast.LENGTH_LONG).show();
         } else {
-            ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.CAMERA},CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA}, CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
         }
     }
 
@@ -334,12 +340,16 @@ public class ProfileFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+
         if (resultCode == getActivity().RESULT_OK) {
-            if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
+            if (requestCode == ImageIntentHandler.REQUEST_CAPTURE) {
                 if (resultCode == Activity.RESULT_OK) {
                     // successfully captured the image
                     // display it in image view
-                    previewCapturedImage();
+                    previewCapturedImage(requestCode, resultCode, data);
 
 
                 } else if (resultCode == Activity.RESULT_CANCELED) {
@@ -349,7 +359,7 @@ public class ProfileFragment extends Fragment {
                     // failed to capture image
                     Toast.makeText(getActivity(), "Sorry! Failed to capture image", Toast.LENGTH_SHORT).show();
                 }
-            } else if (requestCode == 2) {
+            } else if (requestCode == ImageIntentHandler.REQUEST_GALLERY) {
                 Uri selectedImage = data.getData();
                 String[] filePath = {MediaStore.Images.Media.DATA};
                 Cursor c = getActivity().getContentResolver().query(selectedImage, filePath, null, null, null);
@@ -360,7 +370,13 @@ public class ProfileFragment extends Fragment {
                 c.close();
                 bitmap = (BitmapFactory.decodeFile(picturePath));
                 Log.w("...path...", picturePath + "");
-                profile_imageView.setImageBitmap(bitmap);
+
+                ImageIntentHandler intentHandler =
+                        new ImageIntentHandler(getActivity(), mImagePair)
+                                .folder("LocalLinkers")
+                                .sizeDp(200);
+                intentHandler.handleIntent(requestCode, resultCode, data);
+
                 encodeTobase64(bitmap);
 
             }
@@ -371,15 +387,21 @@ public class ProfileFragment extends Fragment {
     /**
      * Display image from a path to ImageView
      */
-    private void previewCapturedImage() {
+    private void previewCapturedImage(int requestCode, int resultCode, Intent data) {
         try {
 
-            // bimatp factory
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 8;
-            bitmap = BitmapFactory.decodeFile(fileUri.getPath(), options);
-
+            Uri selectedImage = data.getData();
+            String[] filePath = {MediaStore.Images.Media.DATA};
+            Cursor c = getActivity().getContentResolver().query(selectedImage, filePath, null, null, null);
+            c.moveToFirst();
+            int columnIndex = c.getColumnIndex(filePath[0]);
+            String picturePath = c.getString(columnIndex);
+            image_path1 = picturePath;
+            c.close();
+            bitmap = (BitmapFactory.decodeFile(picturePath));
             profile_imageView.setImageBitmap(bitmap);
+            Log.w("...path...", picturePath + "");
+
             encodeTobase64(bitmap);
             Uri tempUri = getImageUri(getActivity(), bitmap);
             Log.v("", "mImageCaptureUri" + tempUri);
@@ -392,8 +414,7 @@ public class ProfileFragment extends Fragment {
         }
     }
 
-    public Uri getImageUri(Context inContext, Bitmap inImage)
-    {
+    public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
         String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
@@ -486,8 +507,7 @@ public class ProfileFragment extends Fragment {
         @Override
         public void handleResponse(String response) {
             try {
-                if (response != null && response.length() != 0)
-                {
+                if (response != null && response.length() != 0) {
 
                     JSONObject jsonObject = new JSONObject(response);
                     String status = Utilities.getJSONStringValue(jsonObject, "Result", null);
@@ -555,8 +575,7 @@ public class ProfileFragment extends Fragment {
                         prefs.edit().putString(Constants.USER_NAME, first_name).commit();
                         prefs.edit().putString(Constants.ADDRESS, address).commit();
                         prefs.edit().putString(Constants.CITY, city).commit();
-                        if (bitmap != null)
-                        {
+                        if (bitmap != null) {
                             prefs.edit().putString(Constants.IMAGE, null).commit();
                             sharedPreferences();
 
@@ -577,27 +596,22 @@ public class ProfileFragment extends Fragment {
         }
     };
 
-    private void sharedPreferences()
-    {
+    private void sharedPreferences() {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("PRODUCT_PHOTO", encodeTobase64(bitmap));
         editor.commit();
     }
 
 
-
-    private void retrivesharedPreferences()
-    {
+    private void retrivesharedPreferences() {
         String photo = prefs.getString("PRODUCT_PHOTO", "photo");
         assert photo != null;
-        if(!photo.equals("photo"))
-        {
+        if (!photo.equals("photo")) {
             byte[] b = Base64.decode(photo, Base64.DEFAULT);
             InputStream is = new ByteArrayInputStream(b);
             bitmap = BitmapFactory.decodeStream(is);
             profile_imageView.setImageBitmap(bitmap);
-        }
-        else{
+        } else {
             profile_imageView.setImageResource(R.drawable.no_preview);
         }
     }
