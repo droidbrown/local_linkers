@@ -120,12 +120,9 @@ public class Home extends AppCompatActivity implements LocationListener {
         profile_name.setTypeface(Font);  //
         imageView1 = (CircleImageView) listHeaderView.findViewById(R.id.imageView1);
 
-        if(UserName != null)
-        {
+        if (UserName != null) {
             profile_name.setText(UserName);
-        }
-        else
-        {
+        } else {
             profile_name.setText("Guest");
         }
 
@@ -270,8 +267,7 @@ public class Home extends AppCompatActivity implements LocationListener {
     }
 
     @Override
-    public boolean onPrepareOptionsMenu(Menu menu)
-    {
+    public boolean onPrepareOptionsMenu(Menu menu) {
         UserName = prefs.getString(Constants.USER_NAME, null);
         Log.e("", "UserName" + UserName);
         Image = prefs.getString(Constants.IMAGE, null);
@@ -308,6 +304,7 @@ public class Home extends AppCompatActivity implements LocationListener {
         return super.onPrepareOptionsMenu(menu);
 
     }
+
     private void retrivesharedPreferences() {
         String photo = prefs.getString("PRODUCT_PHOTO", "photo");
         assert photo != null;
@@ -318,7 +315,6 @@ public class Home extends AppCompatActivity implements LocationListener {
             imageView1.setImageBitmap(bitmap);
         }
     }
-
 
 
     @Override
@@ -338,8 +334,7 @@ public class Home extends AppCompatActivity implements LocationListener {
     boolean doubleBackToExitPressedOnce = false;
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
 //        int count = getFragmentManager().getBackStackEntryCount();
 //
@@ -352,16 +347,14 @@ public class Home extends AppCompatActivity implements LocationListener {
 //            getFragmentManager().popBackStack();
 //        }
 
-        if (doubleBackToExitPressedOnce)
-        {
+        if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             return;
         }
         Home.fragment_position = 1;
         this.doubleBackToExitPressedOnce = true;
         Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-        new Handler().postDelayed(new Runnable()
-        {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 doubleBackToExitPressedOnce = false;
@@ -373,12 +366,8 @@ public class Home extends AppCompatActivity implements LocationListener {
     }
 
 
-
-
-
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         Log.d("hii", "............on resume working........... ");
 
 //        FragmentManager fm = getSupportFragmentManager();
@@ -394,8 +383,8 @@ public class Home extends AppCompatActivity implements LocationListener {
 //            }
 //        });
 
-            super.onResume();
-            //  invalidateOptionsMenu();
+        super.onResume();
+        //  invalidateOptionsMenu();
     }
 
 
@@ -405,10 +394,10 @@ public class Home extends AppCompatActivity implements LocationListener {
         latitude = location.getLatitude();
         prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(Constants.LATITUDE,""+ latitude);
+        editor.putString(Constants.LATITUDE, "" + latitude);
         editor.putString(Constants.LONGITUDE, "" + longitude);
         editor.commit();
-        Log.d("longitude,latitude", ""+latitude+","+longitude);
+        Log.d("longitude,latitude", "" + latitude + "," + longitude);
 
     }
 
@@ -426,4 +415,11 @@ public class Home extends AppCompatActivity implements LocationListener {
     public void onProviderDisabled(String provider) {
 
     }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        Fragment fragment = new ProfileFragment();
+//        fragment.onActivityResult(requestCode, resultCode, data);
+//    }
 }

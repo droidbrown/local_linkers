@@ -31,6 +31,7 @@ import com.hbs.hashbrownsys.locallinkers.http.CommonPostRequestThread;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpExceptionListener;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
+import com.hbs.hashbrownsys.locallinkers.listener.EmptyCart;
 import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
 
 import org.json.JSONObject;
@@ -38,7 +39,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListener {
+public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListener, EmptyCart {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     public final String tag = this.getClass().getSimpleName();
@@ -66,6 +67,7 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
     RelativeLayout show_points_layout;
     Boolean check_redeem_point = false;
     String category = "";
+    TextView emptyCart;
     IHttpExceptionListener exceptionListener = new IHttpExceptionListener() {
 
         @Override
@@ -209,6 +211,8 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
         btn_cmplt_purchase.setTypeface(Font);
         txt_available_points = (TextView) root_view.findViewById(R.id.txt_available_points);
         txt_available_points.setTypeface(Font);
+        emptyCart = (TextView) root_view.findViewById(R.id.empty_cart);
+        emptyCart.setTypeface(Font);
         btn_redeem_points = (Button) root_view.findViewById(R.id.btn_redeem_points);
         btn_redeem_points.setTypeface(Font);
         show_points_layout = (RelativeLayout) root_view.findViewById(R.id.show_points_layout);
@@ -217,15 +221,12 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
             @Override
             public void onClick(View v) {
                 if (cart_list.size() > 0) {
+                    emptyCart.setVisibility(View.GONE);
                     check_redeem_point = true;
-
-
                     progressDialog = ProgressDialog.show(getActivity(), "", "Checking. Please wait...", false);
                     Get_User_Points();
-
-
                 } else {
-
+                    emptyCart.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -298,6 +299,7 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
                 if (cart_list.size() > 0) {
                     Log.e("totalprice", ".........total price................." + total_value.getText().toString());
 
+                    emptyCart.setVisibility(View.GONE);
                     if (totalamount == Integer.parseInt(total)) {
                         reedem = "0";
                     } else {
@@ -314,7 +316,7 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
                     intent.putExtra("user_id", String.valueOf(user_id));
                     startActivityForResult(intent, 100);
                 } else {
-
+                    emptyCart.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -337,8 +339,8 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
                     Cart_model cart_model = new Cart_model();
                     database.deleteModal(cart_model);
                     prefs.edit().putString(Constants.REDEEM_POINT, null).commit();
-                    upload_data1="";
-
+                    upload_data1 = "";
+                    emptyCart.setVisibility(View.VISIBLE);
 
                 } else if (requiredValue.equalsIgnoreCase("Cancel")) {
                     showToast("There was some problem in processing your order. Please try again.");
@@ -395,7 +397,7 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
             database.open();
             cart_list = database.getAllProductModals();
             Log.d("cart_list", ".........cart_list.........." + cart_list.size());
-            adapter = new Cart_Adapter(getActivity(), total_value, cart_list, getResources());
+            adapter = new Cart_Adapter(getActivity(), total_value, cart_list, getResources(), this);
             list_view.setAdapter(adapter);
             list_view.setOnItemClickListener(this);
             showData();
@@ -411,6 +413,7 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
 
         if (cart_list.size() > 0) {
 
+            emptyCart.setVisibility(View.GONE);
             for (int i = 0; i < cart_list.size(); i++) {
                 fcost = cart_list.get(i).getAmount();
                 Log.e("", "cost" + cart_list.get(i).getAmount());
@@ -420,10 +423,16 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
                 total_prices = total_prices + Integer.parseInt(first);
                 totalamount = total_prices;
             }
-            total_value.setText("" + total_prices);
+
+            if (total_prices < 0)
+                total_value.setText("" + 0);
+            else
+                total_value.setText("" + total_prices);
 
         } else {
-
+            emptyCart.setVisibility(View.VISIBLE);
+            if (total_prices < 0)
+                total_value.setText("" + 0);
             total_value.setText("" + 0);
         }
 
@@ -432,18 +441,22 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
 
     @Override
     public void onResume() {
+        checkCartList();
+        super.onResume();
+    }
+
+    void checkCartList() {
         Get_User_Points();
         upload_data = "";
         database = new Cart_Database(getActivity());
         database.open();
         cart_list = database.getAllProductModals();
         Log.d("onresume", "cartlist onresume" + cart_list.size());
-        adapter = new Cart_Adapter(getActivity(), total_value, cart_list, getResources());
+        adapter = new Cart_Adapter(getActivity(), total_value, cart_list, getResources(), this);
         list_view.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
         showData();
-        super.onResume();
     }
 
     public void Get_User_Points() {
@@ -472,7 +485,11 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
         if (total_prices >= points) {
 
             re_total_prices = total_prices - points;
-            total_value.setText("" + re_total_prices);
+
+            if (re_total_prices < 0)
+                total_value.setText("" + 0);
+            else
+                total_value.setText("" + re_total_prices);
             txt_available_points.setText("Available Points: 0");
             prefs.edit().putString(Constants.REDEEM_POINT, String.valueOf(0)).commit();
         } else {
@@ -488,5 +505,10 @@ public class Cart_Tab extends Fragment implements AdapterView.OnItemClickListene
 
     public void showToast(String msg) {
         Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void notifiyifCartIsEmpty() {
+        checkCartList();
     }
 }

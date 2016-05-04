@@ -138,6 +138,7 @@
             android:drawableLeft="@drawable/ic_bsend"
             android:drawablePadding="5dp"
             android:text="10km"
+            android:visibility="gone"
             android:padding="5dp"
             android:singleLine="true"
             android:textColor="#2a2a2a"

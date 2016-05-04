@@ -60,6 +60,7 @@ public class Constants
     public static final String LAST_INDEX="index";
     public static final String LONGITUDE="longi";
     public static final String LATITUDE="lati";
+    public static final String MOVE_TO_CART="move_to_cart";
 
     public static final String PARAMETER_SEP = "&";
     public static final String PARAMETER_EQUALS = "=";

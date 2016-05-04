@@ -24,12 +24,15 @@ import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
 import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
 import com.hbs.hashbrownsys.locallinkers.model.Image_Coupon_List;
+import com.hbs.hashbrownsys.locallinkers.model.MessageEvent;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+
+import de.greenrobot.event.EventBus;
 
 public class Shopping_Details extends AppCompatActivity {
     Typeface Font;
@@ -148,6 +151,9 @@ public class Shopping_Details extends AppCompatActivity {
                     int price = Integer.parseInt(first);
                     int actual_price = item * price;
                     Log.e("", "actual_price" + actual_price);
+
+                    EventBus.getDefault().postSticky(new MessageEvent(Constants.MOVE_TO_CART));
+
                     Log.e("", "item" + item);
                     Cart_model modal = new Cart_model();
                     Cart_Database datasource = new Cart_Database(getApplication());
@@ -389,6 +395,7 @@ public class Shopping_Details extends AppCompatActivity {
                 Cart_model productDetails = datasource.createproductModal(modal);
                 datasource.close();
                 Toast.makeText(getApplicationContext(), "Data added Sucessfully", Toast.LENGTH_SHORT).show();
+                EventBus.getDefault().postSticky(new MessageEvent(Constants.MOVE_TO_CART));
                 onBackPressed();
             }
         }

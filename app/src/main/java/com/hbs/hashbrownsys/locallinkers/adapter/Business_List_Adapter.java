@@ -109,7 +109,7 @@ public class Business_List_Adapter extends BaseAdapter
             Log.d("", "........notification_list_data..........." + array_list.size());
             viewHolder.txt_title.setText(tempValues.getBusinessName());
             viewHolder.txt_des.setText(tempValues.getDescription());
-            viewHolder.txt_name.setText(tempValues.getBusinessName());
+            viewHolder.txt_name.setText(tempValues.getContactPerson());
             viewHolder.txt_phone.setText(tempValues.getPhoneNumber1());
             viewHolder.txt_address.setText(tempValues.getAddress());
             viewHolder.txt_distance.setText(tempValues.getDistance() + "km");

@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,6 +64,8 @@ public class Coupon_Tab extends Fragment {
     int startingPageIndex = 0;
     int Numboftabs;
     LinearLayout linear_layout;
+
+    boolean flag_loading;
     String Latitude = "0.0", Longitude = "0.0";
 
     public Coupon_Tab() {
@@ -92,6 +95,7 @@ public class Coupon_Tab extends Fragment {
         pager = (ViewPager) root_view.findViewById(R.id.pager);
         tabs = (Sub_Coupon_SlidingTabLayout) root_view.findViewById(R.id.tabs);
         linear_layout = (LinearLayout) root_view.findViewById(R.id.linear_layout);
+
         // Adding button to listview at footer
         Button btnLoadMore = new Button(getActivity());
         btnLoadMore.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.white));
@@ -99,12 +103,62 @@ public class Coupon_Tab extends Fragment {
         btnLoadMore.setText("Load More");
 
 
-        list_view.addFooterView(btnLoadMore);
+//        list_view.addFooterView(btnLoadMore);
         btnLoadMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Show_Coupon_List();
+            }
+        });
+
+
+        adapter = new Coupon_list_Adapter(getActivity(), arrayList, getResources());
+        list_view.setAdapter(adapter);
+
+        list_view.setOnScrollListener(new AbsListView.OnScrollListener() {
+
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+
+            }
+
+            public void onScroll(AbsListView view, int firstVisibleItem,
+                                 int visibleItemCount, int totalItemCount) {
+
+                if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0) {
+                    if (flag_loading == false) {
+                        flag_loading = true;
+                        Show_Coupon_List();
+                    }
+                }
+            }
+        });
+
+
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Coupon_list_model selected = (Coupon_list_model) arrayList.get(position);
+                Intent intent = new Intent(getActivity(), Coupon_Detail.class);
+                intent.putExtra("address", selected.getAddress());
+                intent.putExtra("terms", selected.getTermsAndCondition());
+                intent.putExtra("updated_date", selected.getUpdatedDate());
+                intent.putExtra("actual_price", selected.getActualPrice());
+                intent.putExtra("sale_price", selected.getSalePrice());
+                intent.putExtra("coupon_price", selected.getCouponPrice());
+                intent.putExtra("title", selected.getTitle());
+                intent.putExtra("desc", selected.getOfferDetails());
+                intent.putExtra("CouponId", selected.getCouponId());
+                intent.putExtra("button_updated_text", "Buy Now");
+                intent.putExtra("Latitude", selected.getLatitude());
+                intent.putExtra("Longitude", selected.getLongitude());
+                intent.putExtra("paytomarchant", selected.getPayToMerchant());
+                intent.putExtra("IsAsPerBill", selected.getAsPerBill());
+                intent.putExtra("Type", "Coupons");
+                intent.putExtra("BusinessName", selected.getBusinessName());
+                startActivity(intent);
+
             }
         });
 
@@ -165,7 +219,6 @@ public class Coupon_Tab extends Fragment {
         public void handleResponse(String response) {
             try {
                 if (response != null) {
-                    arrayList.clear();
                     //  progressDialog.dismiss();
                     JSONObject obj = new JSONObject(response);
                     Log.e("", "obj" + obj);  //
@@ -174,13 +227,16 @@ public class Coupon_Tab extends Fragment {
 
                     if (Result.equals("0")) {
                         handler.sendEmptyMessage(0);
+
+                        flag_loading = true;
                     } else if (Result.equals("1")) {
                         handler.sendEmptyMessage(1);
+                        flag_loading = false;
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Coupons");
                         Log.e("", "Lst_Coupons" + jsonArray.length());
                         for (int i = 0; i < jsonArray.length(); i++) {
-                            Coupon_list_model modal = new Coupon_list_model();
+                            final Coupon_list_model modal = new Coupon_list_model();
                             JSONObject almonObject = jsonArray.getJSONObject(i);
                             modal.setActualPrice(almonObject.getString("ActualPrice"));
                             modal.setAddress(almonObject.getString("Address"));
@@ -209,10 +265,16 @@ public class Coupon_Tab extends Fragment {
                             modal.setUpdatedDate(almonObject.getString("UpdatedDate"));
                             modal.setImage(almonObject.getString("Image"));
                             modal.setAsPerBill(almonObject.getString("IsAsPerBill"));
-                            arrayList.add(modal);
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                   arrayList.add(modal);
+                                }
+                            });
                         }
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
+                        flag_loading = true;
                     }
 
 
@@ -249,40 +311,10 @@ public class Coupon_Tab extends Fragment {
                         if (progressDialog != null && progressDialog.isShowing() == true)
                             progressDialog.dismiss();
 
-                        Log.e("working", "...........working.........." + arrayList.size());
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                adapter = new Coupon_list_Adapter(getActivity(), arrayList, getResources());
-                                list_view.setAdapter(adapter);
                                 adapter.notifyDataSetChanged();
-                            }
-                        });
-
-
-                        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                                Coupon_list_model selected = (Coupon_list_model) arrayList.get(position);
-                                Intent intent = new Intent(getActivity(), Coupon_Detail.class);
-                                intent.putExtra("address", selected.getAddress());
-                                intent.putExtra("terms", selected.getTermsAndCondition());
-                                intent.putExtra("updated_date", selected.getUpdatedDate());
-                                intent.putExtra("actual_price", selected.getActualPrice());
-                                intent.putExtra("sale_price", selected.getSalePrice());
-                                intent.putExtra("coupon_price", selected.getCouponPrice());
-                                intent.putExtra("title", selected.getTitle());
-                                intent.putExtra("desc", selected.getOfferDetails());
-                                intent.putExtra("CouponId", selected.getCouponId());
-                                intent.putExtra("button_updated_text", "Buy Now");
-                                intent.putExtra("Latitude", selected.getLatitude());
-                                intent.putExtra("Longitude", selected.getLongitude());
-                                intent.putExtra("paytomarchant", selected.getPayToMerchant());
-                                intent.putExtra("IsAsPerBill", selected.getAsPerBill());
-                                intent.putExtra("Type", "Coupons");
-                                intent.putExtra("BusinessName", selected.getBusinessName());
-                                startActivity(intent);
-
                             }
                         });
 

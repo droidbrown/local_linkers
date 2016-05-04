@@ -26,10 +26,13 @@ import com.hbs.hashbrownsys.locallinkers.customtab.SlidingTabLayout;
 import com.hbs.hashbrownsys.locallinkers.customtab.ViewPagerAdapter;
 import com.hbs.hashbrownsys.locallinkers.database.Cart_Database;
 import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
+import com.hbs.hashbrownsys.locallinkers.model.MessageEvent;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import de.greenrobot.event.EventBus;
 
 public class HomeFragment extends Fragment {
     public static String coupons;
@@ -202,12 +205,29 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-
+    @Override
+    public void onStop() {
+        if (EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
+        super.onStop();
+    }
 
     @Override
     public void onResume() {
         super.onResume();
 
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().registerSticky(this);
+        }
+    }
+
+    public void onEventMainThread(MessageEvent event) {
+        if (event.message.equals(Constants.MOVE_TO_CART)) {
+            EventBus.getDefault().removeAllStickyEvents();
+
+            pager.setCurrentItem(4);
+        }
     }
 
 

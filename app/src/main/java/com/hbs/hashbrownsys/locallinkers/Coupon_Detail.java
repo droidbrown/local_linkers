@@ -27,6 +27,7 @@ import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
 import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
 import com.hbs.hashbrownsys.locallinkers.model.Image_Coupon_List;
+import com.hbs.hashbrownsys.locallinkers.model.MessageEvent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,6 +35,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import de.greenrobot.event.EventBus;
 
 public class Coupon_Detail extends AppCompatActivity {
     ImageView back_image, map_image;
@@ -135,21 +138,18 @@ public class Coupon_Detail extends AppCompatActivity {
 
         txt_description.setText(Html.fromHtml(desc, null, null));
         txt_header_name.setText(title);
-        txt_coupon_price_value.setText(coupon_price);
-        txt_value_price.setText(actual_price);
-        txt_offer_price_value.setText(sale_price);
+        txt_coupon_price_value.setText("Rs. "+(int) Float.parseFloat(coupon_price));
+        txt_value_price.setText("Rs. "+(int) Float.parseFloat(actual_price));
+        txt_offer_price_value.setText("Rs. "+(int) Float.parseFloat(sale_price));
         txt_address.setText(address);
         txt_title.setText(BusinessName);
 //        btn_buy_now.setText(button_updated_text);
         checkCouponValidation();
 
-        if (IsAsPerBill.equalsIgnoreCase("true")) {
+        if (IsAsPerBill.equalsIgnoreCase("true"))
             txt_merchant_price.setText("Pay to Merchant As per Bill");
-
-        } else {
-
-            txt_merchant_price.setText("Pay to Merchant " + payTomarchant);
-        }
+        else
+            txt_merchant_price.setText("Pay to Merchant Rs. " + (int) Float.parseFloat(payTomarchant));
 
 
         WebView webView = (WebView) findViewById(R.id.webView);
@@ -175,7 +175,6 @@ public class Coupon_Detail extends AppCompatActivity {
                 Intent intent = new Intent(Coupon_Detail.this, Terms_Conditions.class);
                 intent.putExtra("terms", terms);
                 startActivity(intent);
-
             }
         });
 
@@ -190,6 +189,8 @@ public class Coupon_Detail extends AppCompatActivity {
 
                                                    if (button_updated_text.equals("Update")) {
                                                        Toast.makeText(getApplicationContext(), "Data Updated Sucessfully", Toast.LENGTH_SHORT).show();
+
+                                                       EventBus.getDefault().postSticky(new MessageEvent(Constants.MOVE_TO_CART));
                                                        onBackPressed();
                                                    } else {
                                                        if (cart_list.size() == 0) {
@@ -214,6 +215,7 @@ public class Coupon_Detail extends AppCompatActivity {
                                                            datasource.open();
                                                            Cart_model productDetails = datasource.createproductModal(modal);
                                                            datasource.close();
+                                                           EventBus.getDefault().postSticky(new MessageEvent(Constants.MOVE_TO_CART));
                                                            Toast.makeText(getApplicationContext(), "Your item has been added", Toast.LENGTH_SHORT).show();
                                                            onBackPressed();
 
@@ -231,6 +233,8 @@ public class Coupon_Detail extends AppCompatActivity {
 
                                                            if (isproduct_exits == true) {
                                                                Toast.makeText(getApplicationContext(), "Coupon Already added to cart", Toast.LENGTH_LONG).show();
+
+                                                               EventBus.getDefault().postSticky(new MessageEvent(Constants.MOVE_TO_CART));
                                                                onBackPressed();
 
                                                            } else {
@@ -256,6 +260,7 @@ public class Coupon_Detail extends AppCompatActivity {
                                                                Cart_model productDetails = datasource.createproductModal(modal);
                                                                datasource.close();
                                                                Toast.makeText(getApplicationContext(), "Your item has been added", Toast.LENGTH_SHORT).show();
+                                                               EventBus.getDefault().postSticky(new MessageEvent(Constants.MOVE_TO_CART));
                                                                onBackPressed();
 
                                                            }

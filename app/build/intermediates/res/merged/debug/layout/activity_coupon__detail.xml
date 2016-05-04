@@ -147,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="Offer Price"
+                        android:text="You Save"
                         android:textColor="#2c2c2c"
                         android:textSize="12sp" />
 

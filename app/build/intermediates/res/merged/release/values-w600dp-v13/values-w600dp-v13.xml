@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_search_view_text_min_width">192dip</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="btn_signin">22sp</dimen>
+    <dimen name="ed_phone_text">20dp</dimen>
+    <dimen name="forget_txt">18sp</dimen>
+    <dimen name="logo_from_top">150dp</dimen>
+    <dimen name="pading_size">10sp</dimen>
+    <dimen name="slider_image">200sp</dimen>
+    <dimen name="tab_icon">30sp</dimen>
+    <dimen name="tab_text">15sp</dimen>
+    <integer name="abc_max_action_buttons">5</integer>
+</resources>

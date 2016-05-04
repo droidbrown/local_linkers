@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,6 +60,7 @@ public class Business_Fragment extends Fragment
     int mParam1;
     String Latitude, Longitude;
     Button btnLoadMore;
+    boolean flag_loading;
 
     public Business_Fragment()
     {
@@ -98,8 +100,57 @@ public class Business_Fragment extends Fragment
             mParam1 = getArguments().getInt(ARG_PARAM1);
         }
 
-        Log.e("mParam1", "................mParam1.........." + mParam1);
-//        footerListview();
+        Log.e("working", "...........working.........." + arrayList.size());
+        adapter = new Business_List_Adapter(getActivity(), arrayList, getResources());
+        list_view.setAdapter(adapter);
+
+        list_view.setOnScrollListener(new AbsListView.OnScrollListener() {
+
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+
+            }
+
+            public void onScroll(AbsListView view, int firstVisibleItem,
+                                 int visibleItemCount, int totalItemCount) {
+
+                if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0) {
+                    if (flag_loading == false) {
+                        flag_loading = true;
+                        Show_Business_List();
+                    }
+                }
+            }
+        });
+
+
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                Business_List_model tempValues = (Business_List_model) arrayList.get(position);
+                // image_arrayList = tempValues.getListFriendsModalArrayList();
+                Bundle bundleObject = new Bundle();
+                bundleObject.putSerializable("image_arrayList", image_arrayList);
+                Intent intent = new Intent(getActivity(), Business_Details.class);
+                intent.putExtra("business_name", tempValues.getBusinessName());
+                intent.putExtra("phone", tempValues.getPhoneNumber1());
+                intent.putExtra("business_id", tempValues.getBusinessId());
+                intent.putExtra("desc", tempValues.getDescription());
+                intent.putExtra("contact_person", tempValues.getContactPerson());
+                intent.putExtra("address", tempValues.getAddress());
+                intent.putExtra("distance",tempValues.getDistance());
+                intent.putExtra("button_title",tempValues.getButtonTitle());
+                intent.putExtra("Latitude",tempValues.getLatitude());
+                intent.putExtra("Longitude",tempValues.getLongitude());
+                intent.putExtra("Image",tempValues.getImage());
+                intent.putExtra("Image",tempValues.getImage());
+                intent.putExtra("Subscription",tempValues.getSubscription());
+                startActivity(intent);
+                Sub_Category.Current_tab = mParam1;
+            }
+        });
 
         return root_view;
     }
@@ -111,7 +162,7 @@ public class Business_Fragment extends Fragment
         btnLoadMore.setText("Load More");
 
 
-        list_view.addFooterView(btnLoadMore);
+//        list_view.addFooterView(btnLoadMore);
         btnLoadMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -191,8 +242,11 @@ public class Business_Fragment extends Fragment
                     if (Result.equals("0"))
                     {
                         handler.sendEmptyMessage(0);
+
+                        flag_loading = true;
                     } else if (Result.equals("1")) {
                         handler.sendEmptyMessage(1);
+                        flag_loading = false;
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Business");
                         Log.e("", "Lst_Business" + jsonArray.length());
@@ -228,6 +282,7 @@ public class Business_Fragment extends Fragment
                         }
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
+                        flag_loading = true;
                     }
 
 
@@ -264,41 +319,14 @@ public class Business_Fragment extends Fragment
                         if (progressDialog != null && progressDialog.isShowing() == true)
                             progressDialog.dismiss();
 
-                        Log.e("working", "...........working.........." + arrayList.size());
-                        adapter = new Business_List_Adapter(getActivity(), arrayList, getResources());
-                        list_view.setAdapter(adapter);
-                        if(arrayList.size()>6){
-                            footerListview();
-                        }else{
 
-                        }
-                        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                        {
+                        getActivity().runOnUiThread(new Runnable() {
                             @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-                            {
-                                Business_List_model tempValues = (Business_List_model) arrayList.get(position);
-                                // image_arrayList = tempValues.getListFriendsModalArrayList();
-                                Bundle bundleObject = new Bundle();
-                                bundleObject.putSerializable("image_arrayList", image_arrayList);
-                                Intent intent = new Intent(getActivity(), Business_Details.class);
-                                intent.putExtra("business_name", tempValues.getBusinessName());
-                                intent.putExtra("phone", tempValues.getPhoneNumber1());
-                                intent.putExtra("business_id", tempValues.getBusinessId());
-                                intent.putExtra("desc", tempValues.getDescription());
-                                intent.putExtra("contact_person", tempValues.getContactPerson());
-                                intent.putExtra("address", tempValues.getAddress());
-                                intent.putExtra("distance",tempValues.getDistance());
-                                intent.putExtra("button_title",tempValues.getButtonTitle());
-                                intent.putExtra("Latitude",tempValues.getLatitude());
-                                intent.putExtra("Longitude",tempValues.getLongitude());
-                                intent.putExtra("Image",tempValues.getImage());
-                                intent.putExtra("Image",tempValues.getImage());
-                                intent.putExtra("Subscription",tempValues.getSubscription());
-                                startActivity(intent);
-                                Sub_Category.Current_tab = mParam1;
+                            public void run() {
+                                adapter.notifyDataSetChanged();
                             }
                         });
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

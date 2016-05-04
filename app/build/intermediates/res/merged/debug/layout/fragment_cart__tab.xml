@@ -84,6 +84,18 @@
 
     </ListView>
 
+    <TextView
+        android:id="@+id/empty_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="The cart is empty. Thank you."
+        android:visibility="gone"
+        android:textColor="#841633"
+        android:textSize="15sp" />
+
+
+
 
     <View
         android:id="@+id/view1"
@@ -173,7 +185,6 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
                     android:layout_toLeftOf="@+id/btn_cmplt_purchase"
-                    android:text="60000"
                     android:textColor="#841633"
                     android:textSize="15sp" />
 
