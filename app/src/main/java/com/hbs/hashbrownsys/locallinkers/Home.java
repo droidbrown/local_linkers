@@ -5,13 +5,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.location.Location;
-import android.location.LocationListener;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -19,7 +21,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -33,6 +34,11 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.hbs.hashbrownsys.locallinkers.Utility.MarshMallowPermission;
 import com.hbs.hashbrownsys.locallinkers.adapter.CustomAdapter;
 import com.hbs.hashbrownsys.locallinkers.fragment.Change_City;
 import com.hbs.hashbrownsys.locallinkers.fragment.HomeFragment;
@@ -43,14 +49,13 @@ import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Home extends AppCompatActivity implements LocationListener {
+public class Home extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private CharSequence mTitle;
@@ -77,10 +82,23 @@ public class Home extends AppCompatActivity implements LocationListener {
     TextView profile_name;
     Bitmap bitmap;
 
+    private MarshMallowPermission marshMallowPermission;
+
+
+    private static final String TAG = "app permission";
+
+    Location mLastLocation;
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
+    String lat, lon;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        marshMallowPermission = new MarshMallowPermission(Home.this);
+        LocationMethod();
         topToolBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(topToolBar);
         topToolBar.setNavigationIcon(R.drawable.menu);
@@ -96,10 +114,10 @@ public class Home extends AppCompatActivity implements LocationListener {
 
         prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
         UserName = prefs.getString(Constants.USER_NAME, null);
-        Log.e("", "UserName" + UserName);
+        Log.e("", "UserName>>" + UserName);
 
         Image = prefs.getString(Constants.IMAGE, null);
-        Log.e("", "Image" + Image);
+        Log.e("", "Imag>>e" + Image);
 
         search = (SearchView) topToolBar.findViewById(R.id.search);
         search.setVisibility(View.GONE);
@@ -130,7 +148,8 @@ public class Home extends AppCompatActivity implements LocationListener {
 
         if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null")) {
             try {
-                UrlImageViewHelper.setUrlDrawable(imageView1, "http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop");
+
+                UrlImageViewHelper.setUrlDrawable(imageView1, "http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop");
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
@@ -147,10 +166,12 @@ public class Home extends AppCompatActivity implements LocationListener {
         listViewItems.add(new ItemObject(City_Name, R.drawable.ic_curentlocation));
         listViewItems.add(new ItemObject("Logout", R.drawable.ic_logout));
 
-
+/*setting adapter on navigation drawer*/
         adapter = new CustomAdapter(this, listViewItems);
         mDrawerList.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
+        /*setting drawer*/
         mDrawerToggle = new ActionBarDrawerToggle(Home.this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
             public void onDrawerClosed(View view) {
@@ -191,6 +212,16 @@ public class Home extends AppCompatActivity implements LocationListener {
         });
 
 
+    }
+
+
+    void LocationMethod() {
+        if (!marshMallowPermission.checkPermissionForLocation()) {
+            marshMallowPermission.requestPermissionForLocation();
+        } else {
+            buildGoogleApiClient();
+
+        }
     }
 
 
@@ -287,8 +318,8 @@ public class Home extends AppCompatActivity implements LocationListener {
                 DisplayImageOptions options = new DisplayImageOptions.Builder()
                         .cacheInMemory(true)
                         .build();
-
-                imageLoader.displayImage("http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
+                System.out.println("image profile custom " + Image);
+                imageLoader.displayImage("http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
                         imageView1, options);
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
@@ -307,14 +338,20 @@ public class Home extends AppCompatActivity implements LocationListener {
         listViewItems.add(new ItemObject("My Orders", R.drawable.ic_myorder));
         listViewItems.add(new ItemObject(City_Name, R.drawable.ic_curentlocation));
         listViewItems.add(new ItemObject("Logout", R.drawable.ic_logout));
+
+//        mDrawerList.setAdapter(new CustomAdapter(this, listViewItems));
+//        adapter.notifyDataSetChanged();
+
+        adapter = new CustomAdapter(this, listViewItems);
+        mDrawerList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-        mDrawerList.setAdapter(new CustomAdapter(this, listViewItems));
         return super.onPrepareOptionsMenu(menu);
 
     }
 
     private void retrivesharedPreferences() {
         String photo = prefs.getString("PRODUCT_PHOTO", "photo");
+        System.out.println("photo : " + photo);
         assert photo != null;
         if (!photo.equals("photo")) {
             ImageLoader imageLoader = ImageLoader.getInstance();
@@ -322,7 +359,7 @@ public class Home extends AppCompatActivity implements LocationListener {
                     .cacheInMemory(true)
                     .build();
 
-            imageLoader.displayImage("http://locallinkers.azurewebsites.net/admin/categoryimages/" + photo,
+            imageLoader.displayImage("http://www.locallinkers.com/admin/categoryimages/" + photo,
                     imageView1, options);
         }
     }
@@ -412,20 +449,82 @@ public class Home extends AppCompatActivity implements LocationListener {
 
     }
 
+
     @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
+    public void onConnected(@Nullable Bundle bundle) {
+        callMethodToGetLocation();
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
 
     }
 
     @Override
-    public void onProviderEnabled(String provider) {
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        buildGoogleApiClient();
+    }
+
+    synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+
 
     }
 
     @Override
-    public void onProviderDisabled(String provider) {
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mGoogleApiClient.disconnect();
+    }
+
+
+    private void callMethodToGetLocation() {
+        mLocationRequest = LocationRequest.create();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(100); // Update location every second
+
+
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+
+
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+
+
+        if (mLastLocation != null) {
+            lat = String.valueOf(mLastLocation.getLatitude());
+            lon = String.valueOf(mLastLocation.getLongitude());
+            prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString(Constants.LATITUDE, "" + lat);
+            editor.putString(Constants.LONGITUDE, "" + lon);
+            editor.commit();
+            Log.d("lati,longi custom", "" + lat + "," + lon);
+        }
+
 
     }
+
 
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {

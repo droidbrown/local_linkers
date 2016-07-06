@@ -125,7 +125,7 @@ public class Product_List_Adapter extends BaseAdapter
 //                Log.d("product_img",".................imag................"+imahe_path);
 //            }
 
-            UrlImageViewHelper.setUrlDrawable(viewHolder.img, "http://locallinkers.azurewebsites.net/admin/couponimages/" + imahe_path );
+            UrlImageViewHelper.setUrlDrawable(viewHolder.img, "http://www.locallinkers.com/admin/couponimages/" + imahe_path );
             
             if(position % 2 == 0)
                 view.setTag(viewHolder);

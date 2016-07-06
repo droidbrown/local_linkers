@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/res/merged/debug/values-w480dp-v13/values-w480dp-v13.xml",
+        "outputFile": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-v13\\values-w480dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-w480dp/values-w480dp.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-w480dp\\values-w480dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values-w480dp/values-w480dp.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-w480dp\\values-w480dp.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -49,13 +49,13 @@
                     "endOffset": 226
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 269,
+                        "startOffset": 278,
                         "endColumn": 41,
-                        "endOffset": 306
+                        "endOffset": 315
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 271
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 182,
+                        "startOffset": 189,
                         "endColumn": 44,
-                        "endOffset": 222
+                        "endOffset": 229
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 313
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 227,
+                        "startOffset": 235,
                         "endColumn": 41,
-                        "endOffset": 264
+                        "endOffset": 272
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 359
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 136,
+                        "startOffset": 142,
                         "endColumn": 45,
-                        "endOffset": 177
+                        "endOffset": 183
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 402
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 419,
+                        "startOffset": 434,
                         "endColumn": 42,
-                        "endOffset": 457
+                        "endOffset": 472
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 447
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 490,
+                        "startOffset": 509,
                         "endColumn": 44,
-                        "endOffset": 530
+                        "endOffset": 549
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 487
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 339,
+                        "startOffset": 352,
                         "endColumn": 39,
-                        "endOffset": 374
+                        "endOffset": 387
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 527
                 },
                 "from": {
-                    "file": "/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/src/main/res/values-w480dp/dimens.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w480dp\\dimens.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 379,
+                        "startOffset": 393,
                         "endColumn": 39,
-                        "endOffset": 414
+                        "endOffset": 428
                     }
                 }
             }

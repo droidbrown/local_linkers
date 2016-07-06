@@ -195,7 +195,7 @@ public class Coupon_Detail extends AppCompatActivity {
                                                    } else {
                                                        if (cart_list.size() == 0) {
                                                            Cart_model modal = new Cart_model();
-                                                           url = "http://locallinkers.azurewebsites.net/admin/couponimages/";
+                                                           url = "http://www.locallinkers.com/admin/couponimages/";
                                                            String qty = "1";
                                                            modal.setProduct_name(title);
                                                            modal.setPrice(coupon_price);
@@ -239,7 +239,7 @@ public class Coupon_Detail extends AppCompatActivity {
 
                                                            } else {
                                                                Cart_model modal = new Cart_model();
-                                                               url = "http://locallinkers.azurewebsites.net/admin/couponimages/";
+                                                               url = "http://www.locallinkers.com/admin/couponimages/";
                                                                String qty = "1";
                                                                modal.setProduct_name(title);
                                                                modal.setPrice(coupon_price);

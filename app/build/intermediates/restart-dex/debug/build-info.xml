@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="23"
-    density="xxhdpi"
-    format="7"
-    timestamp="1462345873931940000"
-    verifier="COMPATIBLE" >
+    abi="armeabi,armeabi-v7a"
+    api-level="22"
+    density="xhdpi"
+    format="8"
+    timestamp="74414481406436"
+    token="1004932919892099727"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="4422" />
+        duration="8676" />
     <task
         name="instant-run-dex"
-        duration="3961" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="217" />
+        duration="11201" />
     <task
         name="verifier"
-        duration="82" />
+        duration="4124" />
 
     <artifact
-        location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\hbslenovo-3\Desktop\LocalLinker\local_linkers\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="1462345060578349000" >
-        <artifact
-            location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
     <build
-        timestamp="1462345873931940000"
-        verifier="COMPATIBLE" >
+        timestamp="74414481406436"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/prateekarora/Documents/HashBrown/LocalLinkersGit/local_linkers/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
+            location="C:\Users\hbslenovo-3\Desktop\LocalLinker\local_linkers\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
     </build>
 
 </instant-run>

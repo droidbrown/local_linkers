@@ -161,7 +161,7 @@ public class Home_Detial extends AppCompatActivity
             public void onClick(View v)
             {
                 Cart_model modal = new Cart_model();
-                url = "http://locallinkers.azurewebsites.net/admin/couponimages/";
+                url = "http://www.locallinkers.com/admin/couponimages/";
                 String qty = "1";
                 modal.setProduct_name(title);
                 modal.setPrice(sale_price);

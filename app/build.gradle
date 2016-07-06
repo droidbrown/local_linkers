@@ -63,6 +63,7 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile files('libs/apache-mime4j-0.6.jar')
     compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.google.android.gms:play-services:9.0.2'
     compile 'com.google.android.gms:play-services-gcm:8.4.0'
     compile 'com.github.delight-im:Android-SimpleLocation:v1.0.1'
     compile files('libs/rollbar-android-0.1.2-dev.jar')

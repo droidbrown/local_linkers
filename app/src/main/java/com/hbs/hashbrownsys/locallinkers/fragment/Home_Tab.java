@@ -380,8 +380,13 @@ public class Home_Tab extends Fragment {
         city_id = prefs.getInt("city_id", 0);
         Log.d("city_id", "..........city_id.........." + city_id);
         try {
-            Latitude = Double.parseDouble(prefs.getString(Constants.LATITUDE, ""));
-            Longitude = Double.parseDouble(prefs.getString(Constants.LONGITUDE, ""));
+            String str_lat=prefs.getString(Constants.LATITUDE, "");
+            String str_longi=prefs.getString(Constants.LONGITUDE, "");
+            System.out.println("in home tab "+str_lat+ " "+str_longi);
+
+
+            Latitude = Double.parseDouble(str_lat);
+            Longitude = Double.parseDouble(str_longi);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -433,11 +438,13 @@ public class Home_Tab extends Fragment {
             Image_Coupon_List Object = image_arrayList.get(k);
             Log.d("img", image_arrayList.get(k).getC_Image() + "");
             Images[k] = Object.getC_Image();
+            System.out.println("image link to open "+ Images[k].toString());
         }
         String business_url = "Slider_url";
         mAdapter = new PlaceSlidesFragmentAdapter(business_url, Images, getChildFragmentManager());
-        mAdapter.notifyDataSetChanged();
+
         myPager.setAdapter(mAdapter);
+        mAdapter.notifyDataSetChanged();
     }
 
 

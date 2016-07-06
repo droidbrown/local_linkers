@@ -86,12 +86,12 @@ public class My_Oder_Detail extends AppCompatActivity
 
         if(Type.equals("Coupon"))
         {
-            UrlImageViewHelper.setUrlDrawable(product_image, "http://locallinkers.azurewebsites.net/admin/couponimages/" + image);
+            UrlImageViewHelper.setUrlDrawable(product_image, "http://www.locallinkers.com/admin/couponimages/" + image);
 
         }
         else  if(Type.equals("Product"))
         {
-            UrlImageViewHelper.setUrlDrawable(product_image, "http://locallinkers.azurewebsites.net/admin/couponimages/" + image);
+            UrlImageViewHelper.setUrlDrawable(product_image, "http://www.locallinkers.com/admin/couponimages/" + image);
 
         }
         else

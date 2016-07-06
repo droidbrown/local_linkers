@@ -175,7 +175,7 @@ public class ProfileFragment extends Fragment {
                         .cacheInMemory(true)
                         .build();
 
-                imageLoader.displayImage("http://locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
+                imageLoader.displayImage("http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
                         profile_imageView, options);
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
@@ -614,7 +614,7 @@ public class ProfileFragment extends Fragment {
                     .cacheInMemory(true)
                     .build();
 
-            imageLoader.displayImage("http://locallinkers.com/UserImages/" + photo + "?width=120&mode=crop",
+            imageLoader.displayImage("http://www.locallinkers.com/UserImages/" + photo + "?width=120&mode=crop",
                     profile_imageView, options);
 
 

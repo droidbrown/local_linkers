@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.ItemObject;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.List;
 
@@ -57,7 +59,7 @@ public class CustomAdapter extends BaseAdapter
             listViewHolder = new ViewHolder();
             convertView = lInflater.inflate(R.layout.drawer, parent, false);
             listViewHolder.textInListView = (TextView) convertView.findViewById(R.id.textView);
-            listViewHolder.textInListView.setTypeface(Font);
+           listViewHolder.textInListView.setTypeface(Font);
             listViewHolder.imageInListView = (ImageView) convertView.findViewById(R.id.imageView);
             convertView.setTag(listViewHolder);
         }

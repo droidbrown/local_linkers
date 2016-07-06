@@ -157,7 +157,7 @@ public class DemoActivity extends Activity {
      */
     class ImageUploadTask extends AsyncTask<Void, Void, String>
     {
-        private String webAddressToPost = "http://locallinkers.com/api/User/EditProfile";
+        private String webAddressToPost = "http://www.locallinkers.com/api/User/EditProfile";
 
         // private ProgressDialog dialog;
         private ProgressDialog dialog = new ProgressDialog(DemoActivity.this);

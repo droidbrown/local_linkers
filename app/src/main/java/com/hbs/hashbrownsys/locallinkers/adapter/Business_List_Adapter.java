@@ -116,7 +116,7 @@ public class Business_List_Adapter extends BaseAdapter
 
             image_path = tempValues.getImage();
             Log.e("image_path","...................."+image_path);
-            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://locallinkers.azurewebsites.net/admin/businessimages/" + image_path + "?width=120&height=120&mode=crop");
+            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/businessimages/" + image_path + "?width=120&height=120&mode=crop");
 
              business_name = tempValues.getBusinessName();
              phone = tempValues.getPhoneNumber1();

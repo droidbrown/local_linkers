@@ -7,7 +7,7 @@ public class Constants
 {
     public static final String LOCAL_LINKER_APP_PREFERENCES = "app_preferences";
 
-    public static final String URL = "http://locallinkers.azurewebsites.net/api/";
+    public static final String URL = "http://www.locallinkers.com/api/";
 
     public static final String SIGN_UP = "User/AddUser";
 

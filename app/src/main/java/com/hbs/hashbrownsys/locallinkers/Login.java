@@ -97,6 +97,8 @@ public class Login extends AppCompatActivity {
         JSONObject json = prepareJsonObject();
         progressDialog = ProgressDialog.show(Login.this, "", "Checking. Please wait...", false);
         String url = Constants.URL + Constants.LOGIN;
+
+        System.out.println("url / "+url);
         CommonPostRequestThread requestThread = new CommonPostRequestThread(url, json.toString(), responseListener, exceptionListener);
         requestThread.start();
     }

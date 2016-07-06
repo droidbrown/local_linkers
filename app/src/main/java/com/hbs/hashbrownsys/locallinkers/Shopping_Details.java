@@ -365,7 +365,7 @@ public class Shopping_Details extends AppCompatActivity {
         }
         else
         {
-            url = "http://locallinkers.azurewebsites.net/admin/productimages/";
+            url = "http://www.locallinkers.com/admin/productimages/";
             String qty = ed_qty.getText().toString();
             StringTokenizer tokens = new StringTokenizer(sale_price, ".");
             String first = tokens.nextToken();

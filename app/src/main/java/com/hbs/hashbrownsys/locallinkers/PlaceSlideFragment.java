@@ -49,22 +49,22 @@ public class PlaceSlideFragment  extends Fragment
 
         if(Business_URL.equals(url))
         {
-            UrlImageViewHelper.setUrlDrawable(image, "http://locallinkers.azurewebsites.net/admin/businessimages/" + imageResourceId);
+            UrlImageViewHelper.setUrlDrawable(image, "http://www.locallinkers.com/admin/businessimages/" + imageResourceId);
         }
         else if(Coupon_URL.equals(url))
         {
             Log.e("imageResourceId","imageResourceId"+imageResourceId);
-            UrlImageViewHelper.setUrlDrawable(image, "http://locallinkers.azurewebsites.net/admin/couponimages/" + imageResourceId);
+            UrlImageViewHelper.setUrlDrawable(image, "http://www.locallinkers.com/admin/couponimages/" + imageResourceId);
         }
         else if(Shopping_URL.equals(url))
         {
-            UrlImageViewHelper.setUrlDrawable(image, "http://locallinkers.azurewebsites.net/admin/productimages/" + imageResourceId);
+            UrlImageViewHelper.setUrlDrawable(image, "http://www.locallinkers.com/admin/productimages/" + imageResourceId);
 
         }
         else if(Slider_URL.equals(url))
         {
             Log.e("imageResourceId","imageResourceId"+imageResourceId);
-            UrlImageViewHelper.setUrlDrawable(image, "http://locallinkers.azurewebsites.net/admin/homesliderimages/" + imageResourceId);
+            UrlImageViewHelper.setUrlDrawable(image, "http://www.locallinkers.com/admin/homesliderimages/" + imageResourceId);
 
         }
 

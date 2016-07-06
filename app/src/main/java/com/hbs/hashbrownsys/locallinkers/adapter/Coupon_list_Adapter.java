@@ -152,7 +152,7 @@ public class Coupon_list_Adapter extends BaseAdapter {
             spannable.setSpan(STRIKE_THROUGH_SPAN, 0, price.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
             String image_id = tempValues.getImage();
-            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://locallinkers.azurewebsites.net/admin/couponimages/" + imahe_path + "?width=120&height=120&mode=crop");
+            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + imahe_path + "?width=120&height=120&mode=crop");
 
 
             if (position % 2 == 0)

@@ -23,8 +23,8 @@ public class SplashScreen extends Activity
         prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
         userid = prefs.getInt(Constants.USER_ID, 0);
         phone_number = prefs.getString(Constants.PHONE_NUMBER, "");
-        Log.d("hiii", "userid" + userid);
-        Log.d("hiii", "phone_number" + phone_number);
+        Log.d("hiii", "userid>>>>" + userid);
+        Log.d("hiii", "phone_number>>>>>" + phone_number);
 
         new Handler().postDelayed(new Runnable()
         {

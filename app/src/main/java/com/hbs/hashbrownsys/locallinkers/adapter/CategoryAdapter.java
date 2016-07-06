@@ -82,7 +82,7 @@ public class CategoryAdapter extends ArrayAdapter<Category_Model> {
                     .cacheInMemory(true)
                     .build();
 
-            imageLoader.displayImage("http://locallinkers.azurewebsites.net/admin/categoryimages/" + image_path, holder.img, options);
+            imageLoader.displayImage("http://www.locallinkers.com/admin/categoryimages/" + image_path, holder.img, options);
 
             if (position % 2 == 0) {
 

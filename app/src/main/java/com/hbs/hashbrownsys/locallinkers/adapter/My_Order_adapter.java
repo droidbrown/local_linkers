@@ -97,12 +97,12 @@ public class My_Order_adapter extends BaseAdapter
 
             if(Type.equals("Coupon"))
             {
-                UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://locallinkers.azurewebsites.net/admin/couponimages/" + image_path);
+                UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + image_path);
 
             }
             else  if(Type.equals("Product"))
             {
-                UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://locallinkers.azurewebsites.net/admin/couponimages/" + image_path);
+                UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + image_path);
 
             }
             else

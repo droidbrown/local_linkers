@@ -56,12 +56,12 @@ public class Web_View_Activity extends AppCompatActivity {
         if (total_prices.equalsIgnoreCase("0"))
         {
             // TODO: apply query for amount 0
-            url = "http://locallinkers.com/ccavResponseHandler.aspx?";
+            url = "http://www.locallinkers.com/ccavResponseHandler.aspx?";
             postData = "WithoutPayment=" + orderId + "&ReedemPoints="+reedem_points + "&UserId=" + user_id + "&ProductIds=" + upload_data + "&RoleId="+Role_id;
             Log.v("postData",".........."+postData);
         } else {
             // TODO: apply query for amount greater than 0
-            url = "http://locallinkers.com/ccavRequestHandler.aspx";
+            url = "http://www.locallinkers.com/ccavRequestHandler.aspx";
             postData = "tid=" + seconds + "&merchant_id=89789" + "&order_id=" + orderId + "&redirect_url=http://locallinkers.com/ccavResponseHandler.aspx"
                     + "&cancel_url=http://locallinkers.com/Cancel" + "&amount=" + total_prices + "&currency=INR" + "&merchant_param2=" + upload_data +
                     "&merchant_param3=" + user_id + "&merchant_param4="+reedem_points;
@@ -102,7 +102,7 @@ public class Web_View_Activity extends AppCompatActivity {
             if (!total_prices.equals("0")) {
                 httpPost = new HttpPost(url);
             } else {
-                url = "http://locallinkers.com/ccavResponseHandler.aspx?" +
+                url = "http://www.locallinkers.com/ccavResponseHandler.aspx?" +
                         "WithoutPayment=" + orderId + "&ReedemPoints="+reedem_points + "&UserId=" + user_id
                         + "&ProductIds="+upload_data+"&RoleId="+Role_id;
                 httpPost = new HttpPost(url);
@@ -120,7 +120,7 @@ public class Web_View_Activity extends AppCompatActivity {
                         httpPost.setEntity(new ByteArrayEntity(
                                 postData.getBytes("UTF-8")));
                     else {
-                        url = "http://locallinkers.com/ccavResponseHandler.aspx?" +
+                        url = "http://www.locallinkers.com/ccavResponseHandler.aspx?" +
                                 "WithoutPayment=" + orderId + "&ReedemPoints="+reedem_points + "&UserId=" + user_id
                                 + "&ProductIds="+upload_data+"&RoleId="+Role_id;
                     }

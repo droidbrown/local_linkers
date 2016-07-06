@@ -146,7 +146,7 @@ public class Shopping_List_Adapter extends BaseAdapter
 //                Log.d("img",image_arrayList.get(k).getC_Image()+"");
 //            }
             image_path = tempValues.getImage();
-            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://locallinkers.azurewebsites.net/admin/productimages/" + image_path + "?width=120&height=120&mode=crop");
+            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/productimages/" + image_path + "?width=120&height=120&mode=crop");
 
             if(position % 2 == 0)
                 view.setTag(viewHolder);
