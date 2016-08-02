@@ -18,7 +18,7 @@
 
     <!--Home tab sizes-->
 
-    <dimen name="slider_image">200sp</dimen>
+    <dimen name="slider_image">200dp</dimen>
 
 
 </resources>

@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+import com.bumptech.glide.Glide;
+
 
 import java.util.StringTokenizer;
 
@@ -86,13 +87,13 @@ public class My_Oder_Detail extends AppCompatActivity
 
         if(Type.equals("Coupon"))
         {
-            UrlImageViewHelper.setUrlDrawable(product_image, "http://www.locallinkers.com/admin/couponimages/" + image);
-
+           // UrlImageViewHelper.setUrlDrawable(product_image, "http://www.locallinkers.com/admin/couponimages/" + image);
+            Glide.with(this).load("http://www.locallinkers.com/admin/couponimages/" + image).placeholder(R.drawable.placeholder).into(product_image);
         }
         else  if(Type.equals("Product"))
         {
-            UrlImageViewHelper.setUrlDrawable(product_image, "http://www.locallinkers.com/admin/couponimages/" + image);
-
+           // UrlImageViewHelper.setUrlDrawable(product_image, "http://www.locallinkers.com/admin/couponimages/" + image);
+            Glide.with(this).load( "http://www.locallinkers.com/admin/couponimages/" + image).placeholder(R.drawable.placeholder).into(product_image);
         }
         else
         {

@@ -36,6 +36,15 @@ public class Coupon_list_model implements  Serializable
     public String Title;
     public String UpdatedDate;
     public String IsAsPerBill;
+    public int distance;
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
 
     public String getAsPerBill() {
         return IsAsPerBill;

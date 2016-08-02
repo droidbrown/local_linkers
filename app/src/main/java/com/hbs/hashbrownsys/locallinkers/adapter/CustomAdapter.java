@@ -11,8 +11,7 @@ import android.widget.TextView;
 
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.ItemObject;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
+
 
 import java.util.List;
 

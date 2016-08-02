@@ -29,7 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+
+  android:layout_centerVertical="true"
             android:singleLine="true"
             android:maxLength="20"
             android:text="My Location"
@@ -42,11 +43,15 @@
 
 
     <fragment
-        android:layout_below="@+id/relative_layout"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
+        android:layout_below="@+id/relative_layout"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:context="hashbrown.com.googlemapsample.MapsActivity" />
+
 
 
 

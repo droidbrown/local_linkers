@@ -1,7 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\inner.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\inner.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_rewind.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_upcoming_stop.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_mini_controller_upcoming_stop.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
@@ -12,52 +16,24 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fromfile.png",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\fromfile.png"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_light.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\beauty_parlour.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\beauty_parlour.png"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bill_border.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\bill_border.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_light.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward30.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_forward30.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fromcamera.png",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\fromcamera.png"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\redeem_point.png",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\redeem_point.png"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_draw_cancel.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\ic_draw_cancel.png"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_light.xml",
@@ -68,20 +44,12 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_settings_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_light.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_upcoming_play.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_mini_controller_upcoming_play.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fitness.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\fitness.png"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
@@ -96,16 +64,228 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\fail.png"
     },
     {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_pause.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_pause.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_progress_drawable.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_mini_controller_progress_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\other.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\other.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\redeem_points.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\redeem_points.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\restaurant.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\restaurant.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\placeholder.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\no_preview.jpg",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\no_preview.jpg"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\distance.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\distance.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\holiland.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\holiland.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\border.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\border.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\android.gif",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\android.gif"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\music.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\music.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind10.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_rewind10.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_item_count_border.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\cart_item_count_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_dark.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\studios.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\studios.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\draw40.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\draw40.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\inner.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\inner.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fromfile.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\fromfile.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_disconnect.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_disconnect.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind30.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_rewind30.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_dark.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_stop_live_stream.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_stop_live_stream.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fromcamera.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\fromcamera.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\redeem_point.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\redeem_point.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_pause.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_mini_controller_pause.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\education.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\education.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_settings_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_dark.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\listing_marker.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\listing_marker.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.0\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_plus_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
@@ -124,28 +304,16 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\home_text_border.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_check_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\redeem_points.png",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\redeem_points.png"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward10.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_forward10.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_button_background.xml",
@@ -153,35 +321,27 @@
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_connecting.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\9.0.2\\res\\drawable\\cast_ic_notification_connecting.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\no_preview.jpg",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\no_preview.jpg"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_radio_material.xml"
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\9.2.1\\res\\drawable\\cast_ic_notification_connecting.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_dark.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_light.xml"
-    },
-    {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_skip_next.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_skip_next.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\success.png",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\success.png"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\holiland.png",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\holiland.png"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_small_icon.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_small_icon.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mobile.png",
@@ -192,36 +352,20 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\border.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\border.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\coupon_marker.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\coupon_marker.png"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\android.gif",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\android.gif"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\vpi__tab_indicator.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_dialog_material_background_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\new_location_pin.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\new_location_pin.png"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\img_border.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\img_border.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_seekbar_track_material.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_play.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_play.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\drawer_border.xml",
@@ -232,43 +376,39 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cart_item_count_border.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\cart_item_count_border.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_stop.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_mini_controller_stop.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_forward.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wedding.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\wedding.png"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.0\\res\\drawable\\design_fab_background.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_gradient_light.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_mini_controller_gradient_light.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.0.2\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_play.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_mini_controller_play.xml"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_text_shadow.xml",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable\\home_text_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_skip_prev.xml",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.1\\res\\drawable\\cast_ic_notification_skip_prev.xml"
     }
 ]

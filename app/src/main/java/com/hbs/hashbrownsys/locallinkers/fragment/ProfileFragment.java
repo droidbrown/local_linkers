@@ -34,6 +34,8 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.hbs.hashbrownsys.locallinkers.Change_Password;
 import com.hbs.hashbrownsys.locallinkers.Constants;
 import com.hbs.hashbrownsys.locallinkers.Home;
@@ -43,10 +45,7 @@ import com.hbs.hashbrownsys.locallinkers.http.IHttpExceptionListener;
 import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
 import com.hs.image.ImageIntentHandler;
-import com.hs.image.ImageUtils;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
+
 
 import org.json.JSONObject;
 
@@ -170,13 +169,18 @@ public class ProfileFragment extends Fragment {
 
         if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null")) {
             try {
-                ImageLoader imageLoader = ImageLoader.getInstance();
+        /*        ImageLoader imageLoader = ImageLoader.getInstance();
                 DisplayImageOptions options = new DisplayImageOptions.Builder()
                         .cacheInMemory(true)
                         .build();
 
                 imageLoader.displayImage("http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
-                        profile_imageView, options);
+                        profile_imageView, options);*/
+
+
+                Glide.with(this).load("http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop").placeholder(R.drawable.placeholder).diskCacheStrategy( DiskCacheStrategy.NONE ).skipMemoryCache(false).into(profile_imageView);
+
+
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
@@ -609,14 +613,14 @@ public class ProfileFragment extends Fragment {
         String photo = prefs.getString("PRODUCT_PHOTO", "photo");
         if (!photo.equals("photo")) {
 
-            ImageLoader imageLoader = ImageLoader.getInstance();
+      /*      ImageLoader imageLoader = ImageLoader.getInstance();
             DisplayImageOptions options = new DisplayImageOptions.Builder()
                     .cacheInMemory(true)
                     .build();
 
             imageLoader.displayImage("http://www.locallinkers.com/UserImages/" + photo + "?width=120&mode=crop",
-                    profile_imageView, options);
-
+                    profile_imageView, options);*/
+            Glide.with(this).load("http://www.locallinkers.com/UserImages/" + photo + "?width=120&mode=crop").placeholder(R.drawable.placeholder).into(profile_imageView);
 
         } else {
             profile_imageView.setImageResource(R.drawable.no_preview);

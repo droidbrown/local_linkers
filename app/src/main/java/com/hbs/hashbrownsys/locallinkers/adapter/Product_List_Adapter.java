@@ -12,9 +12,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.Product_list_model;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -125,8 +126,8 @@ public class Product_List_Adapter extends BaseAdapter
 //                Log.d("product_img",".................imag................"+imahe_path);
 //            }
 
-            UrlImageViewHelper.setUrlDrawable(viewHolder.img, "http://www.locallinkers.com/admin/couponimages/" + imahe_path );
-            
+          //  UrlImageViewHelper.setUrlDrawable(viewHolder.img, "http://www.locallinkers.com/admin/couponimages/" + imahe_path );
+            Glide.with(activity_new).load("http://www.locallinkers.com/admin/couponimages/" + imahe_path ).placeholder(R.drawable.placeholder).into(viewHolder.img);
             if(position % 2 == 0)
                 view.setTag(viewHolder);
 

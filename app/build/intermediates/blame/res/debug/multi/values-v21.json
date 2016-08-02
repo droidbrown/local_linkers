@@ -26,8 +26,27 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 124,
+                    "endColumn": 137,
+                    "endOffset": 257
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-v21\\google_maps_api.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 822,
+                        "endColumn": 137,
+                        "endOffset": 955
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 262,
                     "endColumn": 90,
-                    "endOffset": 210
+                    "endOffset": 348
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -42,11 +61,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 215,
+                    "startOffset": 353,
                     "endColumn": 102,
-                    "endOffset": 313
+                    "endOffset": 451
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -61,11 +80,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 318,
+                    "startOffset": 456,
                     "endColumn": 102,
-                    "endOffset": 416
+                    "endOffset": 554
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -80,11 +99,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 421,
+                    "startOffset": 559,
                     "endColumn": 104,
-                    "endOffset": 521
+                    "endOffset": 659
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -99,11 +118,11 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 526,
+                    "startOffset": 664,
                     "endColumn": 106,
-                    "endOffset": 628
+                    "endOffset": 766
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -118,11 +137,11 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 633,
+                    "startOffset": 771,
                     "endColumn": 108,
-                    "endOffset": 737
+                    "endOffset": 875
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -137,11 +156,11 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 742,
+                    "startOffset": 880,
                     "endColumn": 108,
-                    "endOffset": 846
+                    "endOffset": 984
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -156,11 +175,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 851,
+                    "startOffset": 989,
                     "endColumn": 108,
-                    "endOffset": 955
+                    "endOffset": 1093
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -175,11 +194,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 960,
+                    "startOffset": 1098,
                     "endColumn": 108,
-                    "endOffset": 1064
+                    "endOffset": 1202
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -194,11 +213,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1069,
+                    "startOffset": 1207,
                     "endColumn": 108,
-                    "endOffset": 1173
+                    "endOffset": 1311
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -213,11 +232,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1178,
+                    "startOffset": 1316,
                     "endColumn": 106,
-                    "endOffset": 1280
+                    "endOffset": 1418
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -232,11 +251,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1285,
+                    "startOffset": 1423,
                     "endColumn": 102,
-                    "endOffset": 1383
+                    "endOffset": 1521
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -251,11 +270,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1388,
+                    "startOffset": 1526,
                     "endColumn": 118,
-                    "endOffset": 1502
+                    "endOffset": 1640
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -270,12 +289,12 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1507,
-                    "endLine": 17,
+                    "startOffset": 1645,
+                    "endLine": 18,
                     "endColumn": 12,
-                    "endOffset": 1657
+                    "endOffset": 1795
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -291,12 +310,12 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1662,
-                    "endLine": 19,
+                    "startOffset": 1800,
+                    "endLine": 20,
                     "endColumn": 12,
-                    "endOffset": 1812
+                    "endOffset": 1950
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -312,11 +331,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1817,
+                    "startOffset": 1955,
                     "endColumn": 104,
-                    "endOffset": 1917
+                    "endOffset": 2055
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -331,11 +350,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1922,
+                    "startOffset": 2060,
                     "endColumn": 120,
-                    "endOffset": 2038
+                    "endOffset": 2176
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -350,11 +369,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2043,
+                    "startOffset": 2181,
                     "endColumn": 100,
-                    "endOffset": 2139
+                    "endOffset": 2277
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -369,12 +388,12 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2144,
-                    "endLine": 24,
+                    "startOffset": 2282,
+                    "endLine": 25,
                     "endColumn": 12,
-                    "endOffset": 2286
+                    "endOffset": 2424
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -390,12 +409,12 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2291,
-                    "endLine": 26,
+                    "startOffset": 2429,
+                    "endLine": 27,
                     "endColumn": 12,
-                    "endOffset": 2427
+                    "endOffset": 2565
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -411,11 +430,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2432,
+                    "startOffset": 2570,
                     "endColumn": 102,
-                    "endOffset": 2530
+                    "endOffset": 2668
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -430,11 +449,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2535,
+                    "startOffset": 2673,
                     "endColumn": 118,
-                    "endOffset": 2649
+                    "endOffset": 2787
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -449,11 +468,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 2654,
+                    "startOffset": 2792,
                     "endColumn": 106,
-                    "endOffset": 2756
+                    "endOffset": 2894
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -468,11 +487,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 2761,
+                    "startOffset": 2899,
                     "endColumn": 102,
-                    "endOffset": 2859
+                    "endOffset": 2997
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -487,12 +506,12 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2864,
-                    "endLine": 32,
+                    "startOffset": 3002,
+                    "endLine": 33,
                     "endColumn": 12,
-                    "endOffset": 3006
+                    "endOffset": 3144
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -508,12 +527,12 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 3011,
-                    "endLine": 34,
+                    "startOffset": 3149,
+                    "endLine": 35,
                     "endColumn": 12,
-                    "endOffset": 3161
+                    "endOffset": 3299
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -529,12 +548,12 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 3166,
-                    "endLine": 36,
+                    "startOffset": 3304,
+                    "endLine": 37,
                     "endColumn": 12,
-                    "endOffset": 3332
+                    "endOffset": 3470
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -550,12 +569,12 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 3337,
-                    "endLine": 38,
+                    "startOffset": 3475,
+                    "endLine": 39,
                     "endColumn": 12,
-                    "endOffset": 3481
+                    "endOffset": 3619
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -571,12 +590,12 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3486,
-                    "endLine": 40,
+                    "startOffset": 3624,
+                    "endLine": 41,
                     "endColumn": 12,
-                    "endOffset": 3646
+                    "endOffset": 3784
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -592,12 +611,12 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3651,
-                    "endLine": 42,
+                    "startOffset": 3789,
+                    "endLine": 43,
                     "endColumn": 12,
-                    "endOffset": 3803
+                    "endOffset": 3941
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -613,12 +632,12 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3808,
-                    "endLine": 44,
+                    "startOffset": 3946,
+                    "endLine": 45,
                     "endColumn": 12,
-                    "endOffset": 3954
+                    "endOffset": 4092
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -634,11 +653,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3959,
+                    "startOffset": 4097,
                     "endColumn": 118,
-                    "endOffset": 4073
+                    "endOffset": 4211
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -653,12 +672,12 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 4078,
-                    "endLine": 47,
+                    "startOffset": 4216,
+                    "endLine": 48,
                     "endColumn": 12,
-                    "endOffset": 4222
+                    "endOffset": 4360
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -674,12 +693,12 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 4227,
-                    "endLine": 49,
+                    "startOffset": 4365,
+                    "endLine": 50,
                     "endColumn": 12,
-                    "endOffset": 4371
+                    "endOffset": 4509
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -695,11 +714,11 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 4376,
+                    "startOffset": 4514,
                     "endColumn": 111,
-                    "endOffset": 4483
+                    "endOffset": 4621
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -714,11 +733,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 4488,
+                    "startOffset": 4626,
                     "endColumn": 146,
-                    "endOffset": 4630
+                    "endOffset": 4768
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -733,12 +752,12 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 4635,
-                    "endLine": 53,
+                    "startOffset": 4773,
+                    "endLine": 54,
                     "endColumn": 12,
-                    "endOffset": 4783
+                    "endOffset": 4921
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -754,12 +773,12 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 4788,
-                    "endLine": 55,
+                    "startOffset": 4926,
+                    "endLine": 56,
                     "endColumn": 12,
-                    "endOffset": 4930
+                    "endOffset": 5068
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -775,11 +794,11 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 4935,
+                    "startOffset": 5073,
                     "endColumn": 74,
-                    "endOffset": 5005
+                    "endOffset": 5143
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -794,11 +813,11 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 5010,
+                    "startOffset": 5148,
                     "endColumn": 88,
-                    "endOffset": 5094
+                    "endOffset": 5232
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -813,11 +832,11 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 5099,
+                    "startOffset": 5237,
                     "endColumn": 86,
-                    "endOffset": 5181
+                    "endOffset": 5319
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -832,11 +851,11 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 5186,
+                    "startOffset": 5324,
                     "endColumn": 100,
-                    "endOffset": 5282
+                    "endOffset": 5420
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -851,12 +870,12 @@
             },
             {
                 "to": {
-                    "startLine": 60,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 5287,
-                    "endLine": 105,
+                    "startOffset": 5425,
+                    "endLine": 106,
                     "endColumn": 12,
-                    "endOffset": 8524
+                    "endOffset": 8662
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -872,12 +891,12 @@
             },
             {
                 "to": {
-                    "startLine": 106,
+                    "startLine": 107,
                     "startColumn": 4,
-                    "startOffset": 8529,
-                    "endLine": 108,
+                    "startOffset": 8667,
+                    "endLine": 109,
                     "endColumn": 12,
-                    "endOffset": 8710
+                    "endOffset": 8848
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -893,12 +912,12 @@
             },
             {
                 "to": {
-                    "startLine": 109,
+                    "startLine": 110,
                     "startColumn": 4,
-                    "startOffset": 8715,
-                    "endLine": 154,
+                    "startOffset": 8853,
+                    "endLine": 155,
                     "endColumn": 12,
-                    "endOffset": 11964
+                    "endOffset": 12102
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -914,12 +933,12 @@
             },
             {
                 "to": {
-                    "startLine": 155,
+                    "startLine": 156,
                     "startColumn": 4,
-                    "startOffset": 11969,
-                    "endLine": 157,
+                    "startOffset": 12107,
+                    "endLine": 158,
                     "endColumn": 12,
-                    "endOffset": 12162
+                    "endOffset": 12300
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -935,12 +954,12 @@
             },
             {
                 "to": {
-                    "startLine": 158,
+                    "startLine": 159,
                     "startColumn": 4,
-                    "startOffset": 12167,
-                    "endLine": 159,
+                    "startOffset": 12305,
+                    "endLine": 160,
                     "endColumn": 12,
-                    "endOffset": 12285
+                    "endOffset": 12423
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -956,12 +975,12 @@
             },
             {
                 "to": {
-                    "startLine": 160,
+                    "startLine": 161,
                     "startColumn": 4,
-                    "startOffset": 12290,
-                    "endLine": 161,
+                    "startOffset": 12428,
+                    "endLine": 162,
                     "endColumn": 12,
-                    "endOffset": 12408
+                    "endOffset": 12546
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -977,12 +996,12 @@
             },
             {
                 "to": {
-                    "startLine": 162,
+                    "startLine": 163,
                     "startColumn": 4,
-                    "startOffset": 12413,
-                    "endLine": 163,
+                    "startOffset": 12551,
+                    "endLine": 164,
                     "endColumn": 12,
-                    "endOffset": 12521
+                    "endOffset": 12659
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -998,12 +1017,12 @@
             },
             {
                 "to": {
-                    "startLine": 164,
+                    "startLine": 165,
                     "startColumn": 4,
-                    "startOffset": 12526,
-                    "endLine": 166,
+                    "startOffset": 12664,
+                    "endLine": 167,
                     "endColumn": 12,
-                    "endOffset": 12704
+                    "endOffset": 12842
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1019,12 +1038,12 @@
             },
             {
                 "to": {
-                    "startLine": 167,
+                    "startLine": 168,
                     "startColumn": 4,
-                    "startOffset": 12709,
-                    "endLine": 168,
+                    "startOffset": 12847,
+                    "endLine": 169,
                     "endColumn": 12,
-                    "endOffset": 12835
+                    "endOffset": 12973
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1040,12 +1059,12 @@
             },
             {
                 "to": {
-                    "startLine": 169,
+                    "startLine": 170,
                     "startColumn": 4,
-                    "startOffset": 12840,
-                    "endLine": 171,
+                    "startOffset": 12978,
+                    "endLine": 172,
                     "endColumn": 12,
-                    "endOffset": 13036
+                    "endOffset": 13174
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1061,11 +1080,11 @@
             },
             {
                 "to": {
-                    "startLine": 172,
+                    "startLine": 173,
                     "startColumn": 4,
-                    "startOffset": 13041,
+                    "startOffset": 13179,
                     "endColumn": 88,
-                    "endOffset": 13125
+                    "endOffset": 13263
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1080,11 +1099,11 @@
             },
             {
                 "to": {
-                    "startLine": 173,
+                    "startLine": 174,
                     "startColumn": 4,
-                    "startOffset": 13130,
+                    "startOffset": 13268,
                     "endColumn": 110,
-                    "endOffset": 13236
+                    "endOffset": 13374
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1099,11 +1118,11 @@
             },
             {
                 "to": {
-                    "startLine": 174,
+                    "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 13241,
+                    "startOffset": 13379,
                     "endColumn": 126,
-                    "endOffset": 13363
+                    "endOffset": 13501
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1118,11 +1137,11 @@
             },
             {
                 "to": {
-                    "startLine": 175,
+                    "startLine": 176,
                     "startColumn": 4,
-                    "startOffset": 13368,
+                    "startOffset": 13506,
                     "endColumn": 100,
-                    "endOffset": 13464
+                    "endOffset": 13602
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1137,11 +1156,11 @@
             },
             {
                 "to": {
-                    "startLine": 176,
+                    "startLine": 177,
                     "startColumn": 4,
-                    "startOffset": 13469,
+                    "startOffset": 13607,
                     "endColumn": 94,
-                    "endOffset": 13559
+                    "endOffset": 13697
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1156,11 +1175,11 @@
             },
             {
                 "to": {
-                    "startLine": 177,
+                    "startLine": 178,
                     "startColumn": 4,
-                    "startOffset": 13564,
+                    "startOffset": 13702,
                     "endColumn": 122,
-                    "endOffset": 13682
+                    "endOffset": 13820
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1175,11 +1194,11 @@
             },
             {
                 "to": {
-                    "startLine": 178,
+                    "startLine": 179,
                     "startColumn": 4,
-                    "startOffset": 13687,
+                    "startOffset": 13825,
                     "endColumn": 128,
-                    "endOffset": 13811
+                    "endOffset": 13949
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1194,11 +1213,11 @@
             },
             {
                 "to": {
-                    "startLine": 179,
+                    "startLine": 180,
                     "startColumn": 4,
-                    "startOffset": 13816,
+                    "startOffset": 13954,
                     "endColumn": 116,
-                    "endOffset": 13928
+                    "endOffset": 14066
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1213,12 +1232,12 @@
             },
             {
                 "to": {
-                    "startLine": 180,
+                    "startLine": 181,
                     "startColumn": 4,
-                    "startOffset": 13933,
-                    "endLine": 182,
+                    "startOffset": 14071,
+                    "endLine": 183,
                     "endColumn": 12,
-                    "endOffset": 14105
+                    "endOffset": 14243
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1234,11 +1253,11 @@
             },
             {
                 "to": {
-                    "startLine": 183,
+                    "startLine": 184,
                     "startColumn": 4,
-                    "startOffset": 14110,
+                    "startOffset": 14248,
                     "endColumn": 98,
-                    "endOffset": 14204
+                    "endOffset": 14342
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1253,12 +1272,12 @@
             },
             {
                 "to": {
-                    "startLine": 184,
+                    "startLine": 185,
                     "startColumn": 4,
-                    "startOffset": 14209,
-                    "endLine": 185,
+                    "startOffset": 14347,
+                    "endLine": 186,
                     "endColumn": 12,
-                    "endOffset": 14339
+                    "endOffset": 14477
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1274,12 +1293,12 @@
             },
             {
                 "to": {
-                    "startLine": 186,
+                    "startLine": 187,
                     "startColumn": 4,
-                    "startOffset": 14344,
-                    "endLine": 187,
+                    "startOffset": 14482,
+                    "endLine": 188,
                     "endColumn": 12,
-                    "endOffset": 14482
+                    "endOffset": 14620
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1295,12 +1314,12 @@
             },
             {
                 "to": {
-                    "startLine": 188,
+                    "startLine": 189,
                     "startColumn": 4,
-                    "startOffset": 14487,
-                    "endLine": 189,
+                    "startOffset": 14625,
+                    "endLine": 190,
                     "endColumn": 12,
-                    "endOffset": 14617
+                    "endOffset": 14755
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1316,12 +1335,12 @@
             },
             {
                 "to": {
-                    "startLine": 190,
+                    "startLine": 191,
                     "startColumn": 4,
-                    "startOffset": 14622,
-                    "endLine": 191,
+                    "startOffset": 14760,
+                    "endLine": 192,
                     "endColumn": 12,
-                    "endOffset": 14736
+                    "endOffset": 14874
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1337,12 +1356,12 @@
             },
             {
                 "to": {
-                    "startLine": 192,
+                    "startLine": 193,
                     "startColumn": 4,
-                    "startOffset": 14741,
-                    "endLine": 195,
+                    "startOffset": 14879,
+                    "endLine": 196,
                     "endColumn": 12,
-                    "endOffset": 14937
+                    "endOffset": 15075
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1358,12 +1377,12 @@
             },
             {
                 "to": {
-                    "startLine": 196,
+                    "startLine": 197,
                     "startColumn": 4,
-                    "startOffset": 14942,
-                    "endLine": 197,
+                    "startOffset": 15080,
+                    "endLine": 198,
                     "endColumn": 12,
-                    "endOffset": 15056
+                    "endOffset": 15194
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1379,11 +1398,11 @@
             },
             {
                 "to": {
-                    "startLine": 198,
+                    "startLine": 199,
                     "startColumn": 4,
-                    "startOffset": 15061,
+                    "startOffset": 15199,
                     "endColumn": 92,
-                    "endOffset": 15149
+                    "endOffset": 15287
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1398,11 +1417,11 @@
             },
             {
                 "to": {
-                    "startLine": 199,
+                    "startLine": 200,
                     "startColumn": 4,
-                    "startOffset": 15154,
+                    "startOffset": 15292,
                     "endColumn": 110,
-                    "endOffset": 15260
+                    "endOffset": 15398
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1417,11 +1436,11 @@
             },
             {
                 "to": {
-                    "startLine": 200,
+                    "startLine": 201,
                     "startColumn": 4,
-                    "startOffset": 15265,
+                    "startOffset": 15403,
                     "endColumn": 55,
-                    "endOffset": 15316
+                    "endOffset": 15454
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1436,12 +1455,12 @@
             },
             {
                 "to": {
-                    "startLine": 201,
+                    "startLine": 202,
                     "startColumn": 4,
-                    "startOffset": 15321,
-                    "endLine": 202,
+                    "startOffset": 15459,
+                    "endLine": 203,
                     "endColumn": 12,
-                    "endOffset": 15423
+                    "endOffset": 15561
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1457,12 +1476,12 @@
             },
             {
                 "to": {
-                    "startLine": 203,
+                    "startLine": 204,
                     "startColumn": 4,
-                    "startOffset": 15428,
-                    "endLine": 206,
+                    "startOffset": 15566,
+                    "endLine": 207,
                     "endColumn": 12,
-                    "endOffset": 15618
+                    "endOffset": 15756
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1478,12 +1497,12 @@
             },
             {
                 "to": {
-                    "startLine": 207,
+                    "startLine": 208,
                     "startColumn": 4,
-                    "startOffset": 15623,
-                    "endLine": 208,
+                    "startOffset": 15761,
+                    "endLine": 209,
                     "endColumn": 12,
-                    "endOffset": 15729
+                    "endOffset": 15867
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1499,12 +1518,12 @@
             },
             {
                 "to": {
-                    "startLine": 209,
+                    "startLine": 210,
                     "startColumn": 4,
-                    "startOffset": 15734,
-                    "endLine": 210,
+                    "startOffset": 15872,
+                    "endLine": 211,
                     "endColumn": 12,
-                    "endOffset": 15862
+                    "endOffset": 16000
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1520,11 +1539,11 @@
             },
             {
                 "to": {
-                    "startLine": 211,
+                    "startLine": 212,
                     "startColumn": 4,
-                    "startOffset": 15867,
+                    "startOffset": 16005,
                     "endColumn": 94,
-                    "endOffset": 15957
+                    "endOffset": 16095
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1539,11 +1558,11 @@
             },
             {
                 "to": {
-                    "startLine": 212,
+                    "startLine": 213,
                     "startColumn": 4,
-                    "startOffset": 15962,
+                    "startOffset": 16100,
                     "endColumn": 90,
-                    "endOffset": 16048
+                    "endOffset": 16186
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1558,11 +1577,11 @@
             },
             {
                 "to": {
-                    "startLine": 213,
+                    "startLine": 214,
                     "startColumn": 4,
-                    "startOffset": 16053,
+                    "startOffset": 16191,
                     "endColumn": 90,
-                    "endOffset": 16139
+                    "endOffset": 16277
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1577,11 +1596,11 @@
             },
             {
                 "to": {
-                    "startLine": 214,
+                    "startLine": 215,
                     "startColumn": 4,
-                    "startOffset": 16144,
+                    "startOffset": 16282,
                     "endColumn": 116,
-                    "endOffset": 16256
+                    "endOffset": 16394
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1596,12 +1615,12 @@
             },
             {
                 "to": {
-                    "startLine": 215,
+                    "startLine": 216,
                     "startColumn": 4,
-                    "startOffset": 16261,
-                    "endLine": 216,
+                    "startOffset": 16399,
+                    "endLine": 217,
                     "endColumn": 12,
-                    "endOffset": 16395
+                    "endOffset": 16533
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1617,12 +1636,12 @@
             },
             {
                 "to": {
-                    "startLine": 217,
+                    "startLine": 218,
                     "startColumn": 4,
-                    "startOffset": 16400,
-                    "endLine": 223,
+                    "startOffset": 16538,
+                    "endLine": 224,
                     "endColumn": 12,
-                    "endOffset": 16748
+                    "endOffset": 16886
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1638,12 +1657,12 @@
             },
             {
                 "to": {
-                    "startLine": 224,
+                    "startLine": 225,
                     "startColumn": 4,
-                    "startOffset": 16753,
-                    "endLine": 230,
+                    "startOffset": 16891,
+                    "endLine": 231,
                     "endColumn": 12,
-                    "endOffset": 17113
+                    "endOffset": 17251
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1659,12 +1678,12 @@
             },
             {
                 "to": {
-                    "startLine": 231,
+                    "startLine": 232,
                     "startColumn": 4,
-                    "startOffset": 17118,
-                    "endLine": 240,
+                    "startOffset": 17256,
+                    "endLine": 241,
                     "endColumn": 12,
-                    "endOffset": 17793
+                    "endOffset": 17931
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1680,11 +1699,11 @@
             },
             {
                 "to": {
-                    "startLine": 241,
+                    "startLine": 242,
                     "startColumn": 4,
-                    "startOffset": 17798,
+                    "startOffset": 17936,
                     "endColumn": 56,
-                    "endOffset": 17850
+                    "endOffset": 17988
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1699,11 +1718,11 @@
             },
             {
                 "to": {
-                    "startLine": 242,
+                    "startLine": 243,
                     "startColumn": 4,
-                    "startOffset": 17855,
+                    "startOffset": 17993,
                     "endColumn": 57,
-                    "endOffset": 17908
+                    "endOffset": 18046
                 },
                 "from": {
                     "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v21\\values-v21.xml",
@@ -1718,14 +1737,14 @@
             },
             {
                 "to": {
-                    "startLine": 243,
+                    "startLine": 244,
                     "startColumn": 4,
-                    "startOffset": 17913,
+                    "startOffset": 18051,
                     "endColumn": 121,
-                    "endOffset": 18030
+                    "endOffset": 18168
                 },
                 "from": {
-                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-appinvite\\9.0.2\\res\\values-v21\\values.xml",
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-appinvite\\9.2.1\\res\\values-v21\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

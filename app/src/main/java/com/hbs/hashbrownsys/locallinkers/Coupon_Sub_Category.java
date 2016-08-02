@@ -242,7 +242,7 @@ public class Coupon_Sub_Category extends AppCompatActivity
                         handler.sendEmptyMessage(0);
                     } else if (Result.equals("1")) {
 
-                        handler.sendEmptyMessage(1);
+
                         JSONArray jsonArray = obj.getJSONArray("Lst_SubCategory");
                         Log.e("Lst_Category", "lst_SubCategory" + jsonArray.length());
                         for (int i = 0; i < jsonArray.length(); i++) {
@@ -260,6 +260,8 @@ public class Coupon_Sub_Category extends AppCompatActivity
                             subcat_modal.setUpdatedDate(items.getString("UpdatedDate"));
                             sub_cat_arrayList.add(subcat_modal);
                         }
+
+                        handler.sendEmptyMessage(1);
                         Log.v("sub_cat_arrayList", ".........." + sub_cat_arrayList.size());
 
                     }

@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -21,8 +22,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.hbs.hashbrownsys.locallinkers.Constants;
@@ -37,6 +38,7 @@ import com.hbs.hashbrownsys.locallinkers.http.IHttpResponseListener;
 import com.hbs.hashbrownsys.locallinkers.http.Utilities;
 import com.hbs.hashbrownsys.locallinkers.model.Image_Coupon_List;
 import com.hbs.hashbrownsys.locallinkers.model.Product_list_model;
+
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -59,17 +61,53 @@ public class Home_Tab extends Fragment {
     Location mLocation;
     ArrayList<Product_list_model> arrayList = new ArrayList<Product_list_model>();
     Product_List_Adapter adapter;
-    PageIndicator mIndicator;
+        PageIndicator mIndicator;
     ArrayList<Image_Coupon_List> image_arrayList = new ArrayList<Image_Coupon_List>();
     String address, terms, updated_date, actual_price, sale_price, coupon_price, title, desc, CouponId;
     double Latitude, Longitude;
     int city_id, Category_id;
     SharedPreferences prefs;
     View root_view;
-    RelativeLayout relative_layout;
+    FrameLayout relative_layout;
     boolean isResultfound = false;
     ViewPager myPager;
     PlaceSlidesFragmentAdapter mAdapter;
+    // com.hbs.hashbrownsys.locallinkers.CirclePageIndicator mIndicator;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View root_view = inflater.inflate(R.layout.fragment_home__demo__tab, container, false);
+
+        list_view = (ListView) root_view.findViewById(R.id.list_view);
+
+        prefs = getActivity().getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
+        city_id = prefs.getInt("city_id", 0);
+        // Log.d("city_id", "..........city_id.........." + city_id);
+        Category_id = prefs.getInt("Category_id", 0);
+        // Log.d("Category_id", "..........Category_id.........." + Category_id);
+
+        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header_layout, list_view, false);
+        list_view.addHeaderView(header, null, false);
+        // we take the background image and button reference from the header
+        relative_layout = (FrameLayout) header.findViewById(R.id.relative_layout);
+        // list_view.setOnScrollListener(this);
+        myPager = (ViewPager) header.findViewById(R.id.myfivepanelpager);
+
+       /* mIndicator=(com.hbs.hashbrownsys.locallinkers.CirclePageIndicator)header.findViewById(R.id.indicator);
+        mIndicator.setViewPager(myPager);*/
+        return root_view;  //
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        getLocation();
+
+
+    }
+
     public Handler handler = new Handler() {
         public void handleMessage(Message msg) {
 
@@ -97,12 +135,19 @@ public class Home_Tab extends Fragment {
                             progressDialog.dismiss();
 
                         show_tab();
+
+
+
+
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                adapter = new Product_List_Adapter(getActivity(), arrayList, getResources());
-                                list_view.setAdapter(adapter);
-                                adapter.notifyDataSetChanged();
+
+                                    adapter = new Product_List_Adapter(getActivity(), arrayList, getResources());
+                                    list_view.setAdapter(adapter);
+                                    adapter.notifyDataSetChanged();
+
+
                             }
                         });
 
@@ -130,8 +175,8 @@ public class Home_Tab extends Fragment {
                                 intent.putExtra("Longitude", selected.getLongitude());
                                 intent.putExtra("paytomarchant", selected.getPayToMerchant());
                                 intent.putExtra("Type", "Coupons");
-                                intent.putExtra("IsAsPerBill",selected.getIsAsPerBill());
-                                intent.putExtra("BusinessName",selected.getBusinessName());
+                                intent.putExtra("IsAsPerBill", selected.getIsAsPerBill());
+                                intent.putExtra("BusinessName", selected.getBusinessName());
                                 startActivity(intent);
                             }
                         });
@@ -184,13 +229,14 @@ public class Home_Tab extends Fragment {
                 //    aryProducts.clear();
                 if (response != null) {
                     JSONObject obj = new JSONObject(response);
-                    Log.e("", "obj" + obj);
+
+                    System.out.println("result home : "+obj.toString());
                     String Result = obj.getString("Result");
 
                     if (Result.equals("0")) {
                         handler.sendEmptyMessage(0);
                     } else if (Result.equals("1")) {
-                        handler.sendEmptyMessage(1);
+
 
                         JSONArray OrderItemArray = obj.getJSONArray("lst_Slider");
                         for (int j = 0; j < OrderItemArray.length(); j++) {
@@ -238,7 +284,7 @@ public class Home_Tab extends Fragment {
                             prefs = getActivity().getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
                             isResultfound = true;
                         }
-
+                        handler.sendEmptyMessage(1);
 
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
@@ -269,47 +315,13 @@ public class Home_Tab extends Fragment {
         return fragment;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View root_view = inflater.inflate(R.layout.fragment_home__demo__tab, container, false);
 
-        list_view = (ListView) root_view.findViewById(R.id.list_view);
-
-        prefs = getActivity().getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
-        city_id = prefs.getInt("city_id", 0);
-        Log.d("city_id", "..........city_id.........." + city_id);
-        Category_id = prefs.getInt("Category_id", 0);
-        Log.d("Category_id", "..........Category_id.........." + Category_id);
-
-        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header_layout, list_view, false);
-        list_view.addHeaderView(header, null, false);
-        // we take the background image and button reference from the header
-        relative_layout = (RelativeLayout) header.findViewById(R.id.relative_layout);
-        // list_view.setOnScrollListener(this);
-        myPager = (ViewPager) header.findViewById(R.id.myfivepanelpager);
-
-        return root_view;  //
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        getLocation();
-
-
-    }
-
-
-
-    private void getLocation()
-    {
+    private void getLocation() {
         location = new SimpleLocation(getActivity());
         if (!location.hasLocationEnabled()) {
             // ask the user to enable location access
 
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+      /*      AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
             alertDialogBuilder.setMessage("Please Turn on Location");
             alertDialogBuilder.setCancelable(false);
 
@@ -335,26 +347,51 @@ public class Home_Tab extends Fragment {
                 }
             });
             AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
+            alertDialog.show();*/
 
-        } else
-        {
+
+            buildAlertMessageNoGps();
+
+        } else {
             Latitude = location.getLatitude();
             Longitude = location.getLongitude();
             Log.d("lat long", Latitude + "," + Longitude);
-            if(Latitude == 0.0 && Longitude == 0.0)
-            {
-                prefs.edit().putString(Constants.LATITUDE, "29.9667").commit();
-                prefs.edit().putString(Constants.LONGITUDE, " 77.55").commit();
-            }
-            else
-            {
+            if (Latitude == 0.0 && Longitude == 0.0) {
+                prefs.edit().putString(Constants.LATITUDE, "29.972254").commit();
+                prefs.edit().putString(Constants.LONGITUDE, " 77.546299").commit();
+            } else {
                 prefs.edit().putString(Constants.LATITUDE, "" + Latitude).commit();
                 prefs.edit().putString(Constants.LONGITUDE, "" + Longitude).commit();
+
+            }
+
+            if (arrayList.size() == 0) {
+                Log.d("current_tab", ",........... HOME_TAB.............,");
+                Show_Coupon_List();
+            } else {
+                Log.d("current_tab", ",........... HOME_TAB.............," + arrayList.size());
             }
 
 
         }
+    }
+
+    private void buildAlertMessageNoGps() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage("Your GPS seems to be disabled, do you want to enable it?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        dialog.cancel();
+                    }
+                });
+        final AlertDialog alert = builder.create();
+        alert.show();
     }
 
 
@@ -368,9 +405,14 @@ public class Home_Tab extends Fragment {
     }
 
     public void Show_Coupon_List() {
-        JSONObject json = prepareJsonObject();
         progressDialog = ProgressDialog.show(getActivity(), "", "Checking. Please wait...", false);
+
+
+
+        JSONObject json = prepareJsonObject();
+
         String url = Constants.URL + Constants.COUPON_LIST;
+        System.out.println("url Home : "+url);
         CommonPostRequestThread requestThread = new CommonPostRequestThread(url, json.toString(), responseListener, exceptionListener);
         requestThread.start();
     }
@@ -380,9 +422,9 @@ public class Home_Tab extends Fragment {
         city_id = prefs.getInt("city_id", 0);
         Log.d("city_id", "..........city_id.........." + city_id);
         try {
-            String str_lat=prefs.getString(Constants.LATITUDE, "");
-            String str_longi=prefs.getString(Constants.LONGITUDE, "");
-            System.out.println("in home tab "+str_lat+ " "+str_longi);
+            String str_lat = prefs.getString(Constants.LATITUDE, "");
+            String str_longi = prefs.getString(Constants.LONGITUDE, "");
+            System.out.println("in home tab " + str_lat + " " + str_longi);
 
 
             Latitude = Double.parseDouble(str_lat);
@@ -405,6 +447,7 @@ public class Home_Tab extends Fragment {
             innerJsonObject.put("Longitude", Longitude);
             innerJsonObject.put("SelectedPosition", 1);
             Utilities.printD(tag, "" + innerJsonObject.toString());
+            System.out.println("json  Home : "+innerJsonObject.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -414,18 +457,19 @@ public class Home_Tab extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser) {
-
-
-            if (arrayList.size() == 0) {
-                Log.d("current_tab", ",........... HOME_TAB.............,");
-                Show_Coupon_List();
+        if (this.isVisible()) {
+            if (!isVisibleToUser) {
+                Log.d("MyFragment", "Not visible anymore.  Stopping audio.");
+                // TODO stop audio playback
             } else {
-                Log.d("current_tab", ",........... HOME_TAB.............," + arrayList.size());
+                if (arrayList.size() == 0) {
+                    Log.d("current_tab", ",........... COUPON_TAB.............,");
+                    Show_Coupon_List();
+                } else {
+
+                }
             }
 
-
-            // Fetch data or something...
         }
     }
 
@@ -438,7 +482,7 @@ public class Home_Tab extends Fragment {
             Image_Coupon_List Object = image_arrayList.get(k);
             Log.d("img", image_arrayList.get(k).getC_Image() + "");
             Images[k] = Object.getC_Image();
-            System.out.println("image link to open "+ Images[k].toString());
+            System.out.println("image link to open " + Images[k].toString());
         }
         String business_url = "Slider_url";
         mAdapter = new PlaceSlidesFragmentAdapter(business_url, Images, getChildFragmentManager());

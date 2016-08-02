@@ -11,9 +11,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.My_Order_Model;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
 
 import java.util.ArrayList;
 
@@ -97,13 +99,13 @@ public class My_Order_adapter extends BaseAdapter
 
             if(Type.equals("Coupon"))
             {
-                UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + image_path);
-
+              //  UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + image_path);
+                Glide.with(activity_new).load( "http://www.locallinkers.com/admin/couponimages/" + image_path).placeholder(R.drawable.placeholder).into(viewHolder.imageView);
             }
             else  if(Type.equals("Product"))
             {
-                UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + image_path);
-
+              //  UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + image_path);
+                Glide.with(activity_new).load( "http://www.locallinkers.com/admin/couponimages/" + image_path).placeholder(R.drawable.placeholder).into(viewHolder.imageView);
             }
             else
             {

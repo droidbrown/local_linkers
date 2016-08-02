@@ -15,11 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.database.Cart_Database;
 import com.hbs.hashbrownsys.locallinkers.listener.EmptyCart;
 import com.hbs.hashbrownsys.locallinkers.model.Cart_model;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -104,8 +105,8 @@ public class Cart_Adapter extends BaseAdapter {
             id = tempValues.getId();
             String image_path = tempValues.getImage_Id();
             String url = tempValues.getImage_url();
-            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, url + image_path + "?width=120&height=120&mode=crop");
-
+           // UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, url + image_path + "?width=120&height=120&mode=crop");
+            Glide.with(activity_new).load( url + image_path + "?width=120&height=120&mode=crop").placeholder(R.drawable.placeholder).into(viewHolder.imageView);
             Log.d("check_value", " Qty" + tempValues.getQty());
             Log.d("check_value", " Amouuunt" + tempValues.getAmount());
 

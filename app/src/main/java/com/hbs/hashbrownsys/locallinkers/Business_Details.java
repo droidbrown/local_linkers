@@ -12,13 +12,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Business_Details extends AppCompatActivity {
     public static final String TAG = "detailsFragment";
     Typeface Font;
     ImageView back_image, map_image, image;
-    TextView txt_header_name, txt_Product_name, txt_name, txt_phone, txt_address, txtdistance, txt_desc;
+    TextView txt_header_name, txt_Product_name, txt_name, txt_phone, txt_address, txtdistance, txt_desc, txtwebsite;
     Button btn_book_now;
     String image_path;
     String business_name, phone, desc, contact_person, address, distance, button_title, Image, Subscription, business_id;
@@ -26,6 +27,8 @@ public class Business_Details extends AppCompatActivity {
     ViewPager mPager;
     PageIndicator mIndicator;
     String Latitude, Longitude;
+    String website = "";
+    LinearLayout llWebsite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,10 @@ public class Business_Details extends AppCompatActivity {
         txtdistance.setTypeface(Font);
         txt_desc = (TextView) findViewById(R.id.txt_desc);
         txt_desc.setTypeface(Font);
+
+        llWebsite = (LinearLayout) findViewById(R.id.llwebsite);
+        txtwebsite = (TextView) findViewById(R.id.txt_website_icon);
+        txtwebsite.setTypeface(Font);
         // image = (ImageView) findViewById(R.id.image);
         map_image = (ImageView) findViewById(R.id.map_image);
         back_image = (ImageView) findViewById(R.id.back_image);
@@ -64,6 +71,7 @@ public class Business_Details extends AppCompatActivity {
         button_title = getIntent().getExtras().getString("button_title");
         Latitude = getIntent().getExtras().getString("Latitude");
         Longitude = getIntent().getExtras().getString("Longitude");
+        website = getIntent().getExtras().getString("website");
         Log.e("button_title", "................" + button_title);
         Log.e("latlong", "" + Latitude);
         Log.e("latlong", "" + Longitude);
@@ -77,6 +85,14 @@ public class Business_Details extends AppCompatActivity {
         txt_address.setText(address);
         txtdistance.setText(distance + "km");
         txt_desc.setText(desc);
+
+
+        if (website.trim().equalsIgnoreCase("")) {
+            llWebsite.setVisibility(View.GONE);
+        } else {
+            llWebsite.setVisibility(View.VISIBLE);
+            txtwebsite.setText(website);
+        }
 
         if (Subscription.equals("1") || Subscription.equals("2")) {
 
@@ -114,7 +130,19 @@ public class Business_Details extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
+        txtwebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                if (!website.startsWith("http://") && !website.startsWith("https://")) {
+                    website = "http://" + website;
+                }
+
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
+                startActivity(browserIntent);
+            }
+        });
 
         txt_phone.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -47,6 +47,8 @@ public class Constants
 
     public static final String CHECK_COUPON_VALIDATION="v2/User/CheckCouponValidation";
 
+    public static final String MAP_MARKER = "User/GetCouponListingsByDistance";
+    public static final String MAP_MARKER_POLYGON = "User/GetCouponListingsByMultiPolygon";
     public static final String REGISTERED_ID = "regid";
     public static final String USER_LOGGED_IN = "user_logged_in";
     public static final String USER_ID = "user_id";

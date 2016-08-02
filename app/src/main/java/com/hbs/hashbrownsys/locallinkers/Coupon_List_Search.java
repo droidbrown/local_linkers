@@ -72,10 +72,11 @@ public class Coupon_List_Search extends AppCompatActivity
                 if (actionId == EditorInfo.IME_ACTION_SEARCH)
                 {
                     Keyword = ed_search.getText().toString();
-                    Show_Coupon_List();
-                    ed_search.getText().clear();
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(ed_search.getWindowToken(), 0);
+                    Show_Coupon_List();
+
+
                     return true;
                 }
                 return false;
@@ -151,7 +152,7 @@ public class Coupon_List_Search extends AppCompatActivity
                         handler.sendEmptyMessage(0);
                     } else if (Result.equals("1")) {
                         handler.sendEmptyMessage(1);
-
+                        ed_search.setText("");
                         JSONArray jsonArray = obj.getJSONArray("Lst_Coupons");
                         Log.e("", "Lst_Coupons" + jsonArray.length());
                         for (int i = 0; i < jsonArray.length(); i++) {

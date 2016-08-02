@@ -8,6 +8,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -19,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.hbs.hashbrownsys.locallinkers.Constants;
 import com.hbs.hashbrownsys.locallinkers.Home;
@@ -83,12 +86,7 @@ public class Listing_Tab extends Fragment {
 
         location_image = (ImageView) Home.topToolBar.findViewById(R.id.location_image);
         location_image.setVisibility(View.GONE);
-        location_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
 
         Font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/MyriadPro-Regular.otf");
         ed_search = (EditText) root_view.findViewById(R.id.ed_search);

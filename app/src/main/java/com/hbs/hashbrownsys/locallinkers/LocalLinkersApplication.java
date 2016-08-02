@@ -1,13 +1,10 @@
 package com.hbs.hashbrownsys.locallinkers;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 
-import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+
 import com.rollbar.android.Rollbar;
 
 /**
@@ -21,10 +18,16 @@ public class LocalLinkersApplication extends Application {
         Rollbar.init(this, this.getResources().getString(R.string.rollbar_token), "production");
 
         // Create global configuration and initialize ImageLoader with this config
-        initImageLoader();
+        //initImageLoader();
     }
 
-    public void initImageLoader() {
+    @Override
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(context);
+        MultiDex.install(this);
+    }
+
+  /*  public void initImageLoader() {
         // UNIVERSAL IMAGE LOADER SETUP
         DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
                 .cacheOnDisc(true).cacheInMemory(true)
@@ -38,6 +41,6 @@ public class LocalLinkersApplication extends Application {
 
         ImageLoader.getInstance().init(config);
         // END - UNIVERSAL IMAGE LOADER SETUP
-    }
+    }*/
 
 }

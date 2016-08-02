@@ -5,7 +5,10 @@
 
 
     <!--<string name="google_api_key">AIzaSyCCRJUqBK7beOhR44CrgwTiIcbp7XyE9Ak</string>-->
-    <string name="google_api_key">AIzaSyB4DqVEWAKz5mvK3ca9_e_ZfdpkVfLPsGA</string>
+
+ <!--   <string name="google_api_key">AIzaSyB4DqVEWAKz5mvK3ca9_e_ZfdpkVfLPsGA</string>-->
+
+    <string name="google_api_key">AIzaSyDNBDsRVATy-NRk67UCIMOA5maC_1oOtnU</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

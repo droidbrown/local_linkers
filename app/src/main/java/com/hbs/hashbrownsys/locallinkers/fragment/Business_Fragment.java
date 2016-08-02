@@ -42,8 +42,7 @@ import im.delight.android.location.SimpleLocation;
 /**
  * Created by hbslenovo-3 on 3/30/2016.
  */
-public class Business_Fragment extends Fragment
-{
+public class Business_Fragment extends Fragment {
     ListView list_view;
     Business_List_Adapter adapter;
     private SimpleLocation location;
@@ -55,15 +54,14 @@ public class Business_Fragment extends Fragment
     public final String tag = this.getClass().getSimpleName();
     ArrayList<Image_Coupon_List> image_arrayList = new ArrayList<Image_Coupon_List>();
     SharedPreferences prefs;
-    int city_id, Category_id = 0,SubCategoryId = 0;
-    int startingPageIndex=0;
+    int city_id, Category_id = 0, SubCategoryId = 0;
+    int startingPageIndex = 0;
     int mParam1;
     String Latitude, Longitude;
     Button btnLoadMore;
     boolean flag_loading;
 
-    public Business_Fragment()
-    {
+    public Business_Fragment() {
         // Required empty public constructor
     }
 
@@ -73,8 +71,7 @@ public class Business_Fragment extends Fragment
     String category = "";
 
     // TODO: Rename and change types of parameters
-    public static Business_Fragment newInstance(int param1)
-    {
+    public static Business_Fragment newInstance(int param1) {
         Business_Fragment fragment = new Business_Fragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PARAM1, param1);
@@ -83,10 +80,8 @@ public class Business_Fragment extends Fragment
     }
 
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root_view = inflater.inflate(R.layout.fragment_product_, container, false);
 
@@ -95,8 +90,7 @@ public class Business_Fragment extends Fragment
         list_view = (ListView) root_view.findViewById(R.id.list_view);
         ed_search.setTypeface(Font);
 
-        if (getArguments() != null)
-        {
+        if (getArguments() != null) {
             mParam1 = getArguments().getInt(ARG_PARAM1);
         }
 
@@ -124,11 +118,9 @@ public class Business_Fragment extends Fragment
         });
 
 
-        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Business_List_model tempValues = (Business_List_model) arrayList.get(position);
                 // image_arrayList = tempValues.getListFriendsModalArrayList();
                 Bundle bundleObject = new Bundle();
@@ -140,13 +132,14 @@ public class Business_Fragment extends Fragment
                 intent.putExtra("desc", tempValues.getDescription());
                 intent.putExtra("contact_person", tempValues.getContactPerson());
                 intent.putExtra("address", tempValues.getAddress());
-                intent.putExtra("distance",tempValues.getDistance());
-                intent.putExtra("button_title",tempValues.getButtonTitle());
-                intent.putExtra("Latitude",tempValues.getLatitude());
-                intent.putExtra("Longitude",tempValues.getLongitude());
-                intent.putExtra("Image",tempValues.getImage());
-                intent.putExtra("Image",tempValues.getImage());
-                intent.putExtra("Subscription",tempValues.getSubscription());
+                intent.putExtra("distance", tempValues.getDistance());
+                intent.putExtra("button_title", tempValues.getButtonTitle());
+                intent.putExtra("Latitude", tempValues.getLatitude());
+                intent.putExtra("Longitude", tempValues.getLongitude());
+                intent.putExtra("Image", tempValues.getImage());
+                intent.putExtra("Image", tempValues.getImage());
+                intent.putExtra("Subscription", tempValues.getSubscription());
+                intent.putExtra("website", tempValues.getWebsite());
                 startActivity(intent);
                 Sub_Category.Current_tab = mParam1;
             }
@@ -155,7 +148,7 @@ public class Business_Fragment extends Fragment
         return root_view;
     }
 
-    public void footerListview(){
+    public void footerListview() {
         btnLoadMore = new Button(getActivity());
         btnLoadMore.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.white));
         btnLoadMore.setTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));
@@ -172,8 +165,8 @@ public class Business_Fragment extends Fragment
         });
 
     }
-    public void Show_Business_List()
-    {
+
+    public void Show_Business_List() {
         JSONObject json = prepareJsonObject();
         progressDialog = ProgressDialog.show(getActivity(), "", "Checking. Please wait...", false);
         String url = Constants.URL + Constants.BUSINESS_LIST;
@@ -181,8 +174,7 @@ public class Business_Fragment extends Fragment
         requestThread.start();
     }
 
-    public JSONObject prepareJsonObject()
-    {
+    public JSONObject prepareJsonObject() {
 
         prefs = getActivity().getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
         city_id = prefs.getInt("city_id", 0);
@@ -200,7 +192,7 @@ public class Business_Fragment extends Fragment
             innerJsonObject.put("CityId", city_id);
             innerJsonObject.put("Latitude", Latitude);
             innerJsonObject.put("Longitude", Longitude);
-            innerJsonObject.put("SubCategoryId",SubCategoryId);
+            innerJsonObject.put("SubCategoryId", SubCategoryId);
 
             Utilities.printD(tag, "" + innerJsonObject.toString());
         } catch (Exception e) {
@@ -210,12 +202,10 @@ public class Business_Fragment extends Fragment
         return innerJsonObject;
     }
 
-    IHttpExceptionListener exceptionListener = new IHttpExceptionListener()
-    {
+    IHttpExceptionListener exceptionListener = new IHttpExceptionListener() {
 
         @Override
-        public void handleException(String message)
-        {
+        public void handleException(String message) {
             try {
                 if (progressDialog != null && progressDialog.isShowing() == true)
                     progressDialog.dismiss();
@@ -225,12 +215,10 @@ public class Business_Fragment extends Fragment
         }
     };
 
-    IHttpResponseListener responseListener = new IHttpResponseListener()
-    {
+    IHttpResponseListener responseListener = new IHttpResponseListener() {
 
         @Override
-        public void handleResponse(String response)
-        {
+        public void handleResponse(String response) {
             try {
                 if (response != null) {
                     //  progressDialog.dismiss();
@@ -239,13 +227,12 @@ public class Business_Fragment extends Fragment
                     String Result = obj.getString("Result");
                     Log.e("", "Result" + Result);
 
-                    if (Result.equals("0"))
-                    {
+                    if (Result.equals("0")) {
                         handler.sendEmptyMessage(0);
 
                         flag_loading = true;
                     } else if (Result.equals("1")) {
-                        handler.sendEmptyMessage(1);
+
                         flag_loading = false;
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Business");
@@ -280,6 +267,8 @@ public class Business_Fragment extends Fragment
                             arrayList.add(modal);
                             Log.e("LIST SIZE", "-----" + arrayList.size());
                         }
+
+                        handler.sendEmptyMessage(1);
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
                         flag_loading = true;
@@ -354,21 +343,15 @@ public class Business_Fragment extends Fragment
 
 
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser)
-    {
+    public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser)
-        {
-            if (mParam1 == 0)
-            {
+        if (isVisibleToUser) {
+            if (mParam1 == 0) {
                 SubCategoryId = 0;
                 Log.d("current_tab", ",..........Zero position...........," + mParam1);
 
-            }
-            else
-            {
-                if (Sub_Category.sub_cat_arrayList.size() == 0)
-                {
+            } else {
+                if (Sub_Category.sub_cat_arrayList.size() == 0) {
                     Log.d("current_tab", "..........less size ...........");
                 } else {
                     Log.d("current_tab", ".......... Sub_Category.sub_cat_arrayList..........." + Sub_Category.sub_cat_arrayList.size());
@@ -378,30 +361,22 @@ public class Business_Fragment extends Fragment
                 }
             }
 
-            if(arrayList.size() == 0)
-            {
+            if (arrayList.size() == 0) {
                 Show_Business_List();
-            }
-            else
-            {
-                Log.e("size",""+arrayList.size());
+            } else {
+                Log.e("size", "" + arrayList.size());
             }
 
         }
     }
 
 
-
     @Override
-    public void onResume()
-    {
+    public void onResume() {
         super.onResume();
-        if(arrayList.size() == 0)
-        {
-        }
-        else
-        {
-            Log.e("size",""+arrayList.size());
+        if (arrayList.size() == 0) {
+        } else {
+            Log.e("size", "" + arrayList.size());
         }
 
 

@@ -1,0 +1,235 @@
+[
+    {
+        "outputFile": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-w600dp-v13\\values-w600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 63,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-w600dp\\values-w600dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 290,
+                        "endColumn": 63,
+                        "endOffset": 349
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 57,
+                    "endOffset": 172
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 90,
+                        "endColumn": 57,
+                        "endOffset": 143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 177,
+                    "endColumn": 55,
+                    "endOffset": 228
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 149,
+                        "endColumn": 55,
+                        "endOffset": 200
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 233,
+                    "endColumn": 41,
+                    "endOffset": 270
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 371,
+                        "endColumn": 41,
+                        "endOffset": 408
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 275,
+                    "endColumn": 44,
+                    "endOffset": 315
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 282,
+                        "endColumn": 44,
+                        "endOffset": 322
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 320,
+                    "endColumn": 41,
+                    "endOffset": 357
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 328,
+                        "endColumn": 41,
+                        "endOffset": 365
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 362,
+                    "endColumn": 45,
+                    "endOffset": 403
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 235,
+                        "endColumn": 45,
+                        "endOffset": 276
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 408,
+                    "endColumn": 42,
+                    "endOffset": 446
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 527,
+                        "endColumn": 42,
+                        "endOffset": 565
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 451,
+                    "endColumn": 44,
+                    "endOffset": 491
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 602,
+                        "endColumn": 44,
+                        "endOffset": 642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 496,
+                    "endColumn": 39,
+                    "endOffset": 531
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 445,
+                        "endColumn": 39,
+                        "endOffset": 480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 536,
+                    "endColumn": 39,
+                    "endOffset": 571
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 486,
+                        "endColumn": 39,
+                        "endOffset": 521
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 576,
+                    "endColumn": 54,
+                    "endOffset": 626
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-w600dp\\values-w600dp.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 354,
+                        "endColumn": 54,
+                        "endOffset": 404
+                    }
+                }
+            }
+        ]
+    }
+]

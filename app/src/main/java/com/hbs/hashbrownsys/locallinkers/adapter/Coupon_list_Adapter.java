@@ -14,11 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.Coupon_list_model;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -60,8 +61,9 @@ public class Coupon_list_Adapter extends BaseAdapter {
 
     public static class ViewHolder {
         ImageView imageView;
-        TextView txt_title, txt_address, txt_des;
+        TextView txt_title, txt_address, txt_des, textDistance;
         TextView txt_price, txt_price_offer, txt_price_offer_value, txt_price_save, txt_price_save_value;
+        LinearLayout mLlDistance;
     }
 
     @Override
@@ -75,6 +77,9 @@ public class Coupon_list_Adapter extends BaseAdapter {
             viewHolder.imageView = (ImageView) view.findViewById(R.id.imageView);
             viewHolder.txt_title = (TextView) view.findViewById(R.id.txt_title);
             viewHolder.txt_title.setTypeface(Font);
+            viewHolder.textDistance = (TextView) view.findViewById(R.id.txtdistance);
+            viewHolder.textDistance.setTypeface(Font);
+            viewHolder.mLlDistance = (LinearLayout) view.findViewById(R.id.llDistance);
             viewHolder.txt_address = (TextView) view.findViewById(R.id.txt_address);
             viewHolder.txt_address.setTypeface(Font);
             viewHolder.txt_des = (TextView) view.findViewById(R.id.txt_des);
@@ -101,6 +106,15 @@ public class Coupon_list_Adapter extends BaseAdapter {
             tempValues = (Coupon_list_model) array_list.get(position);
             Log.d("", "........notification_list_data..........." + array_list.size());
             viewHolder.txt_title.setText(tempValues.getBusinessName());
+
+            if (tempValues.getDistance() == 0) {
+                viewHolder.mLlDistance.setVisibility(View.GONE);
+            } else {
+                viewHolder.mLlDistance.setVisibility(View.VISIBLE);
+                viewHolder.textDistance.setText(tempValues.getDistance() + " km");
+            }
+
+
             viewHolder.txt_address.setText(tempValues.getTitle());
             // viewHolder.txt_des.setText(tempValues.getOfferDetails());
             String sale_price = tempValues.getSalePrice();
@@ -152,8 +166,8 @@ public class Coupon_list_Adapter extends BaseAdapter {
             spannable.setSpan(STRIKE_THROUGH_SPAN, 0, price.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
             String image_id = tempValues.getImage();
-            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + imahe_path + "?width=120&height=120&mode=crop");
-
+            //  UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/couponimages/" + imahe_path + "?width=120&height=120&mode=crop");
+            Glide.with(activity_new).load("http://www.locallinkers.com/admin/couponimages/" + imahe_path + "?width=120&height=120&mode=crop").placeholder(R.drawable.placeholder).into(viewHolder.imageView);
 
             if (position % 2 == 0)
                 view.setTag(viewHolder);

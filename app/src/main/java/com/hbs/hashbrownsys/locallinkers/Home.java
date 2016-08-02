@@ -34,6 +34,8 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
@@ -45,9 +47,6 @@ import com.hbs.hashbrownsys.locallinkers.fragment.HomeFragment;
 import com.hbs.hashbrownsys.locallinkers.fragment.My_Order_Fragment;
 import com.hbs.hashbrownsys.locallinkers.fragment.ProfileFragment;
 import com.hbs.hashbrownsys.locallinkers.model.ItemObject;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,13 +96,16 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        marshMallowPermission = new MarshMallowPermission(Home.this);
-        LocationMethod();
+
         topToolBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(topToolBar);
         topToolBar.setNavigationIcon(R.drawable.menu);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        Font = Typeface.createFromAsset(getAssets(), "fonts/MyriadPro-Regular.otf");
+
+
+        Font = Typeface.createFromAsset(this.getAssets(), "fonts/MyriadPro-Regular.otf");
+
+
         DrawerLinear = (RelativeLayout) findViewById(R.id.drawerPane);
         TextView local_linker = (TextView) findViewById(R.id.local_linker);
         local_linker.setTypeface(Font);
@@ -139,17 +141,22 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         profile_name = (TextView) listHeaderView.findViewById(R.id.profile_name);
         profile_name.setTypeface(Font);  //
         imageView1 = (CircleImageView) listHeaderView.findViewById(R.id.imageView1);
-
+/*update ame*/
         if (UserName != null) {
-            profile_name.setText(UserName);
+            profile_name.setText("Hi, " + UserName);
         } else {
-            profile_name.setText("Guest");
+            profile_name.setText("Hi, " + "Guest");
         }
 
+        String url_image_profile = "http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop";
+        System.out.println("in check outside: " + url_image_profile);
+/*update user image*/
         if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null")) {
             try {
-
-                UrlImageViewHelper.setUrlDrawable(imageView1, "http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop");
+                String url_image_profile1 = "http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop";
+                System.out.println("in check : " + url_image_profile1);
+                //  UrlImageViewHelper.setUrlDrawable(imageView1,url_image_profile );
+                Glide.with(this).load(url_image_profile).placeholder(R.drawable.placeholder).into(imageView1);
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
@@ -158,8 +165,6 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         }
 
 
-        selectItemFragment(fragment_position);
-
         listViewItems = new ArrayList<ItemObject>();
         listViewItems.add(new ItemObject("Home", R.drawable.ic_home));
         listViewItems.add(new ItemObject("My Orders", R.drawable.ic_myorder));
@@ -167,9 +172,12 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         listViewItems.add(new ItemObject("Logout", R.drawable.ic_logout));
 
 /*setting adapter on navigation drawer*/
-        adapter = new CustomAdapter(this, listViewItems);
+
+        // Code here will run in UI thread
+        adapter = new CustomAdapter(Home.this, listViewItems);
         mDrawerList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
 
         /*setting drawer*/
         mDrawerToggle = new ActionBarDrawerToggle(Home.this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
@@ -197,7 +205,7 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         });
 
 
-        imageView1.setOnClickListener(new View.OnClickListener() {
+        profile_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getApplicationContext(),"working",Toast.LENGTH_SHORT).show();
@@ -212,6 +220,12 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         });
 
 
+
+        marshMallowPermission = new MarshMallowPermission(Home.this);
+        LocationMethod();
+
+        selectItemFragment(fragment_position);
+
     }
 
 
@@ -222,6 +236,8 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
             buildGoogleApiClient();
 
         }
+
+
     }
 
 
@@ -307,20 +323,21 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
 
         Log.e("", "Image" + Image);
         if (UserName != null) {
-            profile_name.setText(UserName);
+            profile_name.setText("Hi, " + UserName);
         } else {
-            profile_name.setText("Guest");
+            profile_name.setText("Hi, " + "Guest");
         }
-
         if (Image != null && !Image.trim().equals("") && !Image.trim().equals("null")) {
             try {
-                ImageLoader imageLoader = ImageLoader.getInstance();
+             /*   ImageLoader imageLoader = ImageLoader.getInstance();
                 DisplayImageOptions options = new DisplayImageOptions.Builder()
                         .cacheInMemory(true)
                         .build();
                 System.out.println("image profile custom " + Image);
                 imageLoader.displayImage("http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop",
-                        imageView1, options);
+                        imageView1, options);*/
+
+                Glide.with(this).load("http://www.locallinkers.com/UserImages/" + Image + "?width=120&mode=crop").placeholder(R.drawable.placeholder).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(imageView1);
             } catch (Exception e) {
                 Log.e("ERROR ", e.toString());
             }
@@ -341,10 +358,16 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
 
 //        mDrawerList.setAdapter(new CustomAdapter(this, listViewItems));
 //        adapter.notifyDataSetChanged();
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                // Code here will run in UI thread
+                adapter = new CustomAdapter(Home.this, listViewItems);
+                mDrawerList.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+            }
+        });
 
-        adapter = new CustomAdapter(this, listViewItems);
-        mDrawerList.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
         return super.onPrepareOptionsMenu(menu);
 
     }
@@ -354,13 +377,14 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
         System.out.println("photo : " + photo);
         assert photo != null;
         if (!photo.equals("photo")) {
-            ImageLoader imageLoader = ImageLoader.getInstance();
+      /*      ImageLoader imageLoader = ImageLoader.getInstance();
             DisplayImageOptions options = new DisplayImageOptions.Builder()
                     .cacheInMemory(true)
                     .build();
 
             imageLoader.displayImage("http://www.locallinkers.com/admin/categoryimages/" + photo,
-                    imageView1, options);
+                    imageView1, options);*/
+            Glide.with(this).load("http://www.locallinkers.com/admin/categoryimages/" + photo).placeholder(R.drawable.placeholder).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(imageView1);
         }
     }
 
@@ -478,20 +502,27 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
     @Override
     protected void onStart() {
         super.onStart();
-        mGoogleApiClient.connect();
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.connect();
+        } else {
+            buildGoogleApiClient();
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mGoogleApiClient.disconnect();
+        if (mGoogleApiClient.isConnected() == true) {
+            mGoogleApiClient.disconnect();
+        }
+
     }
 
 
     private void callMethodToGetLocation() {
         mLocationRequest = LocationRequest.create();
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        mLocationRequest.setInterval(100); // Update location every second
+        mLocationRequest.setInterval(40000); // Update location after 40 second
 
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

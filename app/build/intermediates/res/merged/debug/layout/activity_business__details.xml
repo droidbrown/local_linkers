@@ -144,6 +144,40 @@
             android:textColor="#2a2a2a"
             android:textSize="18sp" />
 
+
+        <LinearLayout
+            android:id="@+id/llwebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_des"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/globe_new" />
+
+            <TextView
+                android:id="@+id/txt_website_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="05dp"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="a"
+                android:padding="5dp"
+                android:textAlignment="gravity"
+                android:textColor="#2a2a2a"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/txt_desc"
             android:layout_width="match_parent"

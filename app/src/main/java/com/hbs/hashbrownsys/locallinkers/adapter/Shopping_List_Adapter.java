@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.Shopping_List_Model;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
@@ -146,8 +148,8 @@ public class Shopping_List_Adapter extends BaseAdapter
 //                Log.d("img",image_arrayList.get(k).getC_Image()+"");
 //            }
             image_path = tempValues.getImage();
-            UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/productimages/" + image_path + "?width=120&height=120&mode=crop");
-
+           // UrlImageViewHelper.setUrlDrawable(viewHolder.imageView, "http://www.locallinkers.com/admin/productimages/" + image_path + "?width=120&height=120&mode=crop");
+            Glide.with(activity_new).load("http://www.locallinkers.com/admin/productimages/" + image_path + "?width=120&height=120&mode=crop").placeholder(R.drawable.placeholder).into(viewHolder.imageView);
             if(position % 2 == 0)
                 view.setTag(viewHolder);
 

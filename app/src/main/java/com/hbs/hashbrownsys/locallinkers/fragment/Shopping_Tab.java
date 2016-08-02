@@ -265,7 +265,7 @@ public class Shopping_Tab extends Fragment {
                         handler.sendEmptyMessage(2);
                         flag_loading = false;
 //                        showHideLoadMoreButton("visible");
-                        handler.sendEmptyMessage(1);
+
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Products");
                         Log.e("", "Lst_Products" + jsonArray.length());
@@ -299,6 +299,8 @@ public class Shopping_Tab extends Fragment {
                             arrayList.add(modal);
                             Log.e("LIST SIZE", "-----" + arrayList.size());
                         }
+
+                        handler.sendEmptyMessage(1);
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
                         flag_loading = true;

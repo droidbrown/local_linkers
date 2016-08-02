@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hbs.hashbrownsys.locallinkers.fragment.Listing_Tab">
+
+    <LinearLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:text="Product"
+            android:textColor="#841633"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="Product Name"
+            android:textColor="#841633"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:text="Price"
+            android:textColor="#841633"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.2"
+            android:text="Qty"
+            android:textColor="#841633"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:paddingRight="5dp"
+            android:text="Amount"
+            android:textColor="#841633"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/first_layout"
+        android:layout_marginTop="5dp"
+        android:background="#2a2a2a" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/relative_layout"
+        android:layout_below="@+id/view"
+        android:divider="#2a2a2a"
+        android:background="#fff"
+        android:dividerHeight="0.5dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/empty_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="The cart is empty. Thank you."
+        android:visibility="gone"
+        android:textColor="#841633"
+        android:textSize="15sp" />
+
+
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/relative_layout"
+        android:layout_marginTop="5dp"
+        android:background="#2a2a2a" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee">
+
+        <RelativeLayout
+            android:id="@+id/show_points_layout"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_available_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Available Points:"
+                android:textColor="#841633"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_redeem_points"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txt_available_points"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/redeem_point"
+                android:drawablePadding="5dp"
+                android:background="@drawable/home_text_border"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Redeem Points"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/amount_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/total_value"
+                    android:text="Amount Rs."
+                    android:textColor="#841633"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/total_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/btn_cmplt_purchase"
+                    android:textColor="#841633"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_cmplt_purchase"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/amount_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/drawer_border"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Complete Purchase"
+                android:textColor="#841633" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

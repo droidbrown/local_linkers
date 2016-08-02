@@ -8,8 +8,8 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.hbs.hashbrownsys.locallinkers";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 8;
-  public static final String VERSION_NAME = "INSTANT_RUN";
+  public static final int VERSION_CODE = 14;
+  public static final String VERSION_NAME = "2.15";
   // Fields from build type: debug
   public static final boolean USE_ROLLBAR = false;
 }

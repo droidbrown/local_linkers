@@ -4,6 +4,10 @@
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_app_launcher.png"
     },
     {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\globe_new.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable-xxxhdpi\\globe_new.png"
+    },
+    {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xxxhdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\abc_btn_check_to_on_mtrl_000.png",
         "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xxxhdpi\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_restore_page.png",
+        "source": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_restore_page.png"
     },
     {
         "merged": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\abc_scrubber_control_to_pressed_mtrl_000.png",

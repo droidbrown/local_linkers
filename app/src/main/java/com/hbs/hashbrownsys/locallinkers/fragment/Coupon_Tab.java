@@ -157,6 +157,8 @@ public class Coupon_Tab extends Fragment {
                 intent.putExtra("IsAsPerBill", selected.getAsPerBill());
                 intent.putExtra("Type", "Coupons");
                 intent.putExtra("BusinessName", selected.getBusinessName());
+                intent.putExtra("catId", selected.getCategoryId());
+                intent.putExtra("image", selected.getImage());
                 startActivity(intent);
 
             }
@@ -169,6 +171,7 @@ public class Coupon_Tab extends Fragment {
     public void Show_Coupon_List() {
         JSONObject json = prepareJsonObject();
         String url = Constants.URL + Constants.COUPON_LIST;
+        System.out.println("coupon url : "+url);
         progressDialog = ProgressDialog.show(getActivity(), "", "Checking. Please wait...", false);
         CommonPostRequestThread requestThread = new CommonPostRequestThread(url, json.toString(), responseListener, exceptionListener);
         requestThread.start();
@@ -191,7 +194,7 @@ public class Coupon_Tab extends Fragment {
             innerJsonObject.put("Latitude", Latitude);
             innerJsonObject.put("Longitude", Longitude);
             innerJsonObject.put("Keyword", Keyword);
-            Utilities.printD(tag, "" + innerJsonObject.toString());
+            System.out.println("coupon JSON : "+innerJsonObject.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -221,16 +224,16 @@ public class Coupon_Tab extends Fragment {
                 if (response != null) {
                     //  progressDialog.dismiss();
                     JSONObject obj = new JSONObject(response);
-                    Log.e("", "obj" + obj);  //
+                    System.out.println("Json result coupon "+obj.toString());
                     String Result = obj.getString("Result");
-                    Log.e("", "Result" + Result);
+                    System.out.println("Json result"+Result.toString());
 
                     if (Result.equals("0")) {
                         handler.sendEmptyMessage(0);
 
                         flag_loading = true;
                     } else if (Result.equals("1")) {
-                        handler.sendEmptyMessage(1);
+
                         flag_loading = false;
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Coupons");
@@ -265,6 +268,7 @@ public class Coupon_Tab extends Fragment {
                             modal.setUpdatedDate(almonObject.getString("UpdatedDate"));
                             modal.setImage(almonObject.getString("Image"));
                             modal.setAsPerBill(almonObject.getString("IsAsPerBill"));
+                            modal.setDistance(almonObject.getInt("Distance"));
                             getActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -272,6 +276,8 @@ public class Coupon_Tab extends Fragment {
                                 }
                             });
                         }
+
+                        handler.sendEmptyMessage(1);
                     } else if (Result.equals("2")) {
                         handler.sendEmptyMessage(2);
                         flag_loading = true;

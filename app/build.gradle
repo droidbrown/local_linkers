@@ -8,8 +8,8 @@ android {
         applicationId "com.hbs.hashbrownsys.locallinkers"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 8
-        versionName "2.0"
+        versionCode 14
+        versionName "2.15"
         multiDexEnabled true
     }
     lintOptions{
@@ -49,25 +49,26 @@ android {
 }
 
 dependencies {
-
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.github.jjobes:SlideDateTimePicker:v1.0.4'
     compile files('libs/libphonenumber-3.5.jar')
     compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:multidex:1.0.0'
     compile 'com.android.support:design:23.1.0'
     compile files('libs/httpclient-4.3.6.jar')
     compile files('libs/httpmime-4.3.6.jar')
     compile files('libs/httpcore-4.3.3.jar')
-    compile files('libs/gcm.jar')
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile files('libs/apache-mime4j-0.6.jar')
-    compile 'com.google.android.gms:play-services-location:8.4.0'
-    compile 'com.google.android.gms:play-services:9.0.2'
-    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.google.android.gms:play-services-location:9.2.1'
+    compile 'com.google.android.gms:play-services:9.2.1'
+    compile 'com.google.android.gms:play-services-gcm:9.2.1'
     compile 'com.github.delight-im:Android-SimpleLocation:v1.0.1'
     compile files('libs/rollbar-android-0.1.2-dev.jar')
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.github.himanshu-soni:image-intent-handler:e724d3e462'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:23.1.0'
+
 }

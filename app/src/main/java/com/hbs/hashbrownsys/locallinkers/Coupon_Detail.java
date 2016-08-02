@@ -51,7 +51,7 @@ public class Coupon_Detail extends AppCompatActivity {
     public static final String TAG = "detailsFragment";
     String address, images_type, terms, updated_date, actual_price, sale_price, coupon_price, title, desc, CouponId, button_updated_text, Latitude, Longitude, payTomarchant, BusinessName;
     String image_path, url, product_id;
-    String IsAsPerBill;
+    String IsAsPerBill,catID,image;
     ProgressDialog progressDialog, pdia;
     public final String tag = this.getClass().getSimpleName();
     ArrayList<Image_Coupon_List> image_arrayList = new ArrayList<Image_Coupon_List>();
@@ -126,6 +126,21 @@ public class Coupon_Detail extends AppCompatActivity {
         Latitude = getIntent().getExtras().getString("Latitude");
         Longitude = getIntent().getExtras().getString("Longitude");
         payTomarchant = getIntent().getExtras().getString("paytomarchant");
+
+        try {
+            catID = getIntent().getExtras().getString("catId");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        try {
+            image = getIntent().getExtras().getString("image");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         IsAsPerBill = getIntent().getExtras().getString("IsAsPerBill");
         BusinessName = getIntent().getExtras().getString("BusinessName");
         prefs = getSharedPreferences(Constants.LOCAL_LINKER_APP_PREFERENCES, Context.MODE_PRIVATE);
@@ -158,12 +173,38 @@ public class Coupon_Detail extends AppCompatActivity {
         txt_address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Coupon_Detail.this, Map.class);
+          /*      Intent intent = new Intent(Coupon_Detail.this, Map.class);
                 intent.putExtra("Latitude", Latitude);
                 intent.putExtra("Longitude", Longitude);
                 intent.putExtra("address", address);
                 intent.putExtra("title", title);
+                startActivity(intent);*/
+
+                Intent intent = new Intent(Coupon_Detail.this, Map.class);
+                intent.putExtra("address",address);
+                intent.putExtra("terms", terms);
+                intent.putExtra("updated_date", updated_date);
+                intent.putExtra("actual_price", actual_price);
+                intent.putExtra("sale_price", sale_price);
+                intent.putExtra("coupon_price", coupon_price);
+                intent.putExtra("title", title);
+                intent.putExtra("desc",desc);
+                intent.putExtra("CouponId", CouponId);
+                intent.putExtra("button_updated_text", "Buy Now");
+                intent.putExtra("Latitude", Latitude);
+                intent.putExtra("Longitude", Longitude);
+                intent.putExtra("paytomarchant", payTomarchant);
+                intent.putExtra("IsAsPerBill", IsAsPerBill);
+                intent.putExtra("Type", "Coupons");
+                intent.putExtra("BusinessName",BusinessName);
+                intent.putExtra("catId", catID);
+                intent.putExtra("image", image);
+
                 startActivity(intent);
+
+
+
+
 
             }
         });

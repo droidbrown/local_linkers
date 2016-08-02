@@ -158,7 +158,7 @@ public class Coupon_ProductFragment extends Fragment
                     }
                     else if (Result.equals("1"))
                     {
-                        handler.sendEmptyMessage(1);
+
 
                         JSONArray jsonArray = obj.getJSONArray("Lst_Coupons");
                         Log.e("", "Lst_Coupons" + jsonArray.length());
@@ -193,8 +193,11 @@ public class Coupon_ProductFragment extends Fragment
                             modal.setUpdatedDate(almonObject.getString("UpdatedDate"));
                             modal.setImage(almonObject.getString("Image"));
                             modal.setAsPerBill(almonObject.getString("IsAsPerBill"));
+                            modal.setDistance(almonObject.getInt("Distance"));
                             arrayList.add(modal);
                         }
+
+                        handler.sendEmptyMessage(1);
                     } else if (Result.equals("2"))
                     {
                         handler.sendEmptyMessage(2);

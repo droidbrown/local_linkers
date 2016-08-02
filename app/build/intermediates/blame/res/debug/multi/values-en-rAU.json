@@ -590,6 +590,25 @@
                         "endOffset": 2301
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3210,
+                    "endColumn": 103,
+                    "endOffset": 3309
+                },
+                "from": {
+                    "file": "C:\\Users\\hbslenovo-3\\Desktop\\LocalLinker\\local_linkers\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-wallet\\9.2.1\\res\\values-en-rAU\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 292,
+                        "endColumn": 103,
+                        "endOffset": 391
+                    }
+                }
             }
         ]
     }

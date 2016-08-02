@@ -79,11 +79,14 @@ public class Shopping_List_Search extends AppCompatActivity
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    Keyword = ed_search.getText().toString();
-                    Show_Shopping_List();
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(ed_search.getWindowToken(), 0);
-                    ed_search.getText().clear();
+                    Keyword = ed_search.getText().toString();
+
+
+
+                    Show_Shopping_List();
+
                     return true;
                 }
                 return false;
@@ -156,7 +159,7 @@ public class Shopping_List_Search extends AppCompatActivity
                         handler.sendEmptyMessage(0);
                     } else if (Result.equals("1")) {
                         handler.sendEmptyMessage(1);
-
+                        ed_search.setText("");
                         JSONArray jsonArray = obj.getJSONArray("Lst_Products");
                         Log.e("", "Lst_Products" + jsonArray.length());
                         for (int i = 0; i < jsonArray.length(); i++) {

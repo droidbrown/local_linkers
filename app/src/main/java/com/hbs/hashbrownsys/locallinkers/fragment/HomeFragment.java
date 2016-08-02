@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.hbs.hashbrownsys.locallinkers.Constants;
 import com.hbs.hashbrownsys.locallinkers.Coupon_List_Search;
+import com.hbs.hashbrownsys.locallinkers.CustomMapActivity;
 import com.hbs.hashbrownsys.locallinkers.Home;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.Shopping_List_Search;
@@ -128,7 +129,7 @@ public class HomeFragment extends Fragment {
                     search.setVisibility(View.GONE);
                     search_icon.setVisibility(View.VISIBLE);
                     filter_image.setVisibility(View.VISIBLE);
-                    location_image.setVisibility(View.GONE);
+                    location_image.setVisibility(View.VISIBLE);
                     tab_position = 1;
                 } else if (pager.getCurrentItem() == 2) {
                     coupons = "business";
@@ -173,16 +174,33 @@ public class HomeFragment extends Fragment {
         location_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String backStateName = this.getClass().getName();
-                Fragment fragment = new Change_City();
-                Bundle bundle = new Bundle();
-                bundle.putInt("tab_position", tab_position);
-                fragment.setArguments(bundle);
+      /*          String backStateName = this.getClass().getName();
+                Fragment fragment = new CustomMapActivity();
+//                Bundle bundle = new Bundle();
+//                bundle.putInt("tab_position", tab_position);
+//                fragment.setArguments(bundle);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment_container, fragment);
                 // fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+*/
+
+                    /*    Fragment fragment = new CustomMapFragments();
+                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.main_fragment_container, fragment);
+                        fragmentManager.beginTransaction().replace(R.id.main_fragment_container, fragment, "MY_CREATE_PRODUCTS");
+                        fragmentTransaction.commit();*/
+                String pathType = "";
+                if (tab_position == 1) {
+                    pathType = "coupon";
+                } else if (tab_position == 2) {
+                    pathType = "listing";
+                }
+                Intent intent = new Intent(getActivity(), CustomMapActivity.class);
+                intent.putExtra("pathFrom", pathType);
+                startActivity(intent);
             }
         });
 

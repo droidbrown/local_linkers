@@ -11,11 +11,11 @@ import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.hbs.hashbrownsys.locallinkers.R;
 import com.hbs.hashbrownsys.locallinkers.model.Category_Model;
-import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
+
 
 import java.util.ArrayList;
 
@@ -77,12 +77,13 @@ public class CategoryAdapter extends ArrayAdapter<Category_Model> {
             holder.tv.setText(tempValues.getName());
             String image_path = tempValues.getImage();
 
-            ImageLoader imageLoader = ImageLoader.getInstance();
+      /*      ImageLoader imageLoader = ImageLoader.getInstance();
             DisplayImageOptions options = new DisplayImageOptions.Builder()
                     .cacheInMemory(true)
                     .build();
 
-            imageLoader.displayImage("http://www.locallinkers.com/admin/categoryimages/" + image_path, holder.img, options);
+            imageLoader.displayImage("http://www.locallinkers.com/admin/categoryimages/" + image_path, holder.img, options);*/
+            Glide.with(activity).load("http://www.locallinkers.com/admin/categoryimages/" + image_path).placeholder(R.drawable.placeholder).diskCacheStrategy( DiskCacheStrategy.NONE ).skipMemoryCache(true).into(holder.img);
 
             if (position % 2 == 0) {
 
